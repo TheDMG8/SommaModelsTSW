@@ -6,8 +6,7 @@ package controller;
 // 3. servlet che usa le query e setta i parametri 
 // 4. jsp che prende i dati dalla servlet 
 
-
-import model.ProductModelDM;
+import model.ProdottoDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,12 +19,12 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-@WebServlet("/InitServlet")
+@WebServlet("/index.html")
 public class InitServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
-	static ProductModelDM model = new ProductModelDM();
+	static ProdottoDAO model = new ProdottoDAO();
 	
 	public InitServlet() {
 		super();

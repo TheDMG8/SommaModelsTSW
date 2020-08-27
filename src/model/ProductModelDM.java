@@ -72,7 +72,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 			preparedStatement = connection.prepareStatement (selectSQL);
 			
 			System.out.println("doRetrieveAll:" + preparedStatement.toString());
-			ResultSet rs = preparedStatement.executeQuery();
+ResultSet rs = preparedStatement.executeQuery();
 			
 			
 			while(rs.next()) {
