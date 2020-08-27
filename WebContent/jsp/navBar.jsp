@@ -10,7 +10,7 @@
 	
 </head>
 <body>
-<img src="pictures/px1.png">
+<img class="upperPage" src="pictures/px1.png">
  
  <nav class="navbar navbar-inverse">
   <div class="container">

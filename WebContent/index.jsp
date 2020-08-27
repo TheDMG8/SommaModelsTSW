@@ -21,7 +21,7 @@
 <body>
 
 
-  <img src="pictures/px1.png">
+
 
 
 <%@ include file="jsp/navbar2.jsp" %> 
