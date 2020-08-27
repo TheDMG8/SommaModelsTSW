@@ -1,106 +1,21 @@
-@charset "ISO-8859-1";
 
-* {box-sizing: border-box;}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
- 
+table {
+	width: 600px;
+	background-color:#F0F8FF;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: black;
+table, th, td {
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
 }
 
-.topnav a{
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+th, td {
+	padding: 5px;
 }
 
-.topnav a:hover {
-  background-color: red;
-  color: white;
+fieldset {
+	width: 570px;
 }
 
-.topnav a.active {
-  background-color: red;
-  color: white;
-}
-
-.topnav .search-container {
-  float: right;
-
-}
-
-.topnav input[type=text] {
-  margin-top: 8px;
-  padding:  10px;
-  font-size: 17px;
-  border: 1px solid black;
-  width: 340px;
-  height: 40px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.topnav .search-container button {
-
-  padding: 10px;
-  font-size: 17;
-  border-right: none;
-  background: white;
-  cursor: pointer;
-  border: 1px solid black;
-  margin-right:8px;
-  width: 40px;
-  height: 40px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.topnav .search-container button:hover {
-  background: #0BADF0;
-}
-
-@media screen and (max-width: 600px) {
-	
-  .topnav .search-container {
-    float: none;
-  }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    margin: 0;
-    padding: 15px;  
- 
-  }
-  
-}
-
-
-.nav{
-	overflow: hidden;
-    background-color: white;
-}
-
-.nav a {
-  float: right;
-  color: #0BADF0;
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.nav img{
-	display: block;
-}
 
