@@ -7,16 +7,16 @@ create user 'tsw'@'localhost' identified by 'adminadmin';
 grant all on Sommamodels.* to 'tsw'@'localhost';
 
 CREATE TABLE utente (
-	idUtente  int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	idUtente  int NOT NULL PRIMARY KEY  AUTO_INCREMENT,
     nome	varchar(30)	NOT NULL,
     cognome	varchar(30)	NOT NULL,
     sesso	varchar(30)	NOT NULL,
     regione	varchar(30) NOT NULL,
-    citta	varchar(30) NOT NULL,
+    cittÃ 	varchar(30) NOT NULL,
     provincia	varchar(30)	NOT NULL,
     via		varchar(30) NOT NULL,
     numCivico	int NOT NULL,
-    cellulare	varchar(30) NOT NULL,
+    cellulare	int ,
     email		varchar(30) NOT NULL,
     psswrd		varchar(30) NOT NULL,
     isAdmin		varchar(14)	DEFAULT 'false',
@@ -45,7 +45,7 @@ CREATE TABLE ordine(
 	idOrdine int PRIMARY KEY NOT NULL ,
     dataOrdine date NOT NULL,
     regione	varchar(30) NOT NULL,
-    citta	varchar(30) NOT NULL,
+    cittÃ 	varchar(30) NOT NULL,
     provincia	varchar(30)	NOT NULL,
     via		varchar(30) NOT NULL,
     numCivico	int NOT NULL,
@@ -57,14 +57,14 @@ CREATE TABLE contiene(
     idProdottoC int NOT NULL REFERENCES prodotto(idProdotto) ON UPDATE CASCADE ON DELETE RESTRICT,
     PRIMARY KEY(idOrdineC,idProdottoC)
 );
-insert into utente(nome, cognome, sesso, regione, citta, provincia, via, numCivico, cellulare, email, psswrd, isAdmin) values ('marianna', 'vujko', 'femmina', 'toscana', 'lucca', 'lucca', 'di patrizio', 3, 3456789876, 'admin@admin', 'admin', 'true');
+
 insert into prodotto(nomeProdotto,marcaProdotto,tipoCategoria,tipoProdotto,descrizioneProdotto,prezzoProdotto,numPezziDisponibili) values ('BUGGY RAPTOR 5XB 1/5 HYMOTO', 'HYMOTO', 'Radiocomandato', 'Modello a scoppio', '4x4, motore 32cc, 2.4GHz', 865.00, 3) ; 
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('TRUGGY DESERT KING HIMOTO 1/5','HIMOTO','Radiocomandato','Scoppio','4wd-telecomando con sistema 2.4GHz con ricerca automatica della frequenza.',940.00,3);
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('Rock Crawler 1/10', 'HYMOTO', 'Radiocomandato', 'Elettrico', '-',490.00, 1);
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('Motoscafo Brushless Fountain', 'HYMOTO', 'Radiocomandato', 'Elettrico. Barca','880BP RTR telecomando con display	HIMOTO	radiocomandato	elettrico	barca radiocomandata in vetroresina, dipinta a mano, con batterie LIPO e caricabatterie.',540.00, 2);
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('OUTRAGE 2.4G RTR PERFORMANCE', 'NAVICRAFT','Radiocomandato', 'Scoppio-barca','Barca telecomandata, RDR tutto incluso. Alimentazione termica e radiocomando incluso.',870.00,3);
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('G LOCOMOTIVA ELETTRICA BR103','PIKO','Radiocomandato', 'elettrico. Ferroviario','-',730.00, 1);
-insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('FERRARI 308 GBT RED', 'FERRARI', 'statico','automodello', 'automodello Ferrari giÃƒÆ’Ã‚Â  assemblato. Pezzo da collezione',114.00,	7);
+insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('FERRARI 308 GBT RED', 'FERRARI', 'statico','automodello', 'automodello Ferrari giÃ  assemblato. Pezzo da collezione',114.00,	7);
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('JAPANESE BATTLESHIP ','TAMIYA','statico', 'navale', 'Modello in scala 1/350',260.00,80);
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('Titanic Centenary 1:700','R.M.S','statico', 'scatola montaggio','scala 1:700',27.80,3);
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('JAMARA COLLA CIANOACRILICA ','JAMARA','accessori','colla','EXTRA LIQUIDA 20mL',6.00,20);

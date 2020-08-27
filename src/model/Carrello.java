@@ -1,35 +1,55 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.List;
-  /*la rendo generica*/
-public class Carrello<T> {
-   
-	  List<T> items;
-	  
-		public Carrello() {
-			items = new ArrayList<T>();
-		}
+import java.util.*;
+
+
+public class Carrello {
+
+	private ArrayList<Prodotto> carrello;
+	private double costoTot;
+	
+	public Carrello() {
+		carrello= new ArrayList<Prodotto>();
+	}
+	
+	public void addProdToCarrello(Prodotto item) {
+		carrello.add(item);
+		costoTot=costoTot+item.getPrezzoProdotto();
+	}
+	
+	public void printAllItem() {
 		
-		public void addItem(T item) {
-			items.add(item);
-		}
-		public void deleteItem(T item) {
-			items.remove(item);
-			/*
-			for(T it: items) {
-				if(it.equals(item)) {
-					items.remove(it);
-					break;
-				}
-			}*/
-		}
+		Prodotto item;
 		
-		public List<T> getItems() {
-			return items;
+		for(int i=0;i<carrello.size();i++) {
+			item=carrello.get(i);
+			System.out.println(item.getIdProdotto()+" "+item.getNomeProdotto()+" "+item.getTipoProdotto()+" "+item.getPrezzoProdotto());
 		}
-		public void deleteItems() {
-			items.clear();
-		}
-		
+			
+	}
+	
+	public Prodotto getItem(int i) {
+		return carrello.get(i);
+	}
+	
+	public void setItem(int i, Prodotto prod) {
+		carrello.set(i, prod);
+	}
+	
+	public ArrayList<?> getCartItem() {
+		return carrello;
+	}
+	
+	public void deleteProdFromCarrello(int i) {
+		costoTot=costoTot-carrello.get(i).getPrezzoProdotto();
+		carrello.remove(i);
+	}
+	
+	public double getCostoTot() {
+		return costoTot;
+	}
+	
+	public boolean isEmpty() {
+		return carrello.isEmpty();
+	}
 }

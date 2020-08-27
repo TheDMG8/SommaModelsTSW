@@ -2,24 +2,22 @@ package model;
 
 import java.io.Serializable;
 
-public class ProductBean implements Serializable {
-      
-	/**
-	 * 
-	 */
+public class Prodotto implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	int idProdotto;
-	String nomeProdotto;
-    String marcaProdotto;
-    String tipoCategoria;
-    String tipoProdotto;
-    String descrizioneProdotto;
-    double prezzoProdotto;
-    String immagine;
-    int numPezziDisponibili;
-    
-    public ProductBean() {
-    	idProdotto= -1;
+		private int idProdotto;
+		private String nomeProdotto;
+		private String marcaProdotto;
+		private String tipoCategoria;
+		private String tipoProdotto;
+		private String descrizioneProdotto;
+		private double prezzoProdotto;
+		private String immagine;
+		private double numPezziDisponibili;
+		
+	public Prodotto() {
+		
+		idProdotto= -1;
     	nomeProdotto="";
         marcaProdotto="";
         tipoCategoria="";
@@ -28,8 +26,7 @@ public class ProductBean implements Serializable {
         prezzoProdotto=0;
         immagine="";
         numPezziDisponibili=0;
-    	
-    }
+	}
 
 	public int getIdProdotto() {
 		return idProdotto;
@@ -95,28 +92,19 @@ public class ProductBean implements Serializable {
 		this.immagine = immagine;
 	}
 
-	public int getNumPezziDisponibili() {
+	public double getNumPezziDisponibili() {
 		return numPezziDisponibili;
 	}
 
-	public void setNumPezziDisponibili(int numPezziDisponibili) {
+	public void setNumPezziDisponibili(double numPezziDisponibili) {
 		this.numPezziDisponibili = numPezziDisponibili;
 	}
-	
-	public boolean isEmpty() {
-		return idProdotto == -1;
-	}
-	
-	@Override
-	public boolean equals(Object other) {
-		return (this.getIdProdotto() == ((ProductBean)other).getIdProdotto());
-	}
-    /*non è obbligatorio ma è x aver la certezza di cosa sto leggendo man a mano*/
+	/*non è obbligatorio ma è x aver la certezza di cosa sto leggendo man a mano*/
     @Override
     public String toString() {
     	return nomeProdotto+"(" + idProdotto +")" + marcaProdotto +"," + tipoCategoria + "," + tipoProdotto +","+ descrizioneProdotto + "," + prezzoProdotto + "," + immagine + "," + numPezziDisponibili;
-    	
     }
 }
 
-/*così il bean è pronto*/
+
+
