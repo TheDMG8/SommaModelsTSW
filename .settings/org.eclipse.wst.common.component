@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="SommaModelsTSW">
+    <wb-module deploy-name="SommaModels">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="SommaModelsTSW"/>
-        <property name="java-output-path" value="/SommaModelsTSW/build/classes"/>
+        <property name="context-root" value="SommaModels"/>
+        <property name="java-output-path" value="/SommaModels/build/classes"/>
     </wb-module>
 </project-modules>
