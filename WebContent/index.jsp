@@ -19,13 +19,10 @@
 <title>Somma Models</title>
 
 </head>
-<body>
 <%@ include file="jsp/navBar.jsp" %>
 
-  <%=prodotto %> 
-  
-<%@ include file="jsp/formTest.jsp" %>
-
+  <%= prodotto %>
+ 
 </body>
-
 </html>
+//spero sia la volta buona
