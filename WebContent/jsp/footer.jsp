@@ -9,8 +9,9 @@
 <link href="CSS/footer.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-    <div class="card mx-5" style="width:100%;">
+<div class=foo>
+<div class="footer">
+    <div class="card mx-5" >
         <div class="row mb-4 ">
             <div class="col-md-4 col-sm-11 col-xs-11">
                 <div class="footer-text pull-left">
@@ -65,5 +66,7 @@
             </div>
         </div>
     </div>
+   </div>
+   </div>
 </body>
 </html>

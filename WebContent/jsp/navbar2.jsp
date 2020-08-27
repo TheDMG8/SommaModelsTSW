@@ -12,7 +12,7 @@
 <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
 </head>
 <body>
-<img src="pictures/px1.png">
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
  
 
