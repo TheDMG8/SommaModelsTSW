@@ -44,7 +44,8 @@
 <!-- Three cards category -->
 
 	<%@ include file="jsp/ThreeContainer.jsp" %> 
-
+<br>
+<br>
 
 
 <!-- Ends cards category -->
