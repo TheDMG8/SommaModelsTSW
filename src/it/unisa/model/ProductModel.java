@@ -15,4 +15,6 @@ public interface ProductModel<T> {
 	public void doUpdate(T prodotto)throws SQLException;
 	
 	public void doDelete(T prodotto)throws SQLException;
+
+	Collection<ProductBean> doRetrieveAllStatico(String order) throws SQLException;
 }
