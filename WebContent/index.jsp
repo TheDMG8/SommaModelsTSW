@@ -27,7 +27,7 @@
 <div class="userBar">	
 			 <a href="Carrello.jsp"><i class="fa fa-shopping-cart"></i> Carrello</a> 
 
-           	 <a href="login.jsp"><i class="fa fa-fw fa-user"></i>Bentornato/a <%=nome %> </a>       	
+           	 <a href="login.jsp"><i class="fa fa-fw fa-user"><%=nome %> </a>       	
         </div>
 <%} %>
 <%@ include file="jsp/navBar.jsp" %> 
