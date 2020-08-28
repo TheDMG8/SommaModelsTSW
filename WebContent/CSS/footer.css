@@ -4,15 +4,16 @@
 .foo{
 	background-color:#16151a;
 }
-.footer {
 
+.footer {
+	
   background-color:#16151a;
 }
 
 
 .card {
 	
-    color: #646771;
+    color: red;
     background-color: #16151a;
 }
 
@@ -27,7 +28,7 @@ ul>li {
 }
 
 ul>li:hover {
-    color: #957bda;
+    color: red;
     cursor: pointer
 }
 
@@ -41,7 +42,7 @@ hr {
 }
 
 .social>i:hover {
-    color: #957bda;
+    color: #ff0000;
     cursor: pointer
 }
 
