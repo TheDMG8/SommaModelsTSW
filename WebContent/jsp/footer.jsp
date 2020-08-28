@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
-<link href="CSS/footer.css" rel="stylesheet" ">
+<link href="CSS/footer.css" rel="stylesheet">
 </head>
 <body>
 <div class=foo>
@@ -19,7 +19,7 @@
                         <h1 class="font-weight-bold mr-2 px-3" style="color:blue; background-color:red"> SM </h1>
                         <h1 style="color: blue">SommaModels</h1>
                     </div>
-                    <p class="card-text">Sono i sogni a far vivere l'uomo. Il destino è in una bparte nelle nostre mani, sempre che sappiamo chiaramente quel che vogliamo e siamo decisi ad ottenerlo.</p>
+                    <p class="card-text">Sono i sogni a far vivere l'uomo. Il destino è in una parte nelle nostre mani, sempre che sappiamo chiaramente quel che vogliamo e siamo decisi ad ottenerlo.</p>
                     <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-facebook"></i> </div>
                 </div>
             </div>

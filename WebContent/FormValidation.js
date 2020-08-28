@@ -12,6 +12,7 @@ function FormValidation(){
 	var uemail = document.registration.email;
 	var password = document.registration.password;
 
+
 	
 if(allLet(unome))
 { 

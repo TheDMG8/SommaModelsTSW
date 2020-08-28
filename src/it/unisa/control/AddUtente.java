@@ -43,7 +43,7 @@ public class AddUtente extends HttpServlet {
 					String cognome= request.getParameter("cognome");
 					String sesso= request.getParameter("sesso");
 					String regione= request.getParameter("regione");
-					String citta= request.getParameter("citta");
+					String città= request.getParameter("città");
 					String provincia= request.getParameter("provincia");
 					String via= request.getParameter("via");
 					int numCivico= Integer.parseInt(request.getParameter("numerocivico"));
@@ -57,7 +57,7 @@ public class AddUtente extends HttpServlet {
 					bean.setCognome(cognome);
 					bean.setSesso(sesso);
 					bean.setRegione(regione);
-					bean.setCitta(citta);
+					bean.setCitta(città);
 					bean.setProvincia(provincia);
 					bean.setVia(via);
 					bean.setNumCivico(numCivico);

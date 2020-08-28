@@ -34,8 +34,9 @@
      <input type="hidden" name="action" value="login">
      </div>
      <p class="message">Non sei ancora registrato? <a href="CreaUtente.jsp">Crea un account!</a></p>
-    
+    <br>
    </form>
+   <%@ include file="jsp/footer.jsp" %>
 </body>
-<%@ include file="jsp/footer.jsp" %>
+
 </html>
