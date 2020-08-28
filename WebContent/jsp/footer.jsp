@@ -9,6 +9,10 @@
 <link href="CSS/footer.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div style="clear:both;"></div>
+<br>
+<br>
+
 <div class="fotter">
 <div class="foo">
     <div class="card mx-5" >
