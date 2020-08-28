@@ -23,7 +23,7 @@
                         <h1 class="font-weight-bold mr-2 px-3" style="color:#16151a; background-color:#957bda"> SM </h1>
                         <h1 style="color: #957bda">SommaModels</h1>
                     </div>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non pariatur numquam animi nam at impedit odit nisi.</p>
+                    <p class="card-text">Sono i sogni a far vivere l'uomo. Il destino è in buona parte nelle nostre mani, sempre che sappiamo chiaramente quel che vogliamo e siamo decisi ad ottenerlo.</p>
                     <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
                 </div>
             </div>
@@ -32,18 +32,6 @@
                 <h5 class="heading">Services</h5>
                 <ul>
                     <li>Assistenza</li>
-                    <li>Development</li>
-                    <li>Cloud</li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-4">
-            <h5 class="heading">Industries</h5>
-                <ul class="card-text">
-                    <li>Finance</li>
-                    <li>Public Sector</li>
-                    <li>Smart Office</li>
-                    <li>Retail</li>
                 </ul>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-4">
@@ -51,6 +39,9 @@
                 <ul class="card-text">
                     <li>About Us</li>
                     <li>Contact</li>
+               		<li>Condizioni di vendita</li>
+                    <li>Pagamento sicuro</li>
+                    <li>Costi di spedizione</li>
                 </ul>
             </div>
         </div>
