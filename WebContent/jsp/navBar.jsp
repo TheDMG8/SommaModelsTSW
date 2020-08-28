@@ -10,8 +10,7 @@
 	
 </head>
 <body>
-<img class="upperPage" src="pictures/px1.png">
- 
+
  <nav class="navbar navbar-inverse">
   <div class="container">
       <!-- Voci del menù -->
@@ -36,14 +35,18 @@
             <li><a href="#">Assistenza</a></li>
             <li><a href="#">Contatti</a></li> 
               
-         </ul>
+       
           
-          <ul class="nav navbar-nav navbar-right">
             
-             <li><a href="login.jsp">Accedi</a></li>
-                  <li><a href="Carrello.jsp">Carrello</a></li>
-          </ul>
-             
+            
+                
+          <li>
+           <form class="form-inline right" action="<%=response.encodeURL("./SearchControl?search=")%>" method="GET">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Cerca...">
+                    <button class="btn btn-success" type="submit">Search</button>
+            </form>
+            </li>
+         </ul>
       </div>
   </div>
 
