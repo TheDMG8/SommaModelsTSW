@@ -14,7 +14,7 @@ function FormValidation(){
 
 	
 if(allLet(unome))
-{
+{ 
 if(allLett(ucognome))
 {
 if(allLette(usesso))
@@ -153,3 +153,5 @@ function allLett(ucognome){
 					  return true;
 						  }
 }
+
+		//stammpare a schermo errore se non rispetti i tipi durante l'inserimento.
