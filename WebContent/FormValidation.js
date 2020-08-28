@@ -43,7 +43,8 @@ if(password_validation(password,7,12))
 }
 }
 }
-return false;
+return false; 
+
 
 }
 function allLet(unome){ 
