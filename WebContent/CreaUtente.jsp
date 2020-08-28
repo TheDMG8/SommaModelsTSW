@@ -23,7 +23,10 @@
    <li><label for="cognome"><b>Cognome</b></label></li>
    <li><input type="text" size="40" name="cognome" ></li>
    <li><label for="sesso"><b>Sesso</b></label></li>
-   <li><input type="text" size="40" name="sesso" ></li>
+   <select name="sesso" id="sesso">
+    <option value="femmina">F</option>
+    <option value="maschio">M</option>
+	</select>
    <li><label for="regione"><b>Regione</b></label></li>
    <li><input type="text" size="40" name="regione"></li>
    <li><label for="citta"><b>Città</b></label></li>

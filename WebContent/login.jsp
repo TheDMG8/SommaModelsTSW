@@ -30,7 +30,7 @@
      
      <input type="hidden" name="action" value="login">
      </div>
-     <p class="message">Not registered? <a href="CreaUtente.jsp">Create an account</a></p>
+    <p class="message">Non sei ancora registrato? <a href="CreaUtente.jsp">Crea un account!</a></p>
     
    </form>
 </body>
