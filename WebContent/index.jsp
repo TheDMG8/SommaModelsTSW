@@ -20,11 +20,17 @@
 </head>
 <body>
 
+<img class="upperPage" src="pictures/px1.png">
+<%if(user == null){ %>
+<%@ include file="jsp/userBar.jsp" %> 
+<% }else{%>
+<div class="userBar">	
+			 <a href="Carrello.jsp"><i class="fa fa-shopping-cart"></i> Carrello</a> 
 
-
-
-
-<%@ include file="jsp/navbar2.jsp" %> 
+           	 <a href="login.jsp"><i class="fa fa-fw fa-user"></i>Bentornato/a <%=nome %> </a>       	
+        </div>
+<%} %>
+<%@ include file="jsp/navBar.jsp" %> 
 
 
 <!-- Carousel (Scorrimento orizzontale) -->

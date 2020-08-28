@@ -7,53 +7,24 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+	<link rel = "stylesheet" href = "CSS/navBar.css" >
 </head>
 <body>
 
- <nav class="navbar navbar-inverse">
-  <div class="container">
-      <!-- Voci del menù -->
-      <div>
-         <ul class="nav navbar-nav">
-         
-             <!-- casetta home -->     
-            <li class="active"><a href="ProductControl">Home</a></li>
-            
-            <!-- DRODoWN MENU -->    
-            <li class="dropdown">
-               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Modellismo Dinamico <span class="caret"></span></a>
-               <ul class="dropdown-menu">
-                 <li><a href="#">Automodelli</a></li>
-                 <li><a href="#">Barche</a></li>
-                 <li><a href="#">Velivoli</a></li>
-               </ul> 
-            </li> <!-- FINE DROPDOWN MENU -->
-            
-            <li><a href="#">Modellismo Statico</a></li>
-            <li><a href="#">Accessori</a></li>
-            <li><a href="#">Assistenza</a></li>
-            <li><a href="#">Contatti</a></li> 
-              
-       
-          
-            
-            
-                
-          <li>
-           <form class="form-inline right" action="<%=response.encodeURL("./SearchControl?search=")%>" method="GET">
+<div class="navbar">
+  	<a class="active" href="index.jsp"><i class="fa fa-fw fa-home"></i> Home</a> 
+ 	<a href="ProductView.jsp">M.Statico</a> 
+ 	<a href="modellismoDinamico.jsp"> M.Dinamico</a> 
+  	<a href="ProductView.jsp"> Accessori</a>
+	<a href="#">Assistenza</a>
+	<a href="#"> Contatti</a>
+    <ul class="search ml-auto">
+            <form class="form-inline right" action="<%=response.encodeURL("./SearchControl?search=")%>" method="GET">
                     <input class="form-control mr-sm-2" type="text" placeholder="Cerca...">
                     <button class="btn btn-success" type="submit">Search</button>
             </form>
-            </li>
-         </ul>
-      </div>
-  </div>
-
- </nav>
-
-
-
+        </ul>
+    </div>
 </body>
 
 </html>
