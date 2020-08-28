@@ -27,19 +27,22 @@
       <a class="nav-link" href="Index.jsp">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="ProductView.jsp">M.Statico</a>
+      <a class="nav-link" href="modellismoStatico.jsp">M.Statico</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="modellismoDinamico.jsp">M.Dinamico</a>
     </li>
      <li class="nav-item">
-      <a class="nav-link" href="ProductView.jsp">Accessori</a>
+      <a class="nav-link" href="accessori.jsp">Accessori</a>
     </li>
      <li class="nav-item">
-      <a class="nav-link" href="#">Assistenza</a>
+      <a class="nav-link" href="assistenza.jsp">Assistenza</a>
     </li>
      <li class="nav-item">
-      <a class="nav-link" href="#">Contatti</a>
+      <a class="nav-link" href="contattaci.jsp">Contattaci</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="ProductView.jsp">Chi Siamo</a>
     </li>
     </ul>
    </div>

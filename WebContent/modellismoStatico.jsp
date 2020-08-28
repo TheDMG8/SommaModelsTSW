@@ -29,7 +29,7 @@
    </form> 
    
  <%}%>
-	<h1>MODELLISMO DINAMICO</h1>
+	<h1>MODELLISMO STATICO</h1>
 
 
 
