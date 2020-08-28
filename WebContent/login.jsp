@@ -12,12 +12,9 @@
 
 
 </head>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="CSS/navBar.css">
+<link href="CSS/login.css" rel="stylesheet" type="text/css">
 <body>
-<%@ include file="jsp/userBar.jsp" %>
-<%@ include file="jsp/navBarSimple.jsp" %>
+<%@ include file="jsp/navbar3.jsp" %>
  <%if(message != null){%>
  		<h4><%=message %></h4>
  	<%}%>
@@ -33,10 +30,9 @@
      
      <input type="hidden" name="action" value="login">
      </div>
-     <p class="message">Non sei ancora registrato? <a href="CreaUtente.jsp">Crea un account!</a></p>
-    <br>
+     <p class="message">Not registered? <a href="CreaUtente.jsp">Create an account</a></p>
+    
    </form>
-   <%@ include file="jsp/footer.jsp" %>
 </body>
-
+<%@ include file="jsp/footer.jsp" %>
 </html>

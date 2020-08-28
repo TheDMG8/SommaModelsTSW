@@ -4,13 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel = "stylesheet" href = "CSS/navBar.css" >
 <title>Registrazione Utente</title>
 <script src="FormValidation.js"></script>
 </head>
-<%@ include file="jsp/userBar.jsp" %>
-<%@ include file="jsp/navBarSimple.jsp" %>
+<%@ include file="jsp/navbar2.jsp" %>
 <body onload="document.registration.nome.focus();">
 <h1>Benvenuto</h1>
 <p>Compila il form per effettuare la registrazione</p>
@@ -26,10 +23,7 @@
    <li><label for="cognome"><b>Cognome</b></label></li>
    <li><input type="text" size="40" name="cognome" ></li>
    <li><label for="sesso"><b>Sesso</b></label></li>
-   <select name="sesso" id="sesso">
-    <option value="femmina">F</option>
-    <option value="maschio">M</option>
-	</select>
+   <li><input type="text" size="40" name="sesso" ></li>
    <li><label for="regione"><b>Regione</b></label></li>
    <li><input type="text" size="40" name="regione"></li>
    <li><label for="citta"><b>Città</b></label></li>

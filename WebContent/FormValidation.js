@@ -12,10 +12,9 @@ function FormValidation(){
 	var uemail = document.registration.email;
 	var password = document.registration.password;
 
-
 	
 if(allLet(unome))
-{ 
+{
 if(allLett(ucognome))
 {
 if(allLette(usesso))
@@ -44,8 +43,7 @@ if(password_validation(password,7,12))
 }
 }
 }
-return false; 
-
+return false;
 
 }
 function allLet(unome){ 
@@ -154,5 +152,3 @@ function allLett(ucognome){
 					  return true;
 						  }
 }
-
-		//stammpare a schermo errore se non rispetti i tipi durante l'inserimento.

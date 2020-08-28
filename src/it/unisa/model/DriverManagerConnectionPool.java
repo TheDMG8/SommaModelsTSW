@@ -19,7 +19,7 @@ public class DriverManagerConnectionPool {
 			System.out.println("DB driver not found:"+ e.getMessage());
 		} 
 	}
-	/*
+	
 	private static synchronized Connection createDBConnection() throws SQLException {
 		Connection newConnection = null;
 		String ip = "localhost";
@@ -36,24 +36,6 @@ public class DriverManagerConnectionPool {
 		newConnection.setAutoCommit(false);
 		return newConnection;
 	}	
-	*/
-	
-	private static synchronized Connection createDBConnection() throws SQLException {
-		Connection newConnection = null;
-		String ip = "localhost";
-		String port = "3306";
-		String db = "SommaModels";
-		String username = "root";
-		String password = "2522";
-
-		newConnection = DriverManager.getConnection("jdbc:mysql://"+ ip+":"+ 
-					port+"/"+db+"?serverTimezone=UTC", 
-					username, password);
-
-		System.out.println("Create a new DB connection");
-		newConnection.setAutoCommit(false);
-		return newConnection;
-	}
 	
 	public static synchronized Connection getConnection() throws SQLException {
 		Connection connection;

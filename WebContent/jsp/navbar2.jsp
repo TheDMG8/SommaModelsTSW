@@ -10,18 +10,16 @@
       
 <title>Navbar esatta</title>
 <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
-<link rel = "stylesheet" href = "CSS/navBar.css" >
-
 </head>
 <body>
-
+<img src="pictures/px1.png">
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
  
 
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="index.jsp">Home</a>
+      <a class="nav-link" href="Index.jsp">Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="ProductView.jsp">M.Statico</a>
@@ -41,9 +39,15 @@
     </ul>
   <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="login.jsp">Accedi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Carrello.jsp">Carrello</a>
+            </li>
             <form class="form-inline right" action="<%=response.encodeURL("./SearchControl?search=")%>" method="GET">
                     <input class="form-control mr-sm-2" type="text" placeholder="Cerca...">
-                    <button class="btn btn-success"  type="submit">Search</button>
+                    <button class="btn btn-success" type="submit">Search</button>
             </form>
         </ul>
     </div>

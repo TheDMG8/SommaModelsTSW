@@ -7,7 +7,7 @@ public class UtenteBean {
 	String cognome;
 	String sesso;
 	String regione;
-	String città;
+	String citta;
 	String provincia;
 	String via;
 	int numCivico;
@@ -21,7 +21,7 @@ public class UtenteBean {
 		cognome= "";
 		sesso= "";
 		regione= "";
-		città= "";
+		citta= "";
 		provincia= "";
 		via= "";
 		numCivico=0;
@@ -71,11 +71,11 @@ public class UtenteBean {
 	}
 
 	public String getCitta() {
-		return città;
+		return citta;
 	}
 
 	public void setCitta(String citta) {
-		this.città = citta;
+		this.citta = citta;
 	}
 
 	public String getProvincia() {

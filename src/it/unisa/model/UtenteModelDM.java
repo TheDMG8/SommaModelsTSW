@@ -110,7 +110,7 @@ public class UtenteModelDM implements UtenteModel<UtenteBean> {
 		PreparedStatement preparedStatement = null;
 		
 		String insertSQL="INSERT INTO utente" +
-		         "(nome,cognome,sesso,regione,città,provincia,via,numCivico,cellulare,email,psswrd) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
+		         "(nome,cognome,sesso,regione,citta,provincia,via,numCivico,cellulare,email,psswrd) VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 		       
 		try {
 			connection = DriverManagerConnectionPool.getConnection();
