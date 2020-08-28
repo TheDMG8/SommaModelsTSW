@@ -12,9 +12,12 @@
 
 
 </head>
-<link href="CSS/login.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="CSS/navBar.css">
 <body>
-<%@ include file="jsp/navbar3.jsp" %>
+<%@ include file="jsp/userBar.jsp" %>
+<%@ include file="jsp/navBarSimple.jsp" %>
  <%if(message != null){%>
  		<h4><%=message %></h4>
  	<%}%>

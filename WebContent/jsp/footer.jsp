@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 
-<link href="CSS/footer.css" rel="stylesheet" type="text/css">
+<link href="CSS/footer.css" rel="stylesheet" ">
 </head>
 <body>
 <div class=foo>

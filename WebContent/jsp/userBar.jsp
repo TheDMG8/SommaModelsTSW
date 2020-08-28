@@ -12,6 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+		<img class="upperPage" src="pictures/px1.png">
 		<div class="userBar">	
 			 <a href="Carrello.jsp"><i class="fa fa-shopping-cart"></i> Carrello</a> 
 

@@ -19,7 +19,8 @@
 
 <title>CARRELLO</title>
 </head>
-<%@ include file="jsp/navbar2.jsp" %>
+<%@ include file="jsp/userBar.jsp" %>
+<%@ include file="jsp/navBar.jsp" %>
 <body>
 <div class="container">
 	<h1>Carrello</h1>

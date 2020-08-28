@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "stylesheet" href = "CSS/navBar.css" >
 <title>Registrazione Utente</title>
 <script src="FormValidation.js"></script>
 </head>
-<%@ include file="jsp/navbar2.jsp" %>
+<%@ include file="jsp/userBar.jsp" %>
+<%@ include file="jsp/navBarSimple.jsp" %>
 <body onload="document.registration.nome.focus();">
 <h1>Benvenuto</h1>
 <p>Compila il form per effettuare la registrazione</p>
