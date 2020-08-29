@@ -10,9 +10,10 @@
       
 <title>Navbar esatta</title>
 <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+<link rel = "stylesheet" href = "CSS/navBar.css">
 </head>
 <body>
-<img src="pictures/px1.png">
+<img class="upperPic" src="pictures/px1.png">
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
  
 

@@ -13,6 +13,7 @@
 
 </head>
 <link href="CSS/login.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <body>
 <%@ include file="jsp/navbar3.jsp" %>
  <%if(message != null){%>

@@ -42,11 +42,11 @@
       <a class="nav-link" href="contattaci.jsp">Contattaci</a>
     </li>
      <li class="nav-item">
-      <a class="nav-link" href="ProductView.jsp">Chi Siamo</a>
+      <a class="nav-link" href="ProductView.jsp">ChiSiamo</a>
     </li>
     </ul>
    </div>
-  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+  	<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="login.jsp">Accedi</a>
@@ -54,16 +54,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="Carrello.jsp">Carrello</a>
             </li>
-            <li><form class="form-inline right" action="<%=response.encodeURL("./SearchControl?search=")%>" method="GET">
+            <li class="nav-item" >
+                <form class="form-inline right" action="<%=response.encodeURL("./SearchControl?search=")%>" method="GET">
                     <input class="form-control mr-sm-2" type="text" placeholder="Cerca...">
                     <button class="btn btn-success" type="submit">Search</button>
             	</form>
             </li>
         </ul>
     </div>
- 
-  
- 
+
 </nav>
+
 </body>
 </html>
