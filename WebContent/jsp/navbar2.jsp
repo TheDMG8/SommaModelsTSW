@@ -54,10 +54,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="Carrello.jsp">Carrello</a>
             </li>
-            <form class="form-inline right" action="<%=response.encodeURL("./SearchControl?search=")%>" method="GET">
+            <li><form class="form-inline right" action="<%=response.encodeURL("./SearchControl?search=")%>" method="GET">
                     <input class="form-control mr-sm-2" type="text" placeholder="Cerca...">
                     <button class="btn btn-success" type="submit">Search</button>
-            </form>
+            	</form>
+            </li>
         </ul>
     </div>
  
