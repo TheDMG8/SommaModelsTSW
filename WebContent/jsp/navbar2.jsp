@@ -30,7 +30,7 @@
       <a class="nav-link" href="Index.jsp">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="modellismoStatico.jsp">M.Statico</a>
+      <a class="nav-link" href="modellismoStatico">M.Statico</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="modellismoDinamico.jsp">M.Dinamico</a>

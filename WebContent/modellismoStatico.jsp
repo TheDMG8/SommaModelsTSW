@@ -1,3 +1,4 @@
+<%@page import="it.unisa.model.ProductBean"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" import="java.util.*,it.unisa.model.UtenteBean" %>
     <%
@@ -7,6 +8,9 @@
    	String nome="";
    	if(user != null){nome= user.getNome();}
     
+   	ServletContext ctx=request.getServletContext();
+   	List<ProductBean> collProd= (List<ProductBean>)ctx.getAttribute("prodottiStatici");
+   	
     %>
 <!DOCTYPE html>
 <html>
@@ -31,6 +35,18 @@
  <%}%>
 	<h1>MODELLISMO STATICO</h1>
 	
+	<% 
+		for(int i=0; i < collProd.size();i++){
+		
+		
+		
+	%>
+	
+	<%=collProd.get(i).toString() %>
+	
+	<% 
+		}
+	%>
 	
 
 

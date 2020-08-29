@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.Collection;
 /*interfaccia che ci nasconde il codice sql va implementata*/
 /*implementa i metodi CRUD usando i generic per qualsiasi bean*/
+
 public interface ProductModel<T> {
    
 	public T doRetrieveByKey(String idProdotto)throws SQLException;

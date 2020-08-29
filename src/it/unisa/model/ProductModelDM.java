@@ -4,8 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 
 import it.unisa.model.DriverManagerConnectionPool;
 
@@ -106,13 +108,13 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 	}
 
 	@Override
-	public Collection<ProductBean> doRetrieveAllStatico(String order) throws SQLException {
+	public List<ProductBean> doRetrieveAllStatico(String order) throws SQLException {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
-		Collection<ProductBean> prodotti = new LinkedList<ProductBean>();
+		List<ProductBean> prodotti = new LinkedList<ProductBean>();
 		
-		String selectSQL = "SELECT *FROM prodotto WHERE tipoCategoria=statico";
+		String selectSQL = "SELECT *FROM prodotto WHERE tipoCategoria='statico' ";
 		
 		if (order != null && !order.equals("")) {
 			selectSQL += "ORDER BY" + order;
