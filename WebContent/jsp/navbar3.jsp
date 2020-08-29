@@ -13,7 +13,10 @@
 <link rel = "stylesheet" href = "CSS/navBar.css">
 </head>
 <body>
-<img class="upperPic" src="pictures/px1.png">
+
+<a href="Index.jsp">
+  <img class="upperPic" src="pictures/px1.png">
+</a>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
  
 

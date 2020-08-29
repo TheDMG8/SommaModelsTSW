@@ -22,7 +22,7 @@
     <img class="card-img-top" src="pictures/staticanave.jpg" alt="Card image" style="width:100%">
     <div class="card-img-overlay">
       <h4 class="card-title">STATICO</h4>
-      <a href="ProductView.jsp" class="btn btn-secondary" style="margin-left:5px;">Catalogo</a>
+      <a href="modellismoStatico.jsp" class="btn btn-secondary" style="margin-left:5px;">Catalogo</a>
     </div>
   </div>
 
@@ -30,7 +30,7 @@
     <img class="card-img-top" src="pictures/accessori.jpg" alt="Card image" style="width:100%">
     <div class="card-img-overlay">
       <h4 class="card-title">ACCESSORI</h4>
-      <a href="ProductView.jsp" class="btn btn-secondary">Catalogo</a>
+      <a href="accessori.jsp" class="btn btn-secondary">Catalogo</a>
     </div>
 </div>
 </div>
