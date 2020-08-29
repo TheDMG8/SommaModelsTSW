@@ -49,7 +49,7 @@
         <div class="row" style="font-size:10px;">
             <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="pull-left">
-                    <p><i class="fa fa-copyright"></i> 2020 themvmdesign</p>
+                    <p><i class="fa fa-copyright"></i> 2020 dimvujmo</p>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-6">
