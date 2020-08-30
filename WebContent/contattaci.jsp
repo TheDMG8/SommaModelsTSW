@@ -30,7 +30,12 @@
    
  <%}%>
 	<h1>CONTATTACI</h1>
-
+	<p> INDIRIZZO: 		Via Giovanni Paolo II, 132 - 84084 Fisciano (SA) <br>
+		TELEFONO: 		08187800 <br>
+		CELLULARE: 		32244466 <br>
+		PARTITA IVA:	0023455555 <br>
+		E-MAIL:			sommamodels@gmail.com <br>
+	</p>
 
 
 </body>
