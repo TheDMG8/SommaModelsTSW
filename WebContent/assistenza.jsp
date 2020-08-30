@@ -49,13 +49,13 @@
 			</select>
 			
 		<li><label for="problema"><b>Descrivi il tuo problema: </b></label></li>
-		<input type="text" size="100" name="descrizioneProblema"> 
+		<textarea id=problma name="problema" rows="4" col="50"> </textarea>
 	</ul>
 	</form>
 
 	 <input type ="submit" value="Inviaci i dati">
 	 
-	<li><p><b> Ti contattiamo noi il prima possibile! </b></p> </li>
+	<br><li><p> Ti contattiamo noi il prima possibile! </p> </li>
 
 
 </body>
