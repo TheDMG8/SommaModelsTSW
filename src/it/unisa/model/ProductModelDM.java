@@ -158,6 +158,110 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 		return prodotti;
 	}
 	
+	/*lista prodotti dinamici*/
+	@Override
+	public Collection<ProductBean> doRetrieveAllDinamico(String order) throws SQLException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		Collection<ProductBean> prodotti = new LinkedList<ProductBean>();
+		
+		String selectSQL = "SELECT *FROM prodotto WHERE tipoCategoria= 'Radiocomandato' ";
+		
+		if (order != null && !order.equals("")) {
+			selectSQL += "ORDER BY" + order;
+		}
+		
+		try {
+			connection = DriverManagerConnectionPool.getConnection();
+			preparedStatement = connection.prepareStatement (selectSQL);
+			
+			System.out.println("doRetrieveAll:" + preparedStatement.toString());
+ResultSet rs = preparedStatement.executeQuery();
+			
+			
+			while(rs.next()) {
+				
+				ProductBean bean = new ProductBean();
+				
+				bean.setIdProdotto(rs.getInt("idProdotto"));
+				bean.setNomeProdotto(rs.getString("nomeProdotto"));
+				bean.setMarcaProdotto(rs.getString("marcaProdotto"));
+				bean.setTipoCategoria(rs.getString("tipoCategoria"));
+				bean.setTipoProdotto(rs.getString("tipoProdotto"));
+				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
+				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
+				bean.setImmagine(rs.getString("immagine"));
+				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
+				
+				
+				prodotti.add(bean);
+				
+			}
+		}finally {
+			try {
+			if(preparedStatement != null )
+				preparedStatement.close();
+			}finally {
+				
+				DriverManagerConnectionPool.releaseConnection(connection);
+		   }
+		}
+		return prodotti;
+	}
+
+	@Override
+	public Collection<ProductBean> doRetrieveAllAccessori(String order) throws SQLException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		Collection<ProductBean> prodotti = new LinkedList<ProductBean>();
+		
+		String selectSQL = "SELECT *FROM prodotto WHERE tipoCategoria= 'accessori' ";
+		
+		if (order != null && !order.equals("")) {
+			selectSQL += "ORDER BY" + order;
+		}
+		
+		try {
+			connection = DriverManagerConnectionPool.getConnection();
+			preparedStatement = connection.prepareStatement (selectSQL);
+			
+			System.out.println("doRetrieveAll:" + preparedStatement.toString());
+ResultSet rs = preparedStatement.executeQuery();
+			
+			
+			while(rs.next()) {
+				
+				ProductBean bean = new ProductBean();
+				
+				bean.setIdProdotto(rs.getInt("idProdotto"));
+				bean.setNomeProdotto(rs.getString("nomeProdotto"));
+				bean.setMarcaProdotto(rs.getString("marcaProdotto"));
+				bean.setTipoCategoria(rs.getString("tipoCategoria"));
+				bean.setTipoProdotto(rs.getString("tipoProdotto"));
+				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
+				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
+				bean.setImmagine(rs.getString("immagine"));
+				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
+				
+				
+				prodotti.add(bean);
+				
+			}
+		}finally {
+			try {
+			if(preparedStatement != null )
+				preparedStatement.close();
+			}finally {
+				
+				DriverManagerConnectionPool.releaseConnection(connection);
+		   }
+		}
+		return prodotti;
+	}
+	
+	
 	@Override
 	public void doSave(ProductBean prodotto) throws SQLException {
 		Connection connection = null;

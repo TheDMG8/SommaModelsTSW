@@ -1,40 +1,71 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.util.*,it.unisa.model.UtenteBean" %>
-    <%
-    
-    UtenteBean user= (UtenteBean)request.getSession().getAttribute("user");
-  //Recupero dati utente dalla session, se presenti.
-   	String nome="";
-   	if(user != null){nome= user.getNome();}
-    
+    pageEncoding="UTF-8" import="java.util.*, it.unisa.model.ProductBean, it.unisa.model.Carrello, it.unisa.model.UtenteBean"%>
+ <%
+     Collection<?> prodotti = (Collection<?>) request.getAttribute("prodotti");
+     
+  	String error = (String)request.getAttribute("error");
+		
+     if(prodotti == null ) {
+  		response.sendRedirect(response.encodeRedirectURL("./accessoriControl"));
+  		return;
+		}
+		
+     
+     ProductBean prodotto = (ProductBean) request.getAttribute("prodotto");
+		
+  
+ 	 	
+ 	
     %>
+    
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
-<title>Somma Models</title>
+
+<title>Accessori</title>
+<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <body>
+
 <%@ include file="jsp/navbar2.jsp" %>
+<div class= "container">
+ <div class="row">
+<% 
+  /*era prodotto*/
+    if(prodotti != null && prodotti.size()>0){
+    	
+    	Iterator<?> it= prodotti.iterator();
+    	while(it.hasNext()){
+    	ProductBean bean = (ProductBean)it.next();
+    	
+  %>
+ 
+  <!-- product grid -->
+<div class="col-md-4 product-grid">
+ <div class="image">
+  <a href="#">
+    <img src="pictures/aereo.jpg" class="w-100">
+    <div class="overlay">
+       <div class="detail" href="#">View Details</div>
+    </div>
+  </a>
+ </div>
+ <h4 class="text-center"><%= bean.getNomeProdotto() %></h4>
+ <h5 class="text-center"><%= bean.getPrezzoProdotto() %>$</h5>
+ <a href="<%= response.encodeURL("accessoriControl?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn">BUY</a>
+</div>
 
-
-	<% if(!nome.isBlank()){ %> <br><h4>Bentornato/a <%=nome %></h4><br>
-
-   <form action="Logout" method="get" > 
-     <input type="submit" value="Logout"/>
-   </form> 
-   
- <%}%>
-	<h1>ACCESSORI</h1>
-
-
-
+<% }
+  }else{ %>
+ 
+  <% } %>
+</div>
+</div>
+<!-- fine product grid -->
+<br>
 </body>
-
 <%@ include file="jsp/footer.jsp" %>
-
 </html>

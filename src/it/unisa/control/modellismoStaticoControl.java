@@ -3,7 +3,6 @@ package it.unisa.control;
 import java.io.IOException;
 import java.sql.SQLException;
 
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,21 +15,19 @@ import it.unisa.model.ProductBean;
 import it.unisa.model.ProductModelDM;
 
 
-@WebServlet("/modellismoDinamicoControl")
-public class modellismoDinamicoControl extends HttpServlet {
+@WebServlet("/modellismoStaticoControl")
+public class modellismoStaticoControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
 	static ProductModelDM model = new ProductModelDM();
 	
-    public modellismoDinamicoControl() {
+    public modellismoStaticoControl() {
         super();
-      
+        
     }
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
+
 		/*gestire il carrello*/
 			/*verificare la presenza*/
 			@SuppressWarnings("unchecked")
@@ -87,21 +84,20 @@ public class modellismoDinamicoControl extends HttpServlet {
 		
 		try {
 			request.removeAttribute("prodotti");
-			request.setAttribute("prodotti", model.doRetrieveAllDinamico(""));
+			request.setAttribute("prodotti", model.doRetrieveAllStatico(""));
 		}catch(SQLException e){
 			System.out.println("Error:" + e.getMessage());
 			request.setAttribute("error", e.getMessage());
 		}
 		
 		
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/modellismoDinamico.jsp");
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/modellismoStatico.jsp");
 		dispatcher.forward(request, response);
-		
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
