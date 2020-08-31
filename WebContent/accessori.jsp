@@ -55,7 +55,7 @@
 <div class="col-md-4 product-grid">
  <div class="image">
   <a href="#">
-    <img src="pictures/aereo.jpg" class="w-100">
+    <img src=<%= bean.getImmagine() %> class="w-100">
     <div class="overlay">
        <div class="detail" href="#">View Details</div>
     </div>

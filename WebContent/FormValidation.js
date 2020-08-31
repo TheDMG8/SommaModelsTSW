@@ -92,7 +92,7 @@ function allLett(ucognome){
 			  if(ucittà.value.match(letters)){
 			    return true;
 			   }else{
-			     alert('Città must have alphabet characters only');
+			     alert('Compila il campo città');
 			      ucittà.focus();
 			      return false;
 			      }
