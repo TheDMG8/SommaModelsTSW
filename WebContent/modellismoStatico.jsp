@@ -38,7 +38,11 @@
 <body>
 
 <%@ include file="jsp/navbar2.jsp" %>
+
 <br><br>
+
+
+
 <div class= "container">
  <div class="row">
 <% 
