@@ -55,8 +55,8 @@
   </a>
  </div>
  <h4 class="text-center"><%= bean.getNomeProdotto() %></h4>
- <h5 class="text-center"><%= bean.getPrezzoProdotto() %>$</h5>
- <a href="<%= response.encodeURL("modellismoStaticoControl?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn">BUY</a>
+ <h5 class="text-center"><%= bean.getPrezzoProdotto() %>&#8364;</h5>
+ <a href="<%= response.encodeURL("modellismoStaticoControl?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn">Compra</a>
 </div>
 
 <% }
