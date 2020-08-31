@@ -22,6 +22,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+.col-md-4{ border: 1px solid black;
+}
+
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
@@ -32,6 +37,8 @@
 <body>
 
 <%@ include file="jsp/navbar2.jsp" %>
+<br>
+<br>
 <div class= "container">
  <div class="row">
 <% 

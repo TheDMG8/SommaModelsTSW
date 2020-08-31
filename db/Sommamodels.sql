@@ -57,7 +57,9 @@ CREATE TABLE contiene(
     idProdottoC int NOT NULL REFERENCES prodotto(idProdotto) ON UPDATE CASCADE ON DELETE RESTRICT,
     PRIMARY KEY(idOrdineC,idProdottoC)
 );
-insert into utente(nome, cognome, sesso, regione, citta, provincia, via, numCivico, cellulare, email, psswrd, isAdmin) values ('marianna', 'vujko', 'femmina', 'toscana', 'lucca', 'lucca', 'di patrizio', 3, 3456789876, 'admin@admin', 'admin', 'true');
+
+insert into utente (nome, cognome, sesso, regione, citta, provincia, via, numCivico, cellulare, email, psswrd) values('Giovanni','Di Mauro','M','Campania','Marigliano','Napoli','Via Clemente Matrisciano',54,3773,'dimy1996@live.it','password');
+insert into utente (nome, cognome, sesso, regione, citta, provincia, via, numCivico, cellulare, email, psswrd, isAdmin) values ('marianna', 'vujko', 'femmina', 'toscana', 'lucca', 'lucca', 'di patrizio', 3, 3456789876, 'admin@admin', 'admin', 'true');
 insert into prodotto(nomeProdotto,marcaProdotto,tipoCategoria,tipoProdotto,descrizioneProdotto,prezzoProdotto,numPezziDisponibili) values ('BUGGY RAPTOR 5XB 1/5 HYMOTO', 'HYMOTO', 'Radiocomandato', 'Modello a scoppio', '4x4, motore 32cc, 2.4GHz', 865.00, 3) ; 
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('TRUGGY DESERT KING HIMOTO 1/5','HIMOTO','Radiocomandato','Scoppio','4wd-telecomando con sistema 2.4GHz con ricerca automatica della frequenza.',940.00,3);
 insert into prodotto (nomeProdotto, marcaProdotto, tipoCategoria, tipoProdotto, descrizioneProdotto, prezzoProdotto, numPezziDisponibili) values('Rock Crawler 1/10', 'HYMOTO', 'Radiocomandato', 'Elettrico', '-',490.00, 1);

@@ -28,10 +28,17 @@
 <title>Modellismo Statico</title>
 <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+<style type="text/css">
+.col-md-4{ border: 1px solid black;
+}
+
+</style>
 </head>
 <body>
 
 <%@ include file="jsp/navbar2.jsp" %>
+<br><br>
 <div class= "container">
  <div class="row">
 <% 

@@ -36,9 +36,9 @@ public class DriverManagerConnectionPool {
 		newConnection.setAutoCommit(false);
 		return newConnection;
 	}	
-	*/
 	
 	
+	/*
 	private static synchronized Connection createDBConnection() throws SQLException {
 		Connection newConnection = null;
 		String ip = "localhost";
@@ -56,14 +56,14 @@ public class DriverManagerConnectionPool {
 		return newConnection;
 	}
 	
-	/*
+	*/
 	private static synchronized Connection createDBConnection() throws SQLException {
 		Connection newConnection = null;
 		String ip = "localhost";
 		String port = "3306";
 		String db = "SommaModels";
-		String username = "root";
-		String password = "070396";
+		String username = "tsw";
+		String password = "adminadmin";
 
 		newConnection = DriverManager.getConnection("jdbc:mysql://"+ ip+":"+ 
 					port+"/"+db+"?serverTimezone=UTC", 
@@ -72,7 +72,7 @@ public class DriverManagerConnectionPool {
 		System.out.println("Create a new DB connection");
 		newConnection.setAutoCommit(false);
 		return newConnection;
-	} */	
+	} 
 	
 	
 	public static synchronized Connection getConnection() throws SQLException {
