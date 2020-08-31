@@ -17,7 +17,7 @@
 		<nav>
 			<ul>
 				<li><a href="">Home</a></li>
-				<li><a href="">Add Product</a></li>
+				<li><a href="addProduct.jsp">Add Product</a></li>
 				<li><a href="#">Settings</a></li>
 				<li><a href="#">Pages</a></li>
 			</ul>
@@ -64,7 +64,6 @@
 	 		<label for="fileupload">Immagine</label>
 	 		<input type="file" name="immagine" required>
 	 	</div>
-	 	
 	 	
 	 	<div class="signup-group">
 	 		<label>Pezzi Disponibili</label>

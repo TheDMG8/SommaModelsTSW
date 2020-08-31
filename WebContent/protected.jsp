@@ -22,7 +22,7 @@ if (adminRoles != true)
 <h1>Welcome to the Protected Page</h1>
 Congratulations. You have accessed a protected document.
 <br><br>
-
+<a href="admin/addProduct.jsp">aggiungi</a>
 
 <form action="Logout" method="get" > 
      <input type="submit" value="Logout"/>
