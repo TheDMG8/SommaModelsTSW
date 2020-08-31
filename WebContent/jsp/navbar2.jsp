@@ -21,6 +21,7 @@
 <link rel = "stylesheet" href = "CSS/navBar.css">
 <script src="https://kit.fontawesome.com/cf835fc8f8.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
 <a href="Index.jsp">
@@ -61,12 +62,12 @@
   	<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
         <% if(!nome.isBlank()){ %> 
-            <li class="nav-item">
-                <a class="nav-link" href="userPersonalPage.jsp"><i class="fas fa-car-side"></i> Profilo</a>
+            <li class="nav-item" >
+                <a class="nav-link" href="userPersonalPage.jsp" style="color:#ff6666;"><i class="fas fa-car-side"></i> Profilo</a>
             </li>
        <%}else{ %>
             <li class="nav-item">
-                <a class="nav-link" href="login.jsp">Accedi</a>
+                <a class="nav-link" href="login.jsp" style="color:#33ccff;" >Accedi</a>
             </li>
        <%} %>
             <li class="nav-item">

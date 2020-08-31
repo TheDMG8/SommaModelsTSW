@@ -14,8 +14,13 @@
 </head>
 <link href="CSS/login.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel = "stylesheet" href = "CSS/navBar.css">
 <body>
-<%@ include file="jsp/navbar3.jsp" %>
+
+<a href="Index.jsp">
+  <img class="upperPic" src="pictures/px1.png">
+</a>
+
  <%if(message != null){%>
  		<h4><%=message %></h4>
  	<%}%>
@@ -27,9 +32,9 @@
      
      <label for="password"><b>Password</b></label><br>
      <input type="password" name="password" placeholder ="password" required>
-     <button type="submit" value="Login">Login</button>
+     <button type="submit" value="Login" style="background-color:#1a8cff;">Login</button>
      
-     <input type="hidden" name="action" value="login">
+     <input type="hidden" name="action" value="login" > 
      </div>
     <p class="message">Non sei ancora registrato? <a href="CreaUtente.jsp">Crea un account!</a></p>
     

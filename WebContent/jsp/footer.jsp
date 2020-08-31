@@ -13,15 +13,15 @@
 <br>
 <br>
 
-<div class="fotter">
+<div class="footer">
 <div class="foo">
     <div class="card mx-5" >
         <div class="row mb-4 ">
             <div class="col-md-4 col-sm-11 col-xs-11">
                 <div class="footer-text pull-left">
                     <div class="d-flex">
-                        <h1 class="font-weight-bold mr-2 px-3" style="color:blue; background-color:red"> SM </h1>
-                        <h1 style="color: blue">SommaModels</h1>
+                        <h1 class="font-weight-bold mr-2 px-3" style="color:#1a8cff; background-color:red"> SM </h1>
+                        <h1 style="color: #1a8cff">SommaModels</h1>
                     </div>
                     <p class="card-text">Sono i sogni a far vivere l'uomo. Il destino è in buona parte nelle nostre mani, sempre che sappiamo chiaramente quel che vogliamo e siamo decisi ad ottenerlo.</p>
                     <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
