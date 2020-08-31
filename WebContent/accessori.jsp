@@ -21,6 +21,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+.col-md-4{ border: 1px solid black;
+}
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
@@ -31,6 +35,10 @@
 <body>
 
 <%@ include file="jsp/navbar2.jsp" %>
+<br><br>
+
+
+<br><br>
 <div class= "container">
  <div class="row">
 <% 
@@ -54,8 +62,8 @@
   </a>
  </div>
  <h4 class="text-center"><%= bean.getNomeProdotto() %></h4>
- <h5 class="text-center"><%= bean.getPrezzoProdotto() %>$</h5>
- <a href="<%= response.encodeURL("accessoriControl?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn">BUY</a>
+ <h5 class="text-center"><%= bean.getPrezzoProdotto() %>&#8364;</h5>
+ <a href="<%= response.encodeURL("accessoriControl?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn">Compra</a>
 </div>
 
 <% }

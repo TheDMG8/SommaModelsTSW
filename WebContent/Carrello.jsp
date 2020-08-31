@@ -16,7 +16,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<style type="text/css">
+.well{ border: 1px solid black;
+		padding: 15px;
+}
 
+</style>
 <title>CARRELLO</title>
 </head>
 <%@ include file="jsp/navbar2.jsp" %>

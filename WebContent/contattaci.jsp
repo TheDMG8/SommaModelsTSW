@@ -1,13 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" import="java.util.*,it.unisa.model.UtenteBean" %>
-    <%
     
-    UtenteBean user= (UtenteBean)request.getSession().getAttribute("user");
-  //Recupero dati utente dalla session, se presenti.
-   	String nome="";
-   	if(user != null){nome= user.getNome();}
-    
-    %>
+  
 <!DOCTYPE html>
 <html>
 <head>

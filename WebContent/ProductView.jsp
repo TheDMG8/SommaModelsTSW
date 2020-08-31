@@ -19,9 +19,7 @@
  	/*controllo dell'esistenza del prodotto*/
  	ProductBean prodotto = (ProductBean) request.getAttribute("prodotto");
  	
- 	UtenteBean user= (UtenteBean)request.getSession().getAttribute("user"); //Recupero dati utente dalla session, se presenti.
- 	String nome="";
- 	if(user != null){nome= user.getNome();}
+ 	
 
     %>
 <!DOCTYPE html>

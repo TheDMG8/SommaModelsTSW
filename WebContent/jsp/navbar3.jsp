@@ -37,8 +37,12 @@
      <li class="nav-item">
       <a class="nav-link" href="#">Assistenza</a>
     </li>
+      
      <li class="nav-item">
-      <a class="nav-link" href="#">Contatti</a>
+      <a class="nav-link" href="contattaci.jsp">Contattaci</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="ProductView.jsp">ChiSiamo</a>
     </li>
     </ul>
   <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
