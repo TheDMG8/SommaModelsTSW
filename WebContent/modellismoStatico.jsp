@@ -4,7 +4,7 @@
      <%
      Collection<?> prodotti = (Collection<?>) request.getAttribute("prodotti");
      
-  	String error = (String)request.getAttribute("error");
+  	 String error = (String)request.getAttribute("error");
 		
      if(prodotti == null ) {
   		response.sendRedirect(response.encodeRedirectURL("./modellismoStaticoControl"));

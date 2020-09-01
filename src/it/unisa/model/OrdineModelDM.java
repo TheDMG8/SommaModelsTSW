@@ -49,6 +49,56 @@ public class OrdineModelDM implements OrdineModel<OrdineBean> {
 		}
 		return bean;
 	}
+	
+	@Override
+	public Collection<OrdineBean> doRetrieveByKeyUser(String idUser) throws SQLException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		@SuppressWarnings("unchecked")
+		Collection<OrdineBean> ordini = (Collection<OrdineBean>) new OrdineBean();
+		
+		String selectSQL = "SELECT o.idOrdine,o. dataOrdine,o.regione,o.citta,o.provincia,o.via,o.numCivico,o.statoOrdine\r\n" + 
+							"FROM ordine as o ,utente as u \r\n" + 
+							"WHERE  o.idOrdine=u.idOrdineCliente&& u.idUtente = ?";
+		 
+		try {
+			connection = DriverManagerConnectionPool.getConnection();
+			preparedStatement = connection.prepareStatement (selectSQL);
+			preparedStatement.setInt(1, Integer.parseInt(idUser) );
+			
+			System.out.println("doRetrieveByKey:" + preparedStatement.toString());
+			ResultSet rs = preparedStatement.executeQuery();
+			
+			while(rs.next()) {
+				
+				OrdineBean bean = new OrdineBean();
+				
+				bean.setIdOrdine(rs.getInt("idOrdine"));
+				bean.setDataOrdine(rs.getString("dataOrdine"));
+				bean.setRegione(rs.getString("regione"));
+				bean.setCitta(rs.getString("citta"));
+				bean.setProvincia(rs.getString("provincia"));
+				bean.setVia(rs.getString("via"));
+				bean.setNumCivico(rs.getInt("numCivico"));
+				bean.setStatoOrdine(rs.getString("statoOrdine"));
+				
+				ordini.add(bean);
+				
+			}
+			
+		}finally {
+			try {
+			if(preparedStatement != null )
+				preparedStatement.close();
+			}finally {
+				
+				DriverManagerConnectionPool.releaseConnection(connection);
+		   }
+		}
+		System.out.println("Termostato");
+		return ordini;
+	}
 
 	@Override
 	public Collection<OrdineBean> doRetrieveAll(String order) throws SQLException {
@@ -98,6 +148,8 @@ public class OrdineModelDM implements OrdineModel<OrdineBean> {
 		}
 		return ordini;
 	}
+	
+	
 
 	@Override
 	public void doSave(OrdineBean ordine) throws SQLException {
