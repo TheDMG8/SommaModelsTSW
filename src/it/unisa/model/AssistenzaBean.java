@@ -4,13 +4,26 @@ public class AssistenzaBean {
 	String categoria;
 	String orario;
 	String problema;
+	String email;
 
 
 public AssistenzaBean() {
 	categoria="";
 	orario="";
 	problema="";
+	email="";
 }
+
+
+public String getEmail() {
+	return email;
+}
+
+
+public void setEmail(String email) {
+	this.email = email;
+}
+
 
 public String getCategoria() {
 	return categoria;

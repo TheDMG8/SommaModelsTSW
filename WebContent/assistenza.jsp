@@ -15,18 +15,16 @@
 <%@ include file="jsp/navbar2.jsp" %>
 
 
-	<% if(!nome.isBlank()){ %> <br><h4>Bentornato/a <%=nome %></h4><br>
-
-   <form action="Logout" method="get" > 
-     <input type="submit" value="Logout"/>
-   </form> 
-   
- <%}%>
-	<!-- <h3>Bentornato!</h3> -->
+	<% if(nome.isBlank()){ %> 
+		<h5>Effettua il login per richiedere assistenza!</h5>   
+ <%}else{%>
+	 
+ 
+	
 	<p>Hai bisogno di aiuto? Compila il form e soddisferemo le tue esigenze!</p>
 	
 <!-- creare una classe per l'assistenza -->
-	<form action="AddAssistenza" method= "POST" name="assistenza"  >
+	<form action="AddAssistenza" method= "POST" name="assistenza" >
 	<input type="hidden" name="action" value="assistenza">
 	<ul>
 		<li><label for="categoria"><b>Categoria: </b></label></li>
@@ -51,7 +49,7 @@
 	 
 	<br><li><p> Ti contattiamo noi il prima possibile! </p> </li>
 
-
+ <% }%>
 </body>
 
 <%@ include file="jsp/footer.jsp" %>
