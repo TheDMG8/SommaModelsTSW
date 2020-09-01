@@ -49,7 +49,7 @@ public class AddAssistenza extends HttpServlet {
 				}
 					}
 			
-				}catch(SQLException | NumberFormatException e) {
+				}catch(NumberFormatException e) {
 					System.out.println("Error:" + e.getMessage());
 					request.setAttribute("error", e.getMessage());
 				}
@@ -61,3 +61,4 @@ public class AddAssistenza extends HttpServlet {
 				
 	
 	}
+}
