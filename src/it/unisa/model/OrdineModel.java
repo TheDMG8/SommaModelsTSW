@@ -15,5 +15,5 @@ public T doRetrieveByKey(String idOrdine)throws SQLException;
 	
 	public void doDelete(T ordine)throws SQLException;
 
-	Collection<OrdineBean> doRetrieveByKeyUser(String idOrdine) throws SQLException;
+	Collection<OrdineBean> doRetrieveByKeyUser(int idUser) throws SQLException;
 }

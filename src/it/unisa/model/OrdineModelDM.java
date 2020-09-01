@@ -51,12 +51,12 @@ public class OrdineModelDM implements OrdineModel<OrdineBean> {
 	}
 	
 	@Override
-	public Collection<OrdineBean> doRetrieveByKeyUser(String idUser) throws SQLException {
+	public Collection<OrdineBean> doRetrieveByKeyUser(int idUser) throws SQLException {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
 		@SuppressWarnings("unchecked")
-		Collection<OrdineBean> ordini = (Collection<OrdineBean>) new OrdineBean();
+		Collection<OrdineBean> ordini = new LinkedList<OrdineBean>()  ;
 		
 		String selectSQL = "SELECT o.idOrdine,o. dataOrdine,o.regione,o.citta,o.provincia,o.via,o.numCivico,o.statoOrdine\r\n" + 
 							"FROM ordine as o ,utente as u \r\n" + 
@@ -65,7 +65,7 @@ public class OrdineModelDM implements OrdineModel<OrdineBean> {
 		try {
 			connection = DriverManagerConnectionPool.getConnection();
 			preparedStatement = connection.prepareStatement (selectSQL);
-			preparedStatement.setInt(1, Integer.parseInt(idUser) );
+			preparedStatement.setInt(1, idUser );
 			
 			System.out.println("doRetrieveByKey:" + preparedStatement.toString());
 			ResultSet rs = preparedStatement.executeQuery();

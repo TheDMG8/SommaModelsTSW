@@ -1,14 +1,18 @@
 <%@page import="it.unisa.model.ProductBean"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="java.util.*,it.unisa.model.UtenteBean,it.unisa.model.OrdineBean" %>
+    pageEncoding="ISO-8859-1" import="java.util.*,it.unisa.model.UtenteBean ,it.unisa.model.OrdineBean" %>
     <%
 
     
-   	ServletContext ctx=request.getServletContext();
+   	ServletContext ctx= request.getServletContext();
     Collection<OrdineBean> collOrdini= (Collection<OrdineBean>)ctx.getAttribute("ordini");
-   	
+    String error = (String)request.getAttribute("error");
+	
+    
+	
+    
   %>
- 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +28,13 @@
 <body>
 <%@ include file="jsp/navbar2.jsp" %>
 
-
+	<% ctx.setAttribute("User", user); 
+	
+	if(collOrdini == null ) {
+ 		response.sendRedirect(response.encodeRedirectURL("./OrdiniControl"));
+ 		return;
+		}
+	%>
 	
 	<div class="user-div">
    			<form action="Logout" method="get" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Logout"/></form> 
