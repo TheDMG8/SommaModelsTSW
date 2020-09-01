@@ -16,13 +16,6 @@
 <%@ include file="jsp/navbar2.jsp" %>
 
 
-	<% if(!nome.isBlank()){ %> <br><h4>Bentornato/a <%=nome %></h4><br>
-
-   <form action="Logout" method="get" > 
-     <input type="submit" value="Logout"/>
-   </form> 
-   
- <%}%>
 	<h1>CONTATTACI</h1>
 	<p> INDIRIZZO: 		Via Giovanni Paolo II, 132 - 84084 Fisciano (SA) <br>
 		TELEFONO: 		08187800 <br>

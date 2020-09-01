@@ -14,10 +14,18 @@
 
 </head>
 <body>
+
+
 <%@ include file="jsp/navbar2.jsp" %>
 
 
-	
+<%if(nome.isBlank()){ 
+	response.sendRedirect("Index.jsp");
+
+%>
+
+
+<%}else{ %>	
 	<div class="user-div">
    			<form action="Logout" method="get" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Logout"/></form> 
     </div>
@@ -104,7 +112,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-         										<input type="submit" onClick="modificaProfilo.jsp" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+         										<a href="modificaProfilo.jsp"><input type="submit"  class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/></a>
    										</div>
 
                             </div>
@@ -117,6 +125,6 @@
         </div>	
 
 </body>
-
+<% }%>
 <%@ include file="jsp/footer.jsp" %>
 </html>

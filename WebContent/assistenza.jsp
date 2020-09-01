@@ -15,16 +15,6 @@
 <%@ include file="jsp/navbar2.jsp" %>
 
 
-	<% if(!nome.isBlank()){ %> <br><h4>Bentornato/a <%=nome %></h4><br>
-
-   <form action="Logout" method="get" > 
-     <input type="submit" value="Logout"/>
-   </form> 
-   
- <%}%>
-	<h3>Bentornato!</h3>
-	<p>Hai bisogno di aiuto? Compila il form e soddisferemo le tue esigenze!</p>
-	
 <!-- creare una classe per l'assistenza -->
 	<form>
 	<ul>
