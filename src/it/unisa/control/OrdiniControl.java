@@ -43,7 +43,7 @@ public class OrdiniControl extends HttpServlet{
 			getServletContext().setAttribute("ordini", orderBean);
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		

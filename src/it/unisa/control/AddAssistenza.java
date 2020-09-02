@@ -20,7 +20,7 @@ import it.unisa.model.UtenteModelDM;
 public class AddAssistenza extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	static AssistenzaModelDM model = new AssistenzaModelDM();
+	AssistenzaModelDM model = new AssistenzaModelDM();
        
     
     public AddAssistenza() {
@@ -37,10 +37,10 @@ public class AddAssistenza extends HttpServlet {
 		
 		
 		
-		String action = request.getParameter("action"); 		//togliere action
+		String azione= request.getParameter("azione"); 		
 		try {
-			if(action != null) {
-				if(action.equals("assistenza")) {
+			if(azione != null) {
+				if(azione.equals("assistenza")) {
 					String categoria= request.getParameter("categoria");
 					String orario= request.getParameter("orario");
 					String problema= request.getParameter("problema");
@@ -54,6 +54,12 @@ public class AddAssistenza extends HttpServlet {
 					
 					model.doSave(bean);
 					getServletContext().setAttribute("beanAssist", bean);
+					//RequestDispatcher view = request.getRequestDispatcher("successAssistenza.jsp");
+					//view.forward(request,response);
+					//return;
+					
+					
+					
 				}
 					}
 			
@@ -70,7 +76,7 @@ public class AddAssistenza extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher(address);
 		dispatcher.forward(request, response);
 		
-
+		
 	
 		
 		

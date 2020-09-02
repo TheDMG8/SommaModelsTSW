@@ -44,7 +44,7 @@
    <li><label for="password"><b>Password</b></label></li>
    <li><input type="password" size="40" name="password" ></li>
    </ul>
-   <input type ="submit" name="submit">
+   <input type ="submit" name="Iviaci i dati">
    <input type="reset"> 
  </fieldset>
   

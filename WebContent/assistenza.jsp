@@ -19,13 +19,10 @@
 		<h5>Effettua il login per richiedere assistenza!</h5>   
  <%}else{%>
 	 
- 
-	
 	<p>Hai bisogno di aiuto? Compila il form e soddisferemo le tue esigenze!</p>
 	
-<!-- creare una classe per l'assistenza -->
-	<form action="AddAssistenza" method= "POST" name="assistenza" >
-	<input type="hidden" name="action" value="assistenza">
+	<form action="AddAssistenza" method= "POST" name="assistenza" onSubmit="return successAssistenza"; >
+	<input type="hidden" name="azione" value="assistenza">
 	<ul>
 		<li><label for="categoria"><b>Categoria: </b></label></li>
    			<select name="categoria" id="categoria">
@@ -35,19 +32,20 @@
 			
 		<li><label for="orario"><b>Fascia oraria in cui sei disponibile: </b></label></li>
    			<li><select name="orario" id="orario"> </li>
-   		 		<option value="noveTredici">9:00-13:00</option>
-   		 		<option value="quattordiciQuindici">14:00-17:00</option>
-    			<option value="sediciDiciassette">17:00-19:00</option>
+   		 		<option value="Nove-Tredici">9:00-13:00</option>
+   		 		<option value="Quattordici-Quindici">14:00-17:00</option>
+    			<option value="Sedici-Diciassette">17:00-19:00</option>
 			</select>
 			
 		<li><label for="problema"><b>Descrivi il tuo problema: </b></label></li>
 		<textarea id=problma name="problema" rows="4" col="50"> </textarea>
 	</ul>
+	<input type ="submit" value="Inviaci i dati">
 	</form>
 
-	 <input type ="submit" value="Inviaci i dati">
 	 
-	<br><li><p> Ti contattiamo noi il prima possibile! </p> </li>
+	 
+	
 
  <% }%>
 </body>

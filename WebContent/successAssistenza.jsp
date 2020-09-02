@@ -12,9 +12,9 @@
 
 <%@ include file="jsp/navbar2.jsp" %>
 
-<h2>NUOVO UTENTE CREATO</h2>
-<p>Nuovo Utente registrato con successo:
-</p>
+<p>Rischiesta di assistenza inviata <br>
+<li><p> Ti contattiamo noi il prima possibile! </p> </li>
+
 <p>
 <% AssistenzaBean assBean=(AssistenzaBean)request.getServletContext().getAttribute("beanAssist"); %>
    Categoria: <%=assBean.getCategoria() %><br>

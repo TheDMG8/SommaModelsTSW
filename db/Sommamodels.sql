@@ -58,6 +58,23 @@ CREATE TABLE contiene(
     PRIMARY KEY(idOrdineC,idProdottoC)
 );
 
+create table richiede(
+idClienteR int NOT NULL REFERENCES utente(idUtente) ON UPDATE CASCADE ON DELETE RESTRICT,
+idAssistenzaR int NOT NULL REFERENCES assistenza(idAssistenza) ON UPDATE CASCADE ON DELETE RESTRICT,
+PRIMARY KEY (idClienteR,idAssistenzaR )
+);
+
+
+
+create table assistenza(
+idAssistenza int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+categoria varchar(40) ,
+orario  varchar(40),
+problema varchar(150),
+email varchar(50)
+);
+
+
 insert into utente (nome, cognome, sesso, regione, citta, provincia, via, numCivico, cellulare, email, psswrd) values('Giovanni','Di Mauro','M','Campania','Marigliano','Napoli','Via Clemente Matrisciano',54,3773,'dimy1996@live.it','password');
 insert into utente (nome, cognome, sesso, regione, citta, provincia, via, numCivico, cellulare, email, psswrd, isAdmin) values ('marianna', 'vujko', 'femmina', 'toscana', 'lucca', 'lucca', 'di patrizio', 3, 3456789876, 'admin@admin', 'admin', 'true');
 insert into prodotto(nomeProdotto,marcaProdotto,tipoCategoria,tipoProdotto,descrizioneProdotto,prezzoProdotto,numPezziDisponibili) values ('BUGGY RAPTOR 5XB 1/5 HYMOTO', 'HYMOTO', 'Radiocomandato', 'Modello a scoppio', '4x4, motore 32cc, 2.4GHz', 865.00, 3) ; 
