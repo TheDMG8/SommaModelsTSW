@@ -31,9 +31,8 @@
      <input type="text" name="username" placeholder="email address" required><br>
      
      <label for="password"><b>Password</b></label><br>
-     <input type="password" name="password" placeholder ="password" required>
+     <input type="password" name="password" placeholder ="password" required><br>
      <button type="submit" value="Login" style="background-color:#1a8cff;">Login</button>
-     
      <input type="hidden" name="action" value="login" > 
      </div>
     <p class="message">Non sei ancora registrato? <a href="CreaUtente.jsp">Crea un account!</a></p>

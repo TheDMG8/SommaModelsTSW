@@ -27,10 +27,15 @@ ul>li {
     padding: 0px;
 }
 
-ul>li:hover {
+.pointer{
     color: red;
     cursor: pointer
 }
+
+.pointer:hover{
+	opacity: 0.6;
+}
+
 
 hr {
     border-width: 0px;

@@ -31,17 +31,17 @@
             <div class="col-md-2 col-sm-4 col-xs-4">
                 <h5 class="heading">Services</h5>
                 <ul>
-                    <li>Assistenza</li>
+                    <li class=pointer>Assistenza</li>
                 </ul>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-4">
                 <h5 class="heading">Company</h5>
                 <ul class="card-text">
-                    <li>About Us</li>
-                    <li>Contact</li>
-               		<li>Condizioni di vendita</li>
-                    <li>Pagamento sicuro</li>
-                    <li>Costi di spedizione</li>
+                    <li class=pointer>About Us</li>
+                    <li class=pointer>Contact</li>
+               		<li class=pointer>Condizioni di vendita</li>
+                    <li class=pointer>Pagamento sicuro</li>
+                    <li class=pointer>Costi di spedizione</li>
                 </ul>
             </div>
         </div>

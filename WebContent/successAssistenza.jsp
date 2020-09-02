@@ -11,6 +11,13 @@
 <body>
 
 <%@ include file="jsp/navbar2.jsp" %>
+<%if(nome.isBlank()){ 
+	response.sendRedirect("Index.jsp");
+
+%>
+
+
+<%}else{ %>	
 
 <p>Rischiesta di assistenza inviata <br>
 <li><p> Ti contattiamo noi il prima possibile! </p> </li>
@@ -22,7 +29,9 @@
    Problema : <%=assBean.getProblema() %><br>
    Email : <%= assBean.getEmail() %><br>
 </p>
+
 </body>
+<% }%>
 <%@ include file="jsp/footer.jsp" %>
 </html>
 

@@ -1,0 +1,32 @@
+@charset "ISO-8859-1";
+
+#titolo{
+ 			color: #ff0000;
+ 			font-size: 25px;
+ 			text-align: center;
+ 			text-transform: none;
+ 			margin-top: 30px;
+		}
+
+
+
+.margin{
+	margin-left: 10px;
+}
+
+.bottoneAssistenza{
+	margin-top: 5px;
+	 background-color: #0080ff;
+	 border: none;
+  	 color: white;
+  	 padding: 10px 28px;
+  	 text-align: center;
+ 	 text-decoration: none;
+ 	 display: inline-block;
+ 	 font-size: 16px;
+ 	 cursor: pointer;
+}
+
+.bottoneAssistenza:hover {
+	opacity: 0.8;
+}
