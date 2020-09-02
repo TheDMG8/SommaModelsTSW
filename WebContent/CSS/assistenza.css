@@ -12,7 +12,8 @@
 
 
 .bottoneAssistenza{
-	margin-top: 5px;
+	 margin-top: 5px;
+	 margin: 5px;
 	 background-color: #0080ff;
 	 border: none;
   	 color: white;
@@ -22,6 +23,7 @@
  	 display: inline-block;
  	 font-size: 16px;
  	 cursor: pointer;
+ 	 
 }
 
 .bottoneAssistenza:hover {

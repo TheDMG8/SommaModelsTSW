@@ -26,20 +26,20 @@
 	<input type="hidden" name="azione" value="assistenza">
 	<ul>
 		<li><label  for="categoria"><b>Categoria: </b></label></li>
-   			<select  name="categoria" id="categoria" >
+   			<li><select  name="categoria" id="categoria" >
    		 		<option value="statico">Modellismo statico</option>
     			<option value="dinamico">Modellismo dinamico</option>
-			</select>
+			</select></li>
 			
 		<li><label  for="orario"><b>Fascia oraria in cui sei disponibile: </b></label></li>
-   			<li><select class=margin name="orario" id="orario"> </li>
+   			<li><select class=margin name="orario" id="orario"> 
    		 		<option value="Nove-Tredici">9:00-13:00</option>
    		 		<option value="Quattordici-Quindici">14:00-17:00</option>
     			<option value="Sedici-Diciassette">17:00-19:00</option>
-			</select>
+			</select> </li>
 			
 		<li><label  for="problema"><b>Descrivi il tuo problema: </b></label></li>
-		<textarea  id=problma name="problema" rows="4" col="100"> </textarea>
+		<li><textarea  id=problma name="problema" rows="4" col="100"> </textarea></li>
 	</ul>
 	<input class=bottoneAssistenza id=bottoneAssistenza type ="submit" value="Inviaci i dati" >
 	</form>
