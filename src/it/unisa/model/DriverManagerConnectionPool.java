@@ -19,7 +19,7 @@ public class DriverManagerConnectionPool {
 			System.out.println("DB driver not found:"+ e.getMessage());
 		} 
 	}
-	/*
+	
 	private static synchronized Connection createDBConnection() throws SQLException {
 		Connection newConnection = null;
 		String ip = "localhost";
@@ -38,7 +38,7 @@ public class DriverManagerConnectionPool {
 	}	
 	
 	
-	
+	/*
 	private static synchronized Connection createDBConnection() throws SQLException {
 		Connection newConnection = null;
 		String ip = "localhost";
@@ -54,7 +54,7 @@ public class DriverManagerConnectionPool {
 		System.out.println("Create a new DB connection");
 		newConnection.setAutoCommit(false);
 		return newConnection;
-	} */
+	} 
 	
 	
 	private static synchronized Connection createDBConnection() throws SQLException {
@@ -73,7 +73,7 @@ public class DriverManagerConnectionPool {
 		newConnection.setAutoCommit(false);
 		return newConnection;
 	} 
-	
+	*/
 	
 	public static synchronized Connection getConnection() throws SQLException {
 		Connection connection;
