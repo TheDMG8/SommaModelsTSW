@@ -27,6 +27,9 @@
 </head>
 <body>
 <%@ include file="jsp/navbar2.jsp" %>
+<%if(nome.isBlank()){ 
+	response.sendRedirect("Index.jsp");
+	}else{ %>	
 
 	<% ctx.setAttribute("User", user); 
 	
@@ -75,9 +78,11 @@
                                                 <p><%if(collOrdini != null && collOrdini.size()>0){
                                                 	    	Iterator<?> it= collOrdini.iterator();
                                                 	    	while(it.hasNext()){
-                                                	    		ProductBean bean = (ProductBean)it.next();
+                                                	    		OrdineBean bean = (OrdineBean)it.next();
                                                 	    		%>
-                                                	    	<br><%=bean%><br>
+                                                	    	<br>Data Ordine: <%=bean.getDataOrdine()%><br>
+                                                	    	<br>Indirizzo Recapito: <%=bean.getRegione()%>,<%=bean.getProvincia()%>,<%=bean.getCitta()%>,<%=bean.getVia()%>,<%=bean.getNumCivico()%><br>
+                                                	    	<br>Stato Ordine: <%=bean.getStatoOrdine()%><br>
                                                 	    	<%}
                                                 	}else{%>
                                                 	<br>Non ci sono ordini<br>
@@ -93,6 +98,6 @@
         </div>	
 
 </body>
-
+<% }%>
 <%@ include file="jsp/footer.jsp" %>
 </html>

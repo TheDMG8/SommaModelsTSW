@@ -14,7 +14,16 @@ public class OrdineBean implements Serializable {
     String via;
     int numCivico;
 	String statoOrdine;
+	int idUtente;
 	
+	public int getIdUtente() {
+		return idUtente;
+	}
+
+	public void setIdUtente(int idUtente) {
+		this.idUtente = idUtente;
+	}
+
 	public OrdineBean() {
 		idOrdine = -1; 
 	    dataOrdine= "";
@@ -24,6 +33,7 @@ public class OrdineBean implements Serializable {
 	    via= "";
 	    numCivico= 0;
 		statoOrdine= "";
+		idUtente=-1;
 	}
 
 	public int getIdOrdine() {

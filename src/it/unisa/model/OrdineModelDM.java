@@ -60,7 +60,7 @@ public class OrdineModelDM implements OrdineModel<OrdineBean> {
 		
 		String selectSQL = "SELECT o.idOrdine,o. dataOrdine,o.regione,o.citta,o.provincia,o.via,o.numCivico,o.statoOrdine\r\n" + 
 							"FROM ordine as o ,utente as u \r\n" + 
-							"WHERE  o.idOrdine=u.idOrdineCliente&& u.idUtente = ?";
+							"WHERE  o.idOrdineCliente=u.idUtente&& u.idUtente = ?";
 		 
 		try {
 			connection = DriverManagerConnectionPool.getConnection();
@@ -96,7 +96,7 @@ public class OrdineModelDM implements OrdineModel<OrdineBean> {
 				DriverManagerConnectionPool.releaseConnection(connection);
 		   }
 		}
-		System.out.println("Termostato");
+		System.out.println("TermostatoOrdini");
 		return ordini;
 	}
 
