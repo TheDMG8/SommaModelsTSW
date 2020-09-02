@@ -47,7 +47,7 @@ return false;
 
 }
 function allLet(unome){ 
-    var letters = /^[A-Za-z]+$/;
+    var letters = /^[A-Za-z- ]+$/;
   if(unome.value.match(letters)){
     return true;
    }else{
@@ -58,7 +58,7 @@ function allLet(unome){
    }
 
 function allLett(ucognome){ 
-    var letters = /^[A-Za-z]+$/;
+    var letters = /^[A-Za-z- ]+$/;
   if(ucognome.value.match(letters)){
     return true;
    }else{
@@ -78,7 +78,7 @@ function allLett(ucognome){
 	      }
   }
 	  function allLetter(uregione){ 
-		    var letters = /^[A-Za-z]+$/;
+		    var letters = /^[A-Za-z- ]+$/;
 		  if(uregione.value.match(letters)){
 		    return true;
 		   }else{
@@ -88,7 +88,7 @@ function allLett(ucognome){
 		      }
 	  }
 		  function allLettera(ucittà){ 
-			    var letters = /^[A-Za-z]+$/;
+			    var letters = /^[A-Za-z- ]+$/;
 			  if(ucittà.value.match(letters)){
 			    return true;
 			   }else{
@@ -98,7 +98,7 @@ function allLett(ucognome){
 			      }
 		  }
 			  function allLetteras(uprovincia){ 
-				    var letters = /^[A-Za-z]+$/;
+				    var letters = /^[A-Za-z- ]+$/;
 				  if(uprovincia.value.match(letters)){
 				    return true;
 				   }else{
@@ -108,7 +108,7 @@ function allLett(ucognome){
 				      }
 			  }
 				  function allLetterad(uvia){ 
-					    var letters = /^[A-Za-z]+$/;
+					    var letters = /^[A-Za-z- ]+$/;
 					  if(uvia.value.match(letters)){
 					    return true;
 					   }else{
