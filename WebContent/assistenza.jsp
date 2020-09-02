@@ -43,9 +43,10 @@
 		<li><label for="problema"><b>Descrivi il tuo problema: </b></label></li>
 		<textarea id=problma name="problema" rows="4" col="50"> </textarea>
 	</ul>
+	<input type ="submit" value="Inviaci i dati">
 	</form>
 
-	 <input type ="submit" value="Inviaci i dati">
+	 
 	 
 	<br><li><p> Ti contattiamo noi il prima possibile! </p> </li>
 
