@@ -27,6 +27,10 @@ ul>li {
     padding: 0px;
 }
 
+li{
+	margin-left: 5px;
+}
+
 .pointer{
     color: red;
     cursor: pointer
@@ -63,3 +67,4 @@ hr {
 .divider {
     border-top: 2px solid rgba(189, 196, 203, 0.5);
 }
+

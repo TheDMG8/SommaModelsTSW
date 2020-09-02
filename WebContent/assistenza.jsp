@@ -25,23 +25,23 @@
 	<form action="AddAssistenza" method= "POST" name="assistenza" onSubmit="return successAssistenza"; >
 	<input type="hidden" name="azione" value="assistenza">
 	<ul>
-		<li><label class=margin for="categoria"><b>Categoria: </b></label></li>
-   			<select class=margin name="categoria" id="categoria" >
+		<li><label  for="categoria"><b>Categoria: </b></label></li>
+   			<select  name="categoria" id="categoria" >
    		 		<option value="statico">Modellismo statico</option>
     			<option value="dinamico">Modellismo dinamico</option>
 			</select>
 			
-		<li><label class=margin for="orario"><b>Fascia oraria in cui sei disponibile: </b></label></li>
+		<li><label  for="orario"><b>Fascia oraria in cui sei disponibile: </b></label></li>
    			<li><select class=margin name="orario" id="orario"> </li>
    		 		<option value="Nove-Tredici">9:00-13:00</option>
    		 		<option value="Quattordici-Quindici">14:00-17:00</option>
     			<option value="Sedici-Diciassette">17:00-19:00</option>
 			</select>
 			
-		<li><label class=margin for="problema"><b>Descrivi il tuo problema: </b></label></li>
-		<textarea class=margin id=problma name="problema" rows="4" col="100"> </textarea>
+		<li><label  for="problema"><b>Descrivi il tuo problema: </b></label></li>
+		<textarea  id=problma name="problema" rows="4" col="100"> </textarea>
 	</ul>
-	<input class="margin bottoneAssistenza" id=bottoneAssistenza type ="submit" value="Inviaci i dati" >
+	<input class=bottoneAssistenza id=bottoneAssistenza type ="submit" value="Inviaci i dati" >
 	</form>
 
 	 
