@@ -58,10 +58,10 @@
   <!-- product grid -->
 <div class="col-md-4 product-grid">
  <div class="image">
-  <a href="#">
+  <a href="DettagliProd?id=<%=bean.getIdProdotto() %>">
     <img src="pictures/aereo.jpg" class="w-100">
     <div class="overlay">
-       <a  href="dettagliProdotto.jsp"><div class="detail" >Visualizza Dettagli</div></a>
+       <div class="detail" >Visualizza Dettagli</div>
     </div>
   </a>
  </div>

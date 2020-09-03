@@ -21,7 +21,6 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 		ProductBean bean = new ProductBean();
 		
 		String selectSQL = "SELECT *FROM prodotto WHERE idProdotto = ?";
-		
 		try {
 			connection = DriverManagerConnectionPool.getConnection();
 			preparedStatement = connection.prepareStatement (selectSQL);

@@ -19,6 +19,7 @@
 <title>Navbar esatta</title>
 <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
 <link rel = "stylesheet" href = "CSS/navBar.css">
+
 <script src="https://kit.fontawesome.com/cf835fc8f8.js" crossorigin="anonymous"></script>
 </head>
 
