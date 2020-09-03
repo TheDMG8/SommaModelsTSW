@@ -4,11 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-.col-md-4{ border: 1px solid black;
-}
 
-</style>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
@@ -37,7 +34,7 @@
      descrizione: <br><%=bean.getDescrizioneProdotto() %>
      </ul>
    	 <p class="price"><%=bean.getPrezzoProdotto() %></p>
-     <p><a href="<%= response.encodeURL("modellismoDinamicoControl?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra</a></p>
+     <p><a href="<%= response.encodeURL("DettagliProdottoAddCart?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra</a></p>
 
   </div>
 </div>
