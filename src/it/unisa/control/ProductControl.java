@@ -91,7 +91,7 @@ public class ProductControl extends HttpServlet {
 		}
 		
 		
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/ProductView.jsp");
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/Carrello.jsp");
 		dispatcher.forward(request, response);
 		
 		}
