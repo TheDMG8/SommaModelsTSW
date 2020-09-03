@@ -77,5 +77,6 @@ public class AdminController extends HttpServlet {
 		System.out.println("Error:" + e.getMessage());
 		request.setAttribute("error", e.getMessage());
 		}
-		}
+		
+	}
     }

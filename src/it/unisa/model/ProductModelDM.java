@@ -341,7 +341,7 @@ ResultSet rs = preparedStatement.executeQuery();
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 	 	
-		String deleteSQL = "DELETE FROM product WHERE idProdotto = ?";
+		String deleteSQL = "DELETE FROM prodotto WHERE idProdotto = ?";
 		
 		try {
 			connection = DriverManagerConnectionPool.getConnection();

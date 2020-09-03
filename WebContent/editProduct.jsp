@@ -5,13 +5,20 @@
     
  	String error = (String)request.getAttribute("error");
  	
- 	
- 	
- 	
- 	
+ 	if(prodotti == null && error == null) {
+ 		response.sendRedirect(response.encodeRedirectURL("./ProductControl"));
+ 		return;
+ 	}
  	/*controllo dell'esistenza del prodotto*/
  	ProductBean prodotto = (ProductBean) request.getAttribute("prodotto");
  	
+ // Check user credentials
+ 	Boolean adminRoles = (Boolean) request.getSession().getAttribute("adminRoles");
+ 	if (adminRoles != true)
+ 	{	
+ 	    response.sendRedirect("./login.jsp");
+ 	    return;
+ 	}
  	
     %>
 <!DOCTYPE html>
@@ -33,8 +40,16 @@
 <!-- fine tabella responsive -->
 </div>
 
-
-<h1>TABLE</h1>
+<nav>
+			<ul>
+				<li><a href="addProduct.jsp">Aggiungi Prodotti</a></li>
+				<li><a href="editProduct.jsp">Modifica Prodotti</a></li>
+			</ul>
+		</nav>
+		<form action="Logout" method="get" > 
+     <input type="submit" value="Logout"/>
+</form>
+<h1>PRODOTTI</h1>
 <table>
    <tr> 
      <th>codice</th>

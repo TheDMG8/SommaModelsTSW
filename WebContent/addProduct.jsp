@@ -1,11 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
+   <%
+// Check user credentials
+Boolean adminRoles = (Boolean) request.getSession().getAttribute("adminRoles");
+if (adminRoles != true)
+{	
+    response.sendRedirect("./login.jsp");
+    return;
+}
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Amministrazione</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -16,12 +26,13 @@
 		</h1>
 		<nav>
 			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="addProduct.jsp">Add Product</a></li>
-				<li><a href="#">Settings</a></li>
-				<li><a href="#">Pages</a></li>
+				<li><a href="addProduct.jsp">Aggiungi Prodotti</a></li>
+				<li><a href="editProduct.jsp">Modifica Prodotti</a></li>
 			</ul>
 		</nav>
+		<form action="Logout" method="get" > 
+     <input type="submit" value="Logout"/>
+</form>
 	</header>
 	
 	<div class="signup-header">
