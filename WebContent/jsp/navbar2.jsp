@@ -37,7 +37,7 @@
 
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="Index.jsp">Home</a>
+      <a class="nav-link" href="Index.jsp"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="modellismoStatico.jsp">M.Statico</a>
@@ -67,11 +67,11 @@
             </li>
        <%}else{ %>
             <li class="nav-item">
-                <a class="nav-link" href="login.jsp" style="color:#33ccff;" >Accedi</a>
+                <a class="nav-link" href="login.jsp" style="color:#33ccff;" ><i class="fa fa-user-o" aria-hidden="true"></i> Accedi</a>
             </li>
        <%} %>
             <li class="nav-item">
-                <a class="nav-link" href="Carrello.jsp">Carrello</a>
+                <a class="nav-link" href="Carrello.jsp"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrello</a>
             </li>
             <li class="nav-item" >
                 <form class="form-inline right" action="<%=response.encodeURL("./SearchControl?search=")%>" method="GET">

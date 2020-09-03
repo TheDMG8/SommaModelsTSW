@@ -23,7 +23,7 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="Index.jsp">Home</a>
+      <a class="nav-link" href="Index.jsp"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="ProductView.jsp">M.Statico</a>
@@ -48,10 +48,10 @@
   <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="login.jsp">Accedi</a>
+                <a class="nav-link" href="login.jsp"><i class="fa fa-user-o" aria-hidden="true"></i> Accedi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Carrello.jsp">Carrello</a>
+                <a class="nav-link" href="Carrello.jsp"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrello</a>
             </li>
             
         </ul>

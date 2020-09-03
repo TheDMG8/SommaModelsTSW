@@ -61,13 +61,13 @@
   <a href="#">
     <img src="pictures/aereo.jpg" class="w-100">
     <div class="overlay">
-       <div class="detail" href="#">View Details</div>
+       <a  href="dettagliProdotto.jsp"><div class="detail" >Visualizza Dettagli</div></a>
     </div>
   </a>
  </div>
  <h4 class="text-center"><%= bean.getNomeProdotto() %></h4>
- <h5 class="text-center"><%= bean.getPrezzoProdotto() %>&#8364;</h5>
- <a href="<%= response.encodeURL("modellismoDinamicoControl?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn">Compra</a>
+ <h5 class="text-center">Prezzo: <%= bean.getPrezzoProdotto() %>&#8364;</h5>
+ <a href="<%= response.encodeURL("modellismoDinamicoControl?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra</a>
 </div>
 
 <% }
