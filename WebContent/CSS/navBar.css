@@ -3,3 +3,7 @@
 	width: 100%;
 }
 
+
+.nav-item a{
+	float: left;
+}
