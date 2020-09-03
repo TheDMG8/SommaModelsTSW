@@ -56,7 +56,7 @@
       <a class="nav-link" href="contattaci.jsp">Contattaci</a>
     </li>
      <li class="nav-item">
-      <a class="nav-link" href="ProductView.jsp">ChiSiamo</a>
+      <a class="nav-link" href="chiSiamo.jsp">ChiSiamo</a>
     </li>
     </ul>
    </div>

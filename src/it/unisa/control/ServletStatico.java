@@ -29,11 +29,11 @@ public class ServletStatico extends HttpServlet{
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 	        throws ServletException, IOException {
-		ProductModelDM prodottiStatici= new ProductModelDM();
-		
+		ProductModelDM prodotti= new ProductModelDM();
+		System.out.println("TERMOSTATO");
 		try {
-			List<ProductBean> collBean = prodottiStatici.doRetrieveAllStatico(null);
-			getServletContext().setAttribute("prodottiStatici", collBean);
+			List<ProductBean> collBean = (List<ProductBean>) prodotti.doRetrieveAll(null);
+			getServletContext().setAttribute("prodotti", collBean);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -41,7 +41,7 @@ public class ServletStatico extends HttpServlet{
 		}
 		
 		String address;
-		address = "/modellismoStatico.jsp";
+		address = "/ProductView.jsp";
 		System.out.println("TERMOSTATO");
 		RequestDispatcher dispatcher = request.getRequestDispatcher(address);
 		dispatcher.forward(request, response);
