@@ -44,7 +44,7 @@
              request.getSession().setAttribute("adminRoles", true);
              request.getServletContext().setAttribute("adminRoles", true);
         %>
-        <form action="AddUtente?action=login%>" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Area Amministratore"/></form> 
+        <form action="adminArea.jsp" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Area Amministratore"/></form> 
    		
         <%} %>
    			<form action="Logout" method="get" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Logout"/></form> 

@@ -28,7 +28,7 @@
 <body>
 <br>
 <div class="container">
-	<h1>Carrello</h1>
+	<h1>Carrello:</h1>
 	<br>
 	
 	<%
@@ -53,6 +53,9 @@
                 </div>
 			</div>
 	<%		}%>
+			<a href="./checkOut.jsp"><button type="button right" class="btn btn-danger">Paga</button></a>
+	
+	
 		<br>
 		<h4>Totale: &euro;<%=tot %></h4>
 		<% } else { %>
