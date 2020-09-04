@@ -40,7 +40,7 @@
 <%@ include file="jsp/navbar2.jsp" %>
 
 <br><br>
-
+<h1>Modellismo Statico:</h1>
 
 
 <div class= "container">

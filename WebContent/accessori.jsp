@@ -36,7 +36,7 @@
 
 <%@ include file="jsp/navbar2.jsp" %>
 <br><br>
-
+<h1>Accessori:</h1>
 
 <br><br>
 <div class= "container">

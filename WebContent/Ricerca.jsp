@@ -11,6 +11,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Ricerca</title>
+<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
 <style type="text/css">
 .col-md-4{ border: 1px solid black;
 }
@@ -58,7 +60,7 @@
   <% } %>
 </div>
 </div>
-
+</div>
 <!-- fine product grid -->
 <br>
 </body>
