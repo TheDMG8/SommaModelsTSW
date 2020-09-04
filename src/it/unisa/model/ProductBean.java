@@ -15,7 +15,7 @@ public class ProductBean implements Serializable {
     String tipoProdotto;
     String descrizioneProdotto;
     double prezzoProdotto;
-    byte[] immagine;
+    String immagine;
     int numPezziDisponibili;
     
     public ProductBean() {
@@ -26,7 +26,7 @@ public class ProductBean implements Serializable {
         tipoProdotto="";
         descrizioneProdotto="";
         prezzoProdotto=0;
-        immagine ???;
+        immagine = "";
         numPezziDisponibili=0;
     	
     }
@@ -87,11 +87,11 @@ public class ProductBean implements Serializable {
 		this.prezzoProdotto = prezzoProdotto;
 	}
 
-	public byte[] getImmagine() {
+	public String getImmagine() {
 		return immagine;
 	}
 
-	public void setImmagine(byte[] immagine) {
+	public void setImmagine(String immagine) {
 		this.immagine = immagine;
 	}
 
