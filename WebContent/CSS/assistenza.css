@@ -37,3 +37,22 @@
   	padding: 30px;
   	margin: 20px;
 }
+
+.aforisma{
+	background-color: lightblue;
+  	width: 500px;
+  	border: none;
+  	padding: 30px;
+  	margin: 20px;
+  	font-style: italic;
+}
+
+.noi{
+	background-color: none;
+  	width: 500px;
+  	border: none;
+  	padding: 30px;
+  	margin: 20px;
+  	font-style: italic;
+}
+
