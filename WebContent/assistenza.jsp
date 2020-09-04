@@ -21,7 +21,7 @@
  <%}else{%>
 	 
 	<p id=titolo>Hai bisogno di aiuto? Compila il form e soddisferemo le tue esigenze!</p>
-
+	
 	<form action="AddAssistenza" method= "POST" name="assistenza" onSubmit="return successAssistenza"; >
 	<input type="hidden" name="azione" value="assistenza">
 	<ul>
@@ -43,7 +43,7 @@
 	</ul>
 	<input class=bottoneAssistenza id=bottoneAssistenza type ="submit" value="Inviaci i dati" >
 	</form>
-	
+
 	 
 	 
 	

@@ -24,23 +24,24 @@
                         <h1 style="color: #1a8cff">SommaModels</h1>
                     </div>
                     <p class="card-text">Sono i sogni a far vivere l'uomo. Il destino è in buona parte nelle nostre mani, sempre che sappiamo chiaramente quel che vogliamo e siamo decisi ad ottenerlo.</p>
-                    <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> </div>
+                    <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
                 </div>
             </div>
             <div class="col-md-2 col-sm-1 col-xs-1 mb-2"></div>
             <div class="col-md-2 col-sm-4 col-xs-4">
                 <h5 class="heading">Services</h5>
                 <ul>
-                    <li class=pointer><a href=assistenza.jsp>Assistenza</li></a>
+                    <li class=pointer>Assistenza</li>
                 </ul>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-4">
                 <h5 class="heading">Company</h5>
                 <ul class="card-text">
-                    <li class=pointer><a href=chiSiamo.jsp>About Us</li></a>
-                    <li class=pointer><a href=contattaci.jsp>Contact</li></a>
-               		<li class=pointer><a href=CondizioniVendita.jsp>Condizioni di vendita</li></a>
-                    <li class=pointer><a href=CostiSpedizione.jsp>Costi di spedizione</li></a>
+                    <li class=pointer>About Us</li>
+                    <li class=pointer>Contact</li>
+               		<li class=pointer>Condizioni di vendita</li>
+                    <li class=pointer>Pagamento sicuro</li>
+                    <li class=pointer>Costi di spedizione</li>
                 </ul>
             </div>
         </div>
