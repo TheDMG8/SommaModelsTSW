@@ -40,6 +40,13 @@
 	%>
 	
 	<div class="user-div">
+	<%if(user.isAdmin().equals("true")){ 
+             request.getSession().setAttribute("adminRoles", true);
+             request.getServletContext().setAttribute("adminRoles", true);
+        %>
+        <form action="AddUtente?action=login%>" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Area Amministratore"/></form> 
+   		
+        <%} %>
    			<form action="Logout" method="get" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Logout"/></form> 
     </div>
 

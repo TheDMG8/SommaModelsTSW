@@ -30,18 +30,18 @@
             <div class="col-md-2 col-sm-1 col-xs-1 mb-2"></div>
             <div class="col-md-2 col-sm-4 col-xs-4">
                 <h5 class="heading">Services</h5>
-                <ul>
-                    <li class=pointer>Assistenza</li>
+                <ul class="ass">
+                    <li class=pointer><a href="assistenza.jsp">Assistenza</a></li>
                 </ul>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-4">
                 <h5 class="heading">Company</h5>
                 <ul class="card-text">
-                    <li class=pointer>About Us</li>
-                    <li class=pointer>Contact</li>
-               		<li class=pointer>Condizioni di vendita</li>
-                    <li class=pointer>Pagamento sicuro</li>
-                    <li class=pointer>Costi di spedizione</li>
+                    <li class=pointer><a href="chiSiamo.jsp">ChiSiamo<a></a></li>
+                    <li class=pointer><a href="contattaci.jsp">Contattaci<a></a></li>
+               		<li class=pointer><a href="#">Condizioni di vendita<a></a></li>
+                    <li class=pointer><a href="#">Pagamento sicuro<a></a></li>
+                    <li class=pointer><a href="#">Costi di spedizione<a></a></li>
                 </ul>
             </div>
         </div>

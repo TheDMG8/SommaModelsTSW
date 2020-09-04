@@ -27,10 +27,15 @@
 
 <%}else{ %>	
 	<div class="user-div">
-   			<form action="Logout" method="get" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Logout"/></form> 
+	 	<%if(user.isAdmin().equals("true")){ 
+             request.getSession().setAttribute("adminRoles", true);
+             request.getServletContext().setAttribute("adminRoles", true);
+        %>
+        <form action="adminArea.jsp" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Area Amministratore"/></form> 
+   		
+        <%} %>
+		<form action="Logout" method="get" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Logout"/></form> 
     </div>
-
-
 <div class="container emp-profile">
             <form method="post">
                 <div class="row">
@@ -115,16 +120,7 @@
          										<a href="modificaProfilo.jsp"><input type="submit"  class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/></a>
    										</div>
                                         </div>
-                                       <%if(user.isAdmin().equals("true")){ 
-                                       					request.getSession().setAttribute("adminRoles", true);
-                                       					request.getServletContext().setAttribute("adminRoles", true);
-                                       %>
-                                       			
-         										<a href="protected.jsp">Area Amministratore</a>
-         										<br>RuoloAdmin:<%= request.getSession().getAttribute("adminRoles") %>
-         										<br>RuoloAdmin:<%= user.isAdmin() %>
-         										
-   									  <%} %>
+                                      
                             </div>
                             
                             

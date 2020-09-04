@@ -12,13 +12,6 @@
  	/*controllo dell'esistenza del prodotto*/
  	ProductBean prodotto = (ProductBean) request.getAttribute("prodotto");
  	
- // Check user credentials
- 	Boolean adminRoles = (Boolean) request.getSession().getAttribute("adminRoles");
- 	if (adminRoles != true)
- 	{	
- 	    response.sendRedirect("./login.jsp");
- 	    return;
- 	}
  	
     %>
 <!DOCTYPE html>
