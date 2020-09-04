@@ -39,9 +39,9 @@
                 <h5 class="heading">Compagnia</h5>
                 <ul class="card-text">
                     <li class=pointer><a href="chiSiamo.jsp">Chi Siamo<a></a></li>
-               		<li class=pointer><a href="#">Condizioni di vendita<a></a></li>
-                    <li class=pointer><a href="#">Pagamento sicuro<a></a></li>
-                    <li class=pointer><a href="#">Costi di spedizione<a></a></li>
+               		<li class=pointer><a href="condizioniVendita.jsp">Condizioni di vendita<a></a></li>
+                    <li class=pointer><a href="condizioniVendita.jsp#pagamentoSicuro">Pagamento sicuro<a></a></li>
+                    <li class=pointer><a href="condizioniVendita.jsp#costiSpedizione">Costi di spedizione<a></a></li>
                 </ul>
             </div>
         </div>
