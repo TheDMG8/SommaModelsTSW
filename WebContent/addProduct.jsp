@@ -16,10 +16,12 @@ if (adminRoles != true)
 <head>
 <meta charset="ISO-8859-1">
 <title>Amministrazione</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
-<link rel="stylesheet" type="text/css" href="style.css">
+
+
 </head>
 <body>
+	<%@ include file="jsp/navbar2.jsp" %>
+
 	<header>
 		<h1>
 			Welcome admin
@@ -91,4 +93,5 @@ if (adminRoles != true)
 	    </div>
 	</footer>
 </body>
+<%@ include file="jsp/footer.jsp" %>
 </html>

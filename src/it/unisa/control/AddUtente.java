@@ -89,7 +89,7 @@ public class AddUtente extends HttpServlet {
 					   	currentSession.setMaxInactiveInterval(5*60);/*5 minuti di inattivit  massima*/
 					   	
 					   	currentSession.setAttribute("adminRoles", true);
-						RequestDispatcher view = request.getRequestDispatcher("protected.jsp");
+						RequestDispatcher view = request.getRequestDispatcher("Index.jsp");
 						view.forward(request,response);
 						return;
 					}

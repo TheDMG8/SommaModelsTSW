@@ -33,7 +33,20 @@ li{
 
 .pointer{
     color: red;
-    cursor: pointer
+    cursor: pointer;
+    
+}
+
+.ass a{
+	text-decoration: none;
+	color: red;
+    cursor: pointer;
+}
+
+.card-text a{
+	text-decoration: none;
+	color: red;
+    cursor: pointer;
 }
 
 .pointer:hover{
