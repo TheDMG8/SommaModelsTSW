@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 
-#titolo{
+.titolo{
  			color: #ff0000;
  			font-size: 25px;
  			text-align: center;
@@ -28,4 +28,12 @@
 
 .bottoneAssistenza:hover {
 	opacity: 0.8;
+}
+
+.pagina{
+	background-color: none;
+  	width: 500px;
+  	border: 1px solid #ccc;
+  	padding: 30px;
+  	margin: 20px;
 }

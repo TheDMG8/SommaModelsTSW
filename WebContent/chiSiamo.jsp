@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet "href="CSS/assistenza.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -16,7 +17,7 @@
 <%@ include file="jsp/navbar2.jsp" %>
 
 
-	<h1>ChiSiamo:</h1>
+	<h1 class=titolo>Ci presentiamo...</h1>
 	
 
 
