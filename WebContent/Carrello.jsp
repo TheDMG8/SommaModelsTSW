@@ -26,6 +26,7 @@
 </head>
 <%@ include file="jsp/navbar2.jsp" %>
 <body>
+<br>
 <div class="container">
 	<h1>Carrello</h1>
 	<br>
