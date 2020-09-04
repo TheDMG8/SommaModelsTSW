@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet "href="CSS/assistenza.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -16,8 +17,8 @@
 <%@ include file="jsp/navbar2.jsp" %>
 
 
-	<h1>CONTATTACI</h1>
-	<p> INDIRIZZO: 		Via Giovanni Paolo II, 132 - 84084 Fisciano (SA) <br>
+	<h1 id=titolo>I nostri contatti</h1>
+	<p class=pagina> INDIRIZZO: 		Via Giovanni Paolo II, 132 - 84084 Fisciano (SA) <br>
 		TELEFONO: 		08187800 <br>
 		CELLULARE: 		32244466 <br>
 		PARTITA IVA:	0023455555 <br>

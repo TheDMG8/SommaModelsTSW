@@ -17,6 +17,11 @@
     background-color: #16151a;
 }
 
+
+a{
+	color:red;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
