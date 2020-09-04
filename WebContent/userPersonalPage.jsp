@@ -114,7 +114,17 @@
                                         <div class="col-md-6">
          										<a href="modificaProfilo.jsp"><input type="submit"  class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/></a>
    										</div>
-
+                                        </div>
+                                       <%if(user.isAdmin().equals("true")){ 
+                                       					request.getSession().setAttribute("adminRoles", true);
+                                       					request.getServletContext().setAttribute("adminRoles", true);
+                                       %>
+                                       			
+         										<a href="protected.jsp">Area Amministratore</a>
+         										<br>RuoloAdmin:<%= request.getSession().getAttribute("adminRoles") %>
+         										<br>RuoloAdmin:<%= user.isAdmin() %>
+         										
+   									  <%} %>
                             </div>
                             
                             

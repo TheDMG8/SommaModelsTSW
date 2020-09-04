@@ -14,6 +14,7 @@ public class UtenteBean {
 	String cellulare;
 	String email;
 	String psswrd;
+	String isAdmin;
 	
 	public UtenteBean() {
 		idUtente = -1;
@@ -28,6 +29,22 @@ public class UtenteBean {
 		cellulare="";
 		email= "";
 		psswrd = "";
+		isAdmin="";
+	}
+	public UtenteBean(String isAdmin) {
+		idUtente = -1;
+	    nome = "";
+		cognome= "";
+		sesso= "";
+		regione= "";
+		citta= "";
+		provincia= "";
+		via= "";
+		numCivico=0;
+		cellulare="";
+		email= "";
+		psswrd = "";
+		this.isAdmin=isAdmin;
 	}
 
 	public int getIdUtente() {
@@ -129,6 +146,13 @@ public class UtenteBean {
 		return this.getIdUtente() == -1;
 	}
 
+	public String isAdmin() {
+		return isAdmin;
+	}
+	
+	public void setAdmin(String isAdmin) {
+		this.isAdmin=isAdmin;
+	}
 	
 
 }
