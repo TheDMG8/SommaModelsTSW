@@ -28,7 +28,7 @@ public class SearchControl extends HttpServlet {
         
     }
 
-	
+	/*
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String toSearch= (String) request.getParameter("search");
 		String[] strings= toSearch.split(" ");
@@ -63,15 +63,31 @@ public class SearchControl extends HttpServlet {
 			
 			request.setAttribute("result", prodotti);
 			request.setAttribute("search", toSearch);
-			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/Ricerca.jsp");/*inserire qui IMPOOOOOO*/
+			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/Ricerca.jsp");
 			dispatcher.forward(request, response);
 		    
 		} catch (SQLException e) {
 			System.out.println("Errore durante la ricerca");
 			}
 	}
+*/
+    
+        public void doGet(HttpServletRequest request, HttpServletResponse response)
+                throws ServletException, IOException {
 
-	
+            String s = request.getParameter("search");
+
+            String address = null;
+
+            Collection<ProductBean> prodotti = model.retriveBySearch(s);
+
+            request.setAttribute("prodotti", prodotti);
+            address = "/Ricerca.jsp";
+            RequestDispatcher dispatcher = request.getRequestDispatcher(address);
+            dispatcher.forward(request, response);
+        }
+
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}

@@ -157,6 +157,36 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 		return prodotti;
 	}
 	
+	public Collection<ProductBean> retriveBySearch(String s){
+        try (Connection con = DriverManagerConnectionPool.getConnection()) {
+            String search = "%";
+            search += s + "%";
+            PreparedStatement ps =
+                    con.prepareStatement("SELECT * FROM prodotto WHERE nomeProdotto LIKE ?");
+            ps.setString(1,search);
+            ResultSet rs = ps.executeQuery();
+
+            Collection<ProductBean> list = new LinkedList<ProductBean>();
+    		
+            while (rs.next()) {
+            	ProductBean bean = new ProductBean();
+            	bean.setIdProdotto(rs.getInt("idProdotto"));
+				bean.setNomeProdotto(rs.getString("nomeProdotto"));
+				bean.setMarcaProdotto(rs.getString("marcaProdotto"));
+				bean.setTipoCategoria(rs.getString("tipoCategoria"));
+				bean.setTipoProdotto(rs.getString("tipoProdotto"));
+				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
+				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
+				bean.setImmagine(rs.getString("immagine"));
+				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
+                list.add(bean);
+            }
+            return list;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+	
 	/*lista prodotti dinamici*/
 	@Override
 	public Collection<ProductBean> doRetrieveAllDinamico(String order) throws SQLException {

@@ -15,7 +15,7 @@
 </head>
 <body>
 <%@ include file="jsp/navbar2.jsp" %>
-
+<br>
 
 	<h1 class=titolo>I nostri recapiti</h1>
 	<p class=pagina> INDIRIZZO: 		Via Giovanni Paolo II, 132 - 84084 Fisciano (SA) <br>

@@ -3,7 +3,7 @@
 
      <%
      Collection<?> prodotti = (Collection<?>) request.getAttribute("prodotti");
-     
+     ArrayList<ProductBean> arrayList=new ArrayList<ProductBean>();
   	 String error = (String)request.getAttribute("error");
 		
      if(prodotti == null ) {
@@ -40,7 +40,7 @@
 <%@ include file="jsp/navbar2.jsp" %>
 
 <br><br>
-
+<h1>Modellismo Statico:</h1>
 
 
 <div class= "container">
@@ -48,9 +48,11 @@
 <% 
   /*era prodotto*/
     if(prodotti != null && prodotti.size()>0){
+    	int i=0;
     	
     	Iterator<?> it= prodotti.iterator();
     	while(it.hasNext()){
+    		i++;
     	ProductBean bean = (ProductBean)it.next();
     	
   %>
@@ -68,6 +70,7 @@
  <h4 class="text-center"><%= bean.getNomeProdotto() %></h4>
  <h5 class="text-center">Prezzo: <%= bean.getPrezzoProdotto() %>&#8364;</h5>
  <a href="<%= response.encodeURL("modellismoStaticoControl?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra</a>
+ 
 </div>
 
 <% }
@@ -76,6 +79,7 @@
   <% } %>
 </div>
 </div>
+
 <!-- fine product grid -->
 <br>
 </body>
