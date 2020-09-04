@@ -41,6 +41,8 @@ public class UtenteModelDM implements UtenteModel<UtenteBean> {
 				bean.setEmail(rs.getString("email"));
 				bean.setPsswrd(rs.getString("psswrd"));
 				bean.setIdUtente(rs.getInt("idUtente"));
+				bean.setAdmin(rs.getString("isAdmin"));
+				
 			}
 		}finally {
 			try {
@@ -51,6 +53,7 @@ public class UtenteModelDM implements UtenteModel<UtenteBean> {
 					DriverManagerConnectionPool.releaseConnection(connection);
 				}
 		}
+		System.out.println(bean.isAdmin);
 		return bean;
 	}
 

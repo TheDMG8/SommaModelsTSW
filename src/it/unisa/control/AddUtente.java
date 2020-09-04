@@ -79,7 +79,16 @@ public class AddUtente extends HttpServlet {
 					int isAdmin= checkLogin(paramUsername, paramPassword);
 					
 					if(isAdmin == 1) {
-						request.getSession().setAttribute("adminRoles", true);
+						UtenteBean user= model.doRetrieveByKey(paramUsername);
+						HttpSession oldsession = request.getSession(false);
+						if(oldsession != null) {
+							oldsession.invalidate(); /*invalida la sessione se esiste*/
+						}
+						HttpSession currentSession = request.getSession(); /*ne creo una nuova*/
+					   	currentSession.setAttribute("user", user);
+					   	currentSession.setMaxInactiveInterval(5*60);/*5 minuti di inattivit  massima*/
+					   	
+					   	currentSession.setAttribute("adminRoles", true);
 						RequestDispatcher view = request.getRequestDispatcher("protected.jsp");
 						view.forward(request,response);
 						return;
