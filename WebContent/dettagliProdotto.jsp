@@ -25,7 +25,7 @@
 <div class="container">
  <div class="row">
    <div class="left col-md-6">
-     <img class="headset" src="pictures/a.jpg">   
+     <img class="headset" src="./getPicture?idProdotto=<%=bean.getIdProdotto()%>" >   
    </div>
    <div class="destra col-md-6">
      

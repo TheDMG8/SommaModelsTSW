@@ -11,6 +11,8 @@
 			}
 			
 			String message= (String) request.getAttribute("message");
+			
+			
 		%>
 <!DOCTYPE html>
 <html>
@@ -40,7 +42,7 @@
 			<div class="well search-result">
 				<div class="row">
 					<div class="col-sm">
-						<img class="img-responsive" src="https://via.placeholder.com/300x150" alt="">
+						<img class="img-responsive" src="./getPicture?idProdotto=<%=p.getIdProdotto()%>" alt="">
 					</div>
 					<div class="col-sm">
 					<a href="./ProductControl?action=details&id=<%=p.getIdProdotto()%>">
