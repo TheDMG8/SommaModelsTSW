@@ -31,35 +31,39 @@
 <div class="pow">
   <div class="col-75">
     <div class="container">
-      <form action="#">
+      <form action="AddOrdine" value="insert" method="Post">
       
         <div class="pow">
           <div class="col-50">
             <h3>Indirizzo Di Fatturazione</h3>
-            <label for="fname"><i class="fa fa-user"></i>Nome e Cognome</label>
-            <input type="text" id="fname" name="firstname" placeholder="Mario Rossi">
+            <label for="nome"><i class="fa fa-user"></i>  Nome e Cognome</label>
+            <input type="text" id="nome" name="nome" placeholder="Mario Rossi">
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" placeholder="MarioRossi@gmail.com">
-            <label for="adr"><i class="fa fa-address-card-o"></i> Indirizzo</label>
-            <input type="text" id="adr" name="address" placeholder="Via Corso Umberto I 10">
-            <label for="city"><i class="fa fa-institution"></i> Citta'</label>
-            <input type="text" id="city" name="city" placeholder="Napoli">
+            <label for="indirizzo"><i class="fa fa-address-card-o"></i> Indirizzo</label>
+            <input type="text" id="indirizzo" name="indirizzo" placeholder="Via Corso Umberto I 10">
+            <label for="citta"><i class="fa fa-institution"></i> Citta'</label>
+            <input type="text" id="citta" name="citta" placeholder="Roma">
+            <label for="provincia"> Provincia</label>
+            <input type="text" id="provincia" name="provincia" placeholder="RO">
+            <label for="regione"> Regione</label>
+            <input type="text" id="regione" name="regione" placeholder="Lazio">
 
             <div class="pow">
               <div class="col-50">
                 <label for="state">Stato</label>
-                <input type="text" id="state" name="state" placeholder="Italia">
+                <input type="text" id="stato" name="stato" placeholder="Italia">
               </div>
               <div class="col-50">
                 <label for="zip">CAP</label>
-                <input type="text" id="zip" name="zip" placeholder="80030">
+                <input type="text" id="cap" name="cap" placeholder="80030">
               </div>
             </div>
           </div>
 
           <div class="col-50">
-            <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
+            <h3>Pagamenti</h3>
+            <label for="fname">Carte Accettate</label>
             <div class="icon-container">
               <i class="fa fa-cc-visa" style="color:navy;"></i>
               <i class="fa fa-cc-mastercard" style="color:red;"></i>
@@ -101,7 +105,7 @@
       <hr>
       <% }%>
       <br>
-      <p>Total <span class="price" style="color:black"><b><%=tot%>&euro;</b></span></p>
+      <p>Totale <span class="price" style="color:black"><b><%=tot%>&euro;</b></span></p>
       <%} %>
     </div>
   </div>

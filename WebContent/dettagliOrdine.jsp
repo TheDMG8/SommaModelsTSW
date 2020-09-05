@@ -5,7 +5,7 @@
 
     
    	ServletContext ctx= request.getServletContext();
-    Collection<OrdineBean> collOrdini= (Collection<OrdineBean>)ctx.getAttribute("ordini");
+    ArrayList<ProductBean> collProd= (ArrayList<ProductBean>)ctx.getAttribute("prodotti");
     String error = (String)request.getAttribute("error");
 	
     
@@ -25,11 +25,6 @@
 .col-md-6 p{
 border: 1px solid black;
 padding: 15px;
-
-}
-
-.col-md-6 a{
- float: right;
 }
 </style>
 <title>PaginaPersonale</title>
@@ -42,11 +37,7 @@ padding: 15px;
 	}else{ %>	
 
 	<% ctx.setAttribute("User", user); 
-	
-	if(collOrdini == null ) {
- 		response.sendRedirect(response.encodeRedirectURL("./OrdiniControl"));
- 		return;
-		}
+}
 	%>
 	
 	<div class="user-div">
@@ -71,7 +62,7 @@ padding: 15px;
                                     <a class="nav-link " id="home-tab" data-toggle="tab" href="userPersonalPage.jsp" role="tab" aria-controls="home" aria-selected="true">Profilo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="ordine-tab" data-toggle="tab" href="#ordini" role="tab" aria-controls="profile" aria-selected="false">Ordini</a>
+                                    <a class="nav-link active" id="ordine-tab" data-toggle="tab" href="ordini.jsp"  role="tab" aria-controls="profile" aria-selected="false">Ordini</a>
                                 </li>
                             </ul>
                         </div>
@@ -89,25 +80,25 @@ padding: 15px;
                             <div class="tab-pane fade show active" id="ordini" role="tabpanel" aria-labelledby="ordine-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>I tuoi Ordini:</label>
+                                                <label>Dettaglio Ordine:</label>
+                                                
                                             </div>
                                             <div class="col-md-6">
-                                                <%if(collOrdini != null && collOrdini.size()>0){
-                                                	    	Iterator<?> it= collOrdini.iterator();
+                                                <%if(collProd != null && collProd.size()>0){
+                                                	    	Iterator<?> it= collProd.iterator();
+                                                	    	int totale=0;
                                                 	    	while(it.hasNext()){
-                                                	    		OrdineBean bean = (OrdineBean)it.next();
+                                                	    		ProductBean bean = (ProductBean)it.next();
+                                                	    		totale+=bean.getPrezzoProdotto();
                                                 	    		%>
                                                 	    		<p>
-                                                	    	<br>ID ordine: <%=bean.getIdOrdine() %><br>
-                                                	    	<br>Indirizzo Recapito: <%=bean.getRegione()%>,<%=bean.getProvincia()%>,<%=bean.getCitta()%>,<%=bean.getVia()%>,<%=bean.getNumCivico()%><br>
-                                                	    	<br>Stato Ordine: <%=bean.getStatoOrdine()%><br>
-                                                	    	<br><a href="DettagliProdottoOrdine?id=<%=bean.getIdOrdine() %>"><button type="button" class="btn btn-danger">Vedi ordine nel dettaglio</button></a>
+                                                	    	<br><%=bean.getNomeProdotto()%><br>
+                                                	    	<br>Prezzo: <%=bean.getPrezzoProdotto()%>&euro;<br>
                                                 	    	</p>
-                                                	    	<br><br>
-                                                	    	<%}
-                                                	}else{%>
-                                                	<br>Non ci sono ordini<br>
-                                                	<%}%>
+                                                	    	
+                                                <%}%>
+                                                <br>Totale:<%=totale %>&euro;<br>
+                                             <%}%>   
                                             </div>
                                         </div>
                                         
@@ -119,6 +110,6 @@ padding: 15px;
         </div>	
 
 </body>
-<% }%>
+
 <%@ include file="jsp/footer.jsp" %>
 </html>

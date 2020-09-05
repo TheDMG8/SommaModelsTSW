@@ -4,7 +4,7 @@
 <html>
 <head>
 <link rel="stylesheet "href="CSS/assistenza.css">
-link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@ link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/c
 <p class=pagina>
 	1. Invito a proporre l&apos; ordine, ordine e conferma d&apos; ordine<br>
 1.1. Il Preventivo eventualmente inviato dal Venditore, recante, tra l&apos; altro, la descrizione, le caratteristiche tecniche ed i prezzi della merce, non costituisce, in alcun<br>
-caso, una proposta contrattuale di vendita, bens&iacute; un mero invito a proporre l&apos; ordine.<br
+caso, una proposta contrattuale di vendita, bens&iacute; un mero invito a proporre l&apos; ordine.<br>
 Le condizioni presenti in detto invito a proporre l&apos;ordine sono destinate a perdere<br>
 ogni validit&aacute; ed efficacia decorsi trenta giorni dal loro invio al Cliente, salvo che<br>
 entro il predetto termine il Venditore non riceva l&apos; Ordine dal Cliente medesimo.<br>

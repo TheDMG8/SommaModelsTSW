@@ -393,6 +393,53 @@ ResultSet rs = preparedStatement.executeQuery();
 		}	
 	}
 
+
+	public ArrayList<ProductBean> doRetrieveByOrdine(String idOrdine) throws SQLException {
+		// TODO Auto-generated method stub
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		ArrayList<ProductBean> list = new ArrayList<ProductBean>();
+		
+		String selectSQL = "SELECT p.idProdotto,p.nomeProdotto,p.marcaProdotto,p.tipoCategoria,p.descrizioneProdotto,p.prezzoProdotto,p.immagine,p.numPezziDisponibili FROM utente as u,prodotto as p, ordine as o, contiene as c WHERE  o.idOrdine = ? && u.idUtente=o.idOrdineCliente && o.idOrdine =c.idOrdineC && c.idProdottoC = p.idProdotto";
+		
+		try {
+
+			connection = DriverManagerConnectionPool.getConnection();
+			preparedStatement = connection.prepareStatement (selectSQL);
+			/*traduzione della stringa in intero*/
+			preparedStatement.setInt(1, Integer.parseInt(idOrdine));
+			/*stampo la query e la eseguo*/
+			System.out.println("doRetrieveByKey:" + preparedStatement.toString());
+			ResultSet rs = preparedStatement.executeQuery();
+			System.out.println("Termostao in product model ordini");
+			
+			while(rs.next()) {
+				ProductBean bean= new ProductBean();
+				bean.setIdProdotto(rs.getInt("idProdotto"));
+				bean.setNomeProdotto(rs.getString("nomeProdotto"));
+				bean.setMarcaProdotto(rs.getString("marcaProdotto"));
+				bean.setTipoCategoria(rs.getString("tipoCategoria"));
+				bean.setTipoProdotto(rs.getString("marcaProdotto"));
+				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
+				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
+				bean.setImmagine(rs.getString("immagine"));
+				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
+				list.add(bean);
+			}
+			
+		}finally {
+			try {
+			if(preparedStatement != null )
+				preparedStatement.close();
+			}finally {
+				
+				DriverManagerConnectionPool.releaseConnection(connection);
+		   }
+		}
+		return list;
+	}
+
 		
 
 

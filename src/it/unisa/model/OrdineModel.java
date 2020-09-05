@@ -9,7 +9,7 @@ public T doRetrieveByKey(String idOrdine)throws SQLException;
 	
 	public Collection<T> doRetrieveAll(String order)throws SQLException;
 	
-	public void doSave(T ordine)throws SQLException;
+	public int doSave(T ordine)throws SQLException;
 	
 	public void doUpdate(T ordine)throws SQLException;
 	

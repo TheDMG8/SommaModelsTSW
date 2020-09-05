@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 
@@ -151,12 +152,13 @@ public class OrdineModelDM implements OrdineModel<OrdineBean> {
 	
 	
 
+	@SuppressWarnings("resource")
 	@Override
-	public void doSave(OrdineBean ordine) throws SQLException {
+	public int doSave(OrdineBean ordine) throws SQLException {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
-		String insertSQL = "INSERT INTO ordine" + "(dataOrdine, regione, citta, provincia, via, numCivico, statoOrdine) VALUES (?, ?, ?, ?, ?, ?, ?)";
+		String insertSQL = "INSERT INTO ordine" + "(dataOrdine, regione, citta, provincia, via, numCivico, statoOrdine,idOrdineCliente) VALUES (?, ?, ?, ?, ?, ?,?, ?)";
 		
 		try {
 			connection = DriverManagerConnectionPool.getConnection();
@@ -169,12 +171,24 @@ public class OrdineModelDM implements OrdineModel<OrdineBean> {
 			preparedStatement.setString(5,ordine.getVia());
 			preparedStatement.setInt(6,ordine.getNumCivico());
 			preparedStatement.setString(7,ordine.getStatoOrdine());
+			preparedStatement.setInt(8, ordine.getIdUtente());
 			
 			System.out.println("doSave: "+ preparedStatement.toString());
 			preparedStatement.executeUpdate();
 		
 			connection.commit();
-
+			String Sql= "Select idOrdine From Ordine where idOrdineCliente=?";
+			preparedStatement = connection.prepareStatement(Sql);
+			preparedStatement.setInt(1, ordine.getIdUtente());
+			System.out.println("doSave: "+ preparedStatement.toString());
+			ResultSet rs =preparedStatement.executeQuery();
+			ArrayList<Integer> numOrdini= new ArrayList<Integer>();
+			while(rs.next())
+			{
+				numOrdini.add(rs.getInt("idOrdine"));
+			}
+			System.out.println("ADDORDINE ADD ORDINE MODEL ");
+			return numOrdini.size();
 		} finally {
 				try {
 					if(preparedStatement != null) 
@@ -184,6 +198,32 @@ public class OrdineModelDM implements OrdineModel<OrdineBean> {
 				}
 			}		
 
+	}
+	
+	public void doSaveProdottiOrdine(int idOrdine, int[] idProdotti,int size) throws SQLException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		String insertSQL = "INSERT INTO contiene" + "(idOrdineC,idProdottoC) VALUES (?, ?)";
+		try {
+			connection = DriverManagerConnectionPool.getConnection();
+			preparedStatement = connection.prepareStatement(insertSQL);
+			for(int i=0;i<size;i++) {
+				preparedStatement.setInt(1,idOrdine);
+				preparedStatement.setInt(2, idProdotti[i]);
+				System.out.println("doSave: "+ preparedStatement.toString());
+				preparedStatement.executeUpdate();
+				connection.commit();
+				System.out.println("ADDORDINE PRODOTTI ORDINE");
+			}
+		} finally {
+			try {
+				if(preparedStatement != null) 
+					preparedStatement.close();
+			} finally {
+				DriverManagerConnectionPool.releaseConnection(connection);
+			}
+		}	
 	}
 
 	@Override
