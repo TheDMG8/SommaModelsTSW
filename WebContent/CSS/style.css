@@ -2,7 +2,9 @@
 .container{
 	padding-top: 50px;
 }
-
+.col-md-4{ 
+	border: 1px solid black;
+}
 /*product grid */
 .product-grid{
 	padding-bottom: 30px;
@@ -13,6 +15,7 @@
 }
 .image{
 	position:relative;
+	
 }
 .overlay{
 	position: absolute;

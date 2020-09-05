@@ -59,7 +59,7 @@
 <div class="col-md-4 product-grid">
  <div class="image">
   <a href="DettagliProd?id=<%=bean.getIdProdotto() %>">
-    <img src="pictures/aereo.jpg" class="w-100">
+    <img src="./getPicture?idProdotto=<%=bean.getIdProdotto()%>" class="w-100">
     <div class="overlay">
        <div class="detail" >Visualizza Dettagli</div>
     </div>

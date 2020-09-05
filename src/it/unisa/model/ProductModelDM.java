@@ -38,7 +38,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 				bean.setTipoProdotto(rs.getString("tipoProdotto"));
 				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
 				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
-				bean.setImmagine(rs.getString("immagine"));
+				bean.setImmagine(rs.getBytes("immagine"));
 				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
 			}
 			
@@ -55,6 +55,9 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 	}
 	
 
+
+
+	
 	@Override
 	public Collection<ProductBean> doRetrieveAll(String order) throws SQLException {
 		Connection connection = null;
@@ -87,7 +90,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 				bean.setTipoProdotto(rs.getString("tipoProdotto"));
 				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
 				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
-				bean.setImmagine(rs.getString("immagine"));
+				bean.setImmagine(rs.getBytes("immagine"));
 				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
 				
 				
@@ -138,7 +141,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 				bean.setTipoProdotto(rs.getString("tipoProdotto"));
 				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
 				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
-				bean.setImmagine(rs.getString("immagine"));
+				bean.setImmagine(rs.getBytes("immagine"));
 				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
 				
 				
@@ -177,7 +180,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 				bean.setTipoProdotto(rs.getString("tipoProdotto"));
 				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
 				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
-				bean.setImmagine(rs.getString("immagine"));
+				bean.setImmagine(rs.getBytes("immagine"));
 				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
                 list.add(bean);
             }
@@ -220,7 +223,7 @@ ResultSet rs = preparedStatement.executeQuery();
 				bean.setTipoProdotto(rs.getString("tipoProdotto"));
 				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
 				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
-				bean.setImmagine(rs.getString("immagine"));
+				bean.setImmagine(rs.getBytes("immagine"));
 				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
 				
 				
@@ -271,7 +274,7 @@ ResultSet rs = preparedStatement.executeQuery();
 				bean.setTipoProdotto(rs.getString("tipoProdotto"));
 				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
 				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
-				bean.setImmagine(rs.getString("immagine"));
+				bean.setImmagine(rs.getBytes("immagine"));
 				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
 				
 				
@@ -308,7 +311,7 @@ ResultSet rs = preparedStatement.executeQuery();
 			preparedStatement.setString(4, prodotto.getTipoProdotto());
 			preparedStatement.setString(5, prodotto.getDescrizioneProdotto());
 			preparedStatement.setDouble(6, prodotto.getPrezzoProdotto());
-			preparedStatement.setString(7, prodotto.getImmagine());
+			preparedStatement.setBytes(7, prodotto.getImmagine());
 			preparedStatement.setInt(8, prodotto.getNumPezziDisponibili());
 			
 			System.out.println("doSave: "+ preparedStatement.toString());
@@ -346,7 +349,7 @@ ResultSet rs = preparedStatement.executeQuery();
 			preparedStatement.setString(4, prodotto.getTipoProdotto());
 			preparedStatement.setString(5, prodotto.getDescrizioneProdotto());
 			preparedStatement.setDouble(6, prodotto.getPrezzoProdotto());
-			preparedStatement.setString(7, prodotto.getImmagine());
+			preparedStatement.setBytes(7, prodotto.getImmagine());
 			preparedStatement.setInt(8, prodotto.getNumPezziDisponibili());
 			preparedStatement.setInt(9, prodotto.getIdProdotto());
 			
@@ -423,7 +426,7 @@ ResultSet rs = preparedStatement.executeQuery();
 				bean.setTipoProdotto(rs.getString("marcaProdotto"));
 				bean.setDescrizioneProdotto(rs.getString("descrizioneProdotto"));
 				bean.setPrezzoProdotto(rs.getInt("prezzoProdotto"));
-				bean.setImmagine(rs.getString("immagine"));
+				bean.setImmagine(rs.getBytes("immagine"));
 				bean.setNumPezziDisponibili(rs.getInt("numPezziDisponibili"));
 				list.add(bean);
 			}

@@ -38,7 +38,7 @@ CREATE TABLE prodotto (
     tipoProdotto	varchar(30) NOT NULL,
     descrizioneProdotto	varchar(200) NOT NULL,
     prezzoProdotto	double NOT NULL,
-    immagine varchar(50),
+    immagine mediumblob DEFAULT NULL,
     numPezziDisponibili int NOT NULL
 );	
 

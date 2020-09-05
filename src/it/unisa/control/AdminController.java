@@ -6,16 +6,19 @@ import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import it.unisa.model.ProductBean;
 import it.unisa.model.ProductModelDM;
 
 
 @WebServlet("/AdminController")
+@MultipartConfig
 public class AdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
    
@@ -42,7 +45,7 @@ public class AdminController extends HttpServlet {
 					String tipoProdotto= request.getParameter("tipoprodotto");
 					String descrizioneProdotto= request.getParameter("descrizioneprodotto");
 					double prezzoProdotto= Double.parseDouble(request.getParameter("prezzoprodotto"));
-					String immagine= request.getParameter("immagine");
+					Part immagine= request.getPart("immagine");
 					int numPezziDisponibili=Integer.parseInt(request.getParameter("numPezziDisponibili"));
 										
 					ProductBean bean = new ProductBean();
@@ -53,7 +56,7 @@ public class AdminController extends HttpServlet {
 					bean.setTipoProdotto(tipoProdotto);
 					bean.setDescrizioneProdotto(descrizioneProdotto);
 					bean.setPrezzoProdotto(prezzoProdotto);
-					bean.setImmagine(immagine);
+					bean.setImmagine(immagine.getInputStream().readAllBytes());
 					bean.setNumPezziDisponibili(numPezziDisponibili);
 					
 					

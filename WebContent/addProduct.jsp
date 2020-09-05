@@ -41,7 +41,7 @@ if (adminRoles != true)
 	 	<h2>Add Product</h2>
 	 </div>
 
-	 <form method="POST" action="AdminController">
+	 <form method="POST" action="AdminController" enctype="multipart/form-data">
 	 
 	 <input type="hidden" name="action" value="add_product">
      

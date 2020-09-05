@@ -22,4 +22,6 @@ public interface ProductModel<T> {
 	public Collection<ProductBean> doRetrieveAllAccessori(String order) throws SQLException;
 
 	public Collection<ProductBean> doRetrieveAllDinamico(String order) throws SQLException;
+
+	
 }
