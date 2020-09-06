@@ -21,6 +21,10 @@
 	color: red;
 }
 
+input[type=number]{
+    width: 70px;
+} 
+
 </style>
 </head>
 <body>
@@ -89,7 +93,7 @@
                                                 <label for="citta"><b>Citta':<input type="text" size="40" name="citta" value="<%=user.getCitta()%>"></b></label><br>
                                                 <label for="provincia"><b>Provincia:<input type="text" size="40" name="provincia" value="<%=user.getProvincia()%>"></b></label><br>
                                                 <label for="via"><b>Via:<input type="text" size="40" name="via" value="<%=user.getVia()%>"></b></label><br>
-                                                <label for="numerocivico"><b>Numero Civico:<input type="number" size="40" name="numerocivico" value="<%=user.getNumCivico()%>"></b></label><br>
+                                                <label for="numerocivico"><b>Numero Civico:   <br><input type="number" size="40" name="numerocivico" value="<%=user.getNumCivico()%>"></b></label><br>
                                                 <label for="cellulare"><b>Cellulare:<input type="tel" size="40" name="cellulare" value="<%=user.getCellulare()%>"></b></label><br>
                                                 <label for="email"><b>Email:</b> <%=user.getEmail() %></label><br>
                                                 <label for="password"><b>Password:<input type="password" size="40" name="password" value="<%=user.getPsswrd()%>"></b></label><br>
