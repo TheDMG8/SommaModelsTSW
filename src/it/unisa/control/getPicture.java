@@ -32,6 +32,8 @@ public class getPicture extends HttpServlet {
 			try {
 				bt = model.doRetrieveByKey(id).getImmagine();
 			
+				System.out.println(bt);
+				
 			ServletOutputStream out = response.getOutputStream();
 			if (bt != null) 
 			{
