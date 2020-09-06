@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>adminArea</title>
+<title>Area admin</title>
 
 </head>
 <body>

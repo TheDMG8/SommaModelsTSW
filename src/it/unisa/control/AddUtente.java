@@ -69,12 +69,46 @@ public class AddUtente extends HttpServlet {
 					RequestDispatcher view = request.getRequestDispatcher("success.jsp");/*dove inoltro il form*/
 					view.forward(request,response);
 					return;
-				  }
-				else if(action.equals("login")) {
+				  }else if(action.equals("modify")) {
+					  String nome= request.getParameter("nome");
+						String cognome= request.getParameter("cognome");
+						String regione= request.getParameter("regione");
+						String citta= request.getParameter("citta");
+						String provincia= request.getParameter("provincia");
+						String via= request.getParameter("via");
+						int numCivico= Integer.parseInt(request.getParameter("numerocivico"));
+						String cellulare= request.getParameter("cellulare");
+						String psswrd= request.getParameter("password");
+						
+						UtenteBean bean = new UtenteBean();
+						
+						bean.setNome(nome);
+						bean.setCognome(cognome);
+						bean.setRegione(regione);
+						bean.setCitta(citta);
+						bean.setProvincia(provincia);
+						bean.setVia(via);
+						bean.setNumCivico(numCivico);
+						bean.setCellulare(cellulare);
+						bean.setPsswrd(psswrd);
+						int user= (int) request.getSession().getAttribute("idUser");
+						System.out.println("ho preso l'idutente:"+ user);
+						model.doUpdateEditProfilo(bean, user);
+						System.out.println("ho effettuato la modifica");
+						RequestDispatcher view = request.getRequestDispatcher("userPersonalPage.jsp");/*dove inoltro il form*/
+						view.forward(request,response);
+						return;
+					  
+					  
+					  
+					  
+					  
+				  }else if(action.equals("login")) {
 					String paramUsername = request.getParameter("username");
 					String paramPassword = request.getParameter("password");
 					
 					/* controllo del login con funzione da db*/
+					@SuppressWarnings("unused")
 					String redirectedPage;
 					int isAdmin= checkLogin(paramUsername, paramPassword);
 					

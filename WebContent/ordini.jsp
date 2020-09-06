@@ -1,4 +1,3 @@
-<%@page import="it.unisa.model.ProductBean"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" import="java.util.*,it.unisa.model.UtenteBean ,it.unisa.model.OrdineBean" %>
     <%
@@ -32,7 +31,7 @@ padding: 15px;
  float: right;
 }
 </style>
-<title>PaginaPersonale</title>
+<title>Pagina ordini</title>
 
 </head>
 <body>

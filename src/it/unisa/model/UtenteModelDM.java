@@ -147,29 +147,24 @@ public class UtenteModelDM implements UtenteModel<UtenteBean> {
 	}
 	}
 	@Override
-	public void doUpdate(UtenteBean utente) throws SQLException {
+	public void doUpdateEditProfilo(UtenteBean utente,int idUtente) throws SQLException {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
-		
-		String updateSQL="UPDATE utente SET" +
-		         "(nome = ?, cognome = ?, sesso = ?, regione = ?, citta = ?, provincia = ?, via = ?, numCivico = ?, cellulare = ?, email = ?, psswrd = ? WHERE idUtente = ?";
-
+		String updateSQL="UPDATE utente SET nome = ?, cognome = ?, regione = ?, citta =?, provincia = ?, via = ? , numCivico = ?, cellulare = ?,  psswrd = ? WHERE idUtente = ?";
 		try {
 			connection = DriverManagerConnectionPool.getConnection();
 			preparedStatement = connection.prepareStatement (updateSQL);
 
 			preparedStatement.setString(1, utente.getNome());
 			preparedStatement.setString(2, utente.getCognome());
-			preparedStatement.setString(3, utente.getSesso());
-			preparedStatement.setString(4, utente.getRegione());
-			preparedStatement.setString(5, utente.getCitta());
-			preparedStatement.setString(6, utente.getProvincia());
-			preparedStatement.setString(7, utente.getVia());
-			preparedStatement.setInt(8, utente.getNumCivico());
-			preparedStatement.setString(9, utente.getCellulare());
-			preparedStatement.setString(10, utente.getEmail());
-			preparedStatement.setString(11, utente.getPsswrd());
-			preparedStatement.setInt(12, utente.getIdUtente());
+			preparedStatement.setString(3, utente.getRegione());
+			preparedStatement.setString(4, utente.getCitta());
+			preparedStatement.setString(5, utente.getProvincia());
+			preparedStatement.setString(6, utente.getVia());
+			preparedStatement.setInt(7, utente.getNumCivico());
+			preparedStatement.setString(8, utente.getCellulare());
+			preparedStatement.setString(9, utente.getPsswrd());
+			preparedStatement.setInt(10, idUtente);
 			
 			System.out.println("doUpdate:" + preparedStatement.toString());
 			preparedStatement.executeUpdate();
@@ -214,5 +209,46 @@ public class UtenteModelDM implements UtenteModel<UtenteBean> {
 
 		}
 
+	}
+	
+	@Override
+	public void doUpdate(UtenteBean utente) throws SQLException {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		String updateSQL="UPDATE utente SET" +
+		         "(nome = ?, cognome = ?, sesso = ?, regione = ?, citta = ?, provincia = ?, via = ?, numCivico = ?, cellulare = ?, email = ?, psswrd = ? WHERE idUtente = ?";
+
+		try {
+			connection = DriverManagerConnectionPool.getConnection();
+			preparedStatement = connection.prepareStatement (updateSQL);
+
+			preparedStatement.setString(1, utente.getNome());
+			preparedStatement.setString(2, utente.getCognome());
+			preparedStatement.setString(3, utente.getSesso());
+			preparedStatement.setString(4, utente.getRegione());
+			preparedStatement.setString(5, utente.getCitta());
+			preparedStatement.setString(6, utente.getProvincia());
+			preparedStatement.setString(7, utente.getVia());
+			preparedStatement.setInt(8, utente.getNumCivico());
+			preparedStatement.setString(9, utente.getCellulare());
+			preparedStatement.setString(10, utente.getEmail());
+			preparedStatement.setString(11, utente.getPsswrd());
+			preparedStatement.setInt(12, utente.getIdUtente());
+			
+			System.out.println("doUpdate:" + preparedStatement.toString());
+			preparedStatement.executeUpdate();
+			
+			/*abbiamo settato a false sennò il db non viene aggiornato*/
+			connection.commit();
+	}finally {
+		try {
+		if(preparedStatement != null )
+			preparedStatement.close();
+		}finally {
+			
+			DriverManagerConnectionPool.releaseConnection(connection);
+	   }
+	}
 	}
 }

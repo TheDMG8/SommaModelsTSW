@@ -32,12 +32,13 @@ padding: 15px;
 </head>
 <body>
 <%@ include file="jsp/navbar2.jsp" %>
+
 <%if(nome.isBlank()){ 
 	response.sendRedirect("Index.jsp");
 	}else{ %>	
 
 	<% ctx.setAttribute("User", user); 
-}
+	}
 	%>
 	
 	<div class="user-div">

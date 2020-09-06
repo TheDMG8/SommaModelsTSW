@@ -10,7 +10,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link href="CSS/profilo.css" rel="stylesheet">
 
-<title>PaginaPersonale</title>
+<title>Pagina personale</title>
 
 </head>
 <body>
@@ -35,6 +35,8 @@
    		
         <%} %>
 		<form action="Logout" method="get" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Logout"/></form> 
+		<form action="modificaProfilo.jsp" method="post" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Modifica Profilo"/></form> 
+    
     </div>
 <div class="container emp-profile">
             <form method="post">
@@ -116,9 +118,10 @@
                                                 <p><%=user.getVia()%> <%=user.getNumCivico()%></p>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-         										<a href="modificaProfilo.jsp"><input type="submit"  class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/></a>
-   										</div>
+                                        
+         										
+   												
+   										
                                         </div>
                                       
                             </div>

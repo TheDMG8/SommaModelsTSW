@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="it.unisa.model.Carrello,it.unisa.model.ProductBean,java.util.*"%>
+    pageEncoding="ISO-8859-1" import="it.unisa.model.Carrello,it.unisa.model.ProductBean,java.util.*,it.unisa.model.UtenteBean"%>
        <%
 			HttpSession sessione= request.getSession(true);
 			@SuppressWarnings("unchecked")
@@ -11,7 +11,12 @@
 			}
 			
 			String message= (String) request.getAttribute("message");
-		%>
+			
+			
+		    
+	
+		    %>
+
 <!DOCTYPE html>
 <html>
 <head>

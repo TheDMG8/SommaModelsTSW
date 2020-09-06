@@ -14,4 +14,6 @@ public interface UtenteModel<T> {
 	public void doUpdate(T utente)throws SQLException;
 	
 	public void doDelete(T utente)throws SQLException;
+
+	void doUpdateEditProfilo(T utente, int idUtente) throws SQLException;
 }
