@@ -17,6 +17,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet "href="CSS/assistenza.css">
 <meta charset="ISO-8859-1">
 <style type="text/css">
 .well{ border: 1px solid black;
@@ -24,11 +25,15 @@
 }
 
 </style>
-<title>CARRELLO</title>
+<title>Carrello</title>
 </head>
 <%@ include file="jsp/navbar2.jsp" %>
 <body>
+
 <br>
+<%if(nome.isBlank()){ %>
+	<p class=titolo>Effettua il login per accedere al carrello</p>
+	<%}else{%>
 <div class="container">
 	<h1>Carrello:</h1>
 	<br>
@@ -64,6 +69,7 @@
 			<h3>Il carrello è vuoto...</h3>
 	<% } %>
 	</div>
+<%} %>	
 </body>
 <%@ include file="jsp/footer.jsp" %>
 </html>
