@@ -98,9 +98,9 @@ public class AddUtente extends HttpServlet {
 						bean.setPsswrd(psswrd);
 						bean.setAdmin(userOld.isAdmin());
 						
-						int user= (int) request.getSession().getAttribute("idUser");
-						System.out.println("ho preso l'idutente:"+ user);
-						model.doUpdateEditProfilo(bean, user);
+						int IdUser= (int) request.getSession().getAttribute("idUser");
+						System.out.println("ho preso l'idutente:"+ IdUser);
+						model.doUpdateEditProfilo(bean, IdUser);
 						System.out.println("ho effettuato la modifica");
 						HttpSession currentSession = request.getSession();
 						currentSession.setAttribute("user", bean);
