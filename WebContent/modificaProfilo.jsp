@@ -102,7 +102,7 @@ input[type=number]{
                                                 
                                             </div>
                                             <div class="nota">
-                                            <br><p>*una volta effettuata una modifica verrai reindirizzato alla home e dovrai rieffettuare il login al sito.</p>
+                                            <br><p>*una volta effettuata una modifica verrai reindirizzato alla pagina profilo.</p>
                                         	</div>
                                         </div>
                                   

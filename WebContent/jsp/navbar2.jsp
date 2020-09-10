@@ -42,10 +42,10 @@
       <a class="nav-link" href="Index.jsp"><i class="fa fa-home" aria-hidden="true"></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="modellismoStatico.jsp">M.Statico</a>
+      <a class="nav-link" href="modellismoStatico.jsp">Statico</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="modellismoDinamico.jsp">M.Dinamico</a>
+      <a class="nav-link" href="modellismoDinamico.jsp">Dinamico</a>
     </li>
      <li class="nav-item">
       <a class="nav-link" href="accessori.jsp">Accessori</a>

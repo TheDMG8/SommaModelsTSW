@@ -30,10 +30,10 @@
    <div class="destra col-md-6">
      
      <h4 class="product"><%=bean.getNomeProdotto() %></h4>
-     <ul class="desc">
-     descrizione: <br><%=bean.getDescrizioneProdotto() %>
-     </ul>
-   	 <p class="price"><%=bean.getPrezzoProdotto() %></p>
+     <div class="desc">
+     <b>Descrizione:</b> <br><%=bean.getDescrizioneProdotto() %>
+     </div>
+   	 <p class="price"><%=bean.getPrezzoProdotto() %>&euro;</p>
      <p><a href="<%= response.encodeURL("DettagliProdottoAddCart?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra</a></p>
 
   </div>

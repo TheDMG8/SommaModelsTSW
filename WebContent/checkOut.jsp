@@ -101,14 +101,21 @@
       <h4>Carrello: <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
       <% 
  
-      int tot= 0;
+      double tot= 0;
 		if(carrello != null && !carrello.getItems().isEmpty()){
 			for(ProductBean p : carrello.getItems()){
 				tot+=p.getPrezzoProdotto();
-      %>			
+      %>
+      <br>			
       <p><%=p.getNomeProdotto()%> <span class="price"><br><%=p.getPrezzoProdotto()%>&euro;</span></p>
       <hr>
       <% }%>
+      <%if(tot>=200){%>
+      <p>Costi Spedizione<span class="price"><br>0.0&euro;</span></p>
+      <%}else{double pr=tot/2; tot+=pr;%>
+      <p>Costi Spedizione<span class="price"><br><%=pr%>&euro;</span></p> 
+      <%} %>
+      <hr>
       <br>
       <p>Totale <span class="price" style="color:black"><b><%=tot%>&euro;</b></span></p>
       <%} %>
