@@ -163,7 +163,21 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 	public Collection<ProductBean> retriveBySearch(String s){
         try (Connection con = DriverManagerConnectionPool.getConnection()) {
             String search = "%";
-            search += s + "%";
+            String replaced="";
+            for(int i=0;i<s.length();i++) {
+            	char var=s.charAt(i);
+            	System.out.println(var);
+            	if(var==' ') {
+            		replaced+="%";
+            		System.out.println("space");
+            	}else {
+            		replaced+=var;
+            	}
+            		
+            }	
+
+            search += replaced + "%";
+            System.out.println(search);
             PreparedStatement ps =
                     con.prepareStatement("SELECT * FROM prodotto WHERE nomeProdotto LIKE ?");
             ps.setString(1,search);
