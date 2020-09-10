@@ -152,7 +152,7 @@ public class AddUtente extends HttpServlet {
 							}
 							HttpSession currentSession = request.getSession(); /*ne creo una nuova*/
 						   	currentSession.setAttribute("user", user);
-						   	currentSession.setMaxInactiveInterval(5*60);/*5 minuti di inattivit  massima*/
+						   	currentSession.setMaxInactiveInterval(30*60);/*5 minuti di inattivit  massima*/
 						   
 						   	response.sendRedirect("Index.jsp");/*vai alla pagina home con login*/
 						   	return;
