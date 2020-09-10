@@ -1,20 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" import="java.util.*, it.unisa.model.ProductBean"%>
-<%
-     Collection<?> prodotti = (Collection<?>) request.getAttribute("prodotti");
-     ArrayList<ProductBean> arrayList=new ArrayList<ProductBean>();
-  	 String error = (String)request.getAttribute("error");
-     
-     if(prodotti == null ) {
-  		response.sendRedirect(response.encodeRedirectURL("./DettagliProd"));
-  		return;
-		}
 
-    %>
-    
    <%
 // Check user credentials
-Boolean adminRoles = (Boolean) request.getSession().getAttribute("adminRoles");
+	Boolean adminRoles = (Boolean) request.getSession().getAttribute("adminRoles");
+   
 if (adminRoles != true)
 {	
     response.sendRedirect("./login.jsp");
@@ -25,6 +15,10 @@ if (adminRoles != true)
 <!DOCTYPE html>
 <html>
 <head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="CSS/profilo.css" rel="stylesheet">
 <meta charset="ISO-8859-1">
 <title>modicaEliminaProdotto</title>
 
@@ -32,80 +26,18 @@ if (adminRoles != true)
 </head>
 <body>
 	<%@ include file="jsp/navbar2.jsp" %>
-
-	<header>
-		<nav>
-			<ul>
-				<li><a href="addProduct.jsp">Aggiungi Prodotti</a></li>
-				<li><a href="editProduct.jsp">Modifica Prodotti</a></li>
-			</ul>
-		</nav>
-		<form action="Logout" method="get" > 
-     <input type="submit" value="Logout"/>
-</form>
-	</header>
-	
-	<div class="signup-header">
-	 	<h2>Modifica prodotto</h2>
-	 </div>
-
-	  <form method="post" action="AdminController" enctype="multipart/form-data">
-		<input type="hidden" name="action" value="update">
-     
-	 	<div class="signup-group">
-	 	
-	 	<label>Id Prodotto</label>
-	 		<input type="text" name="idProdotto" placeholder="ID prodotto"  required>
-	 	</div>
-	 	
-	 		<label>Nome Prodotto</label>
-	 		<input type="text" name="nomeprodotto" placeholder="nome prodotto"  >
-	 	</div>
-	 	<div class="signup-group">
-	 	
-	 		<label>Marca Prodotto</label>
-	 		<input type="text" name="marcaprodotto" placeholder="marca prodotto" >
-	 	</div>
-	 	<div class="signup-group">
-	 		<label>Tipo Categoria</label>
-	 		<input type="text" name="categoria" placeholder="tipo categoria" >
-	 	</div>
-	 	
-	 	<div class="signup-group">
-	 		<label>Tipo Prodotto</label>
-	 		<input type="text" name="tipoprodotto" placeholder="tipo prodotto" >
-	 	</div>
-	 	
-	 	<div class="signup-group">
-	 		<label>Descrizione Prodotto</label>
-	 		<input type="text" name="descrizioneprodotto" placeholder="descrizione" >
-	 	</div>
-	 	
-	 	<div class="signup-group">
-	 		<label>Prezzo Prodotto</label>
-	 		<input type="text" name="prezzoprodotto" placeholder="descrizione" >
-	 	</div>
-	 	
-	 	<div class="signup-group">
-	 		<label for="fileupload">Immagine</label>
-	 		<input type="file" name="immagine" >
-	 	</div>
-	 	
-	 	<div class="signup-group">
-	 		<label>Pezzi Disponibili</label>
-	 		<input type="text" name="numPezziDisponibili" placeholder="pezzi disponibili" >
-	 	</div>
-	 	
-	 	<div class="signup-group">
-			<input type="submit" value="Process">	 
-		</div>
-	 </form>
+<div class="user-div">
+	<form action="addProduct.jsp" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Aggiungi Prodotti"/></form> 
+    <form action="editProduct.jsp" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Elimina Prodotti"/></form> 
+   	<form action="adminArea.jsp" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Area Amministratore"/></form> 
+   		
+</div>
 	 
 	 <h1>elimina prodotto</h1>
 	 <form method="post" action="AdminController" enctype="multipart/form-data">
 	 <input type="hidden" name="action" value="delete">
 	 	<label>Id prodotto:</label>
-	 	<input type="text" name="id" placeholder="num">
+	 	<input type="text" name="id" placeholder="ID">
 	 	<input type="submit" value="elimina prodotto">
 	 </form>		
 	 

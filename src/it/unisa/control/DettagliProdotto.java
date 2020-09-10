@@ -34,7 +34,7 @@ public class DettagliProdotto extends HttpServlet {
 	        throws ServletException, IOException {
 		ServletContext ctx= getServletContext();
 		
-		if(request.getParameter("id")!= null) {
+		
 		String idProd= request.getParameter("id");
 		ProductModelDM prod= new ProductModelDM();
 		
@@ -50,23 +50,6 @@ public class DettagliProdotto extends HttpServlet {
 		System.out.println("TERMOSTATO DETTAGLI PRODOTTI");
 		RequestDispatcher dispatcher = request.getRequestDispatcher(address);
 		dispatcher.forward(request, response);
-	}else {
-		
-		ProductModelDM model=new ProductModelDM();
-		System.out.println("ViewProd 1");
-		try {
-			Collection<ProductBean> collProd=model.doRetrieveAll(null);
-			getServletContext().setAttribute("prodotti", collProd);
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		String address;
-		address = "/adminArea.jsp";
-		System.out.println("ViewProd final");
-		RequestDispatcher dispatcher = request.getRequestDispatcher(address);
-		dispatcher.forward(request, response);
-	}
+	
 	}
 }

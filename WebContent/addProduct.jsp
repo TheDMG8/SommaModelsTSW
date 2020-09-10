@@ -26,12 +26,11 @@ if (adminRoles != true)
 		<h1>
 			Welcome admin
 		</h1>
-		<nav>
-			<ul>
-				<li><a href="addProduct.jsp">Aggiungi Prodotti</a></li>
-				<li><a href="editProduct.jsp">Modifica Prodotti</a></li>
-			</ul>
-		</nav>
+		<div class="user-div">
+			<form action="addProduct.jsp" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Aggiungi Prodotti"/></form> 
+   			 <form action="editProduct.jsp" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Elimina Prodotti"/></form> 
+   			<form action="adminArea.jsp" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Area Amministratore"/></form> 
+   		</div>
 		<form action="Logout" method="get" > 
      <input type="submit" value="Logout"/>
 </form>

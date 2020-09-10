@@ -79,7 +79,8 @@ public class AdminController extends HttpServlet {
 						double prezzoProdotto= Double.parseDouble(request.getParameter("prezzoprodotto"));
 						Part immagine= request.getPart("immagine");
 						int numPezziDisponibili=Integer.parseInt(request.getParameter("numPezziDisponibili"));
-											
+
+						
 												
 						bean.setNomeProdotto(nomeProdotto);
 						bean.setMarcaProdotto(marcaProdotto);

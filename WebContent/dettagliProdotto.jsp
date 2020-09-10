@@ -35,7 +35,10 @@
      </div>
    	 <p class="price"><%=bean.getPrezzoProdotto() %>&euro;</p>
      <p><a href="<%= response.encodeURL("DettagliProdottoAddCart?action=addCart&id=" + bean.getIdProdotto()) %>" class="btn"><i class="fa fa-cart-plus" aria-hidden="true"></i> Compra</a></p>
-
+<%if(user != null)
+	if(user.isAdmin().equals("true")){%>
+ <h4 class="text-center">ID PRODOTTO:<%=bean.getIdProdotto() %></h4>
+<%}%>
   </div>
 </div>
 </div>
