@@ -1,6 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" import="java.util.*, it.unisa.model.ProductBean"%>
+<%
+     Collection<?> prodotti = (Collection<?>) request.getAttribute("prodotti");
+     ArrayList<ProductBean> arrayList=new ArrayList<ProductBean>();
+  	 String error = (String)request.getAttribute("error");
+     
+     if(prodotti == null ) {
+  		response.sendRedirect(response.encodeRedirectURL("./DettagliProd"));
+  		return;
+		}
 
+    %>
+    
    <%
 // Check user credentials
 Boolean adminRoles = (Boolean) request.getSession().getAttribute("adminRoles");
