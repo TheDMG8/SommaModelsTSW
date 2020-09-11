@@ -19,8 +19,9 @@ if (adminRoles != true)
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link href="CSS/profilo.css" rel="stylesheet">
+<link href="CSS/assistenza.css" rel="stylesheet">
 <meta charset="ISO-8859-1">
-<title>modicaEliminaProdotto</title>
+<title>EliminaProdotto</title>
 
 
 </head>
@@ -33,13 +34,14 @@ if (adminRoles != true)
    		
 </div>
 	 
-	 <h1>elimina prodotto</h1>
+	 <li><h1>elimina prodotto</h1>
 	 <form method="post" action="AdminController" enctype="multipart/form-data">
 	 <input type="hidden" name="action" value="delete">
-	 	<label>Id prodotto:</label>
-	 	<input type="text" name="id" placeholder="ID">
-	 	<input type="submit" value="elimina prodotto">
+	 	<li><label>Id prodotto:</label>
+	 	<li><input type="text" name="id" placeholder="ID">
+	 	<li><input class="bottoneAssistenza" type="submit" value="elimina prodotto">
 	 </form>		
+	 
 	 
 	
 	 <footer style="position: absolute;left: 0;bottom: 0;width: 100%;">

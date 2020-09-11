@@ -20,8 +20,8 @@
 		<form action="Logout" method="get" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Logout"/></form> 
 		<form action="modificaProfilo.jsp" method="post" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Modifica Profilo"/></form> 
     </div>
-<h1>Welcome to the Protected Page</h1>
-Congratulations. You have accessed a protected document.
+<h1>Benvenuto nella pagina protetta</h1>
+
 <br><br>
 <div class="user-div">
 	<form action="addProduct.jsp" method="POST" ><input class="profile-edit-btn" name="btnAddMore" type="submit" value="Aggiungi Prodotti"/></form> 
