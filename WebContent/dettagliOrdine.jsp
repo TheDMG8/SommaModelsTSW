@@ -85,6 +85,8 @@ padding: 15px;
                                                 
                                             </div>
                                             <div class="col-md-6">
+                                            <p>
+                                            <b>Prodotti:</b>
                                                 <%if(collProd != null && collProd.size()>0){
                                                 	    	Iterator<?> it= collProd.iterator();
                                                 	    	int totale=0;
@@ -92,14 +94,20 @@ padding: 15px;
                                                 	    		ProductBean bean = (ProductBean)it.next();
                                                 	    		totale+=bean.getPrezzoProdotto();
                                                 	    		%>
-                                                	    		<p>
-                                                	    	<br><%=bean.getNomeProdotto()%><br>
+                                                	    		
+                                                	    	<br><%=bean.getNomeProdotto()%>
                                                 	    	<br>Prezzo: <%=bean.getPrezzoProdotto()%>&euro;<br>
-                                                	    	</p>
+                                                	    	
                                                 	    	
                                                 <%}%>
-                                                <br>Totale:<%=totale %>&euro;<br>
+                                                <br><%if(totale>=200){%>
+     												 <b>Costi Spedizione:</b><span class="price"> Gratuita</span>
+      												<%}else{double pr=totale*15/100; totale+=pr;%>
+     												 <p><b>Costi Spedizione:</b><span class="price"><%=pr%>&euro;</span>
+      												<%} %>
+                                                <br><b>Totale:</b><%=totale %>&euro;<br>
                                              <%}%>   
+                                             </p>
                                             </div>
                                         </div>
                                         

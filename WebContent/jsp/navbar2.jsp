@@ -15,19 +15,18 @@
 <!-- Meta tags -->
       <meta charset = "utf-8">
       <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
+      <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+	  <link rel = "stylesheet" type="text/css"  href = "CSS/navBar.css"/>
+      <link rel = "stylesheet" type="text/css"  href = "CSS/mediaquery.css"/>
       
 <title>Navbar esatta</title>
-
-<link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
-<link rel = "stylesheet" href = "CSS/navBar.css">
-
-<script src="https://kit.fontawesome.com/cf835fc8f8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<a href="Index.jsp">
+<a class="pic" href="Index.jsp">
   <img class="upperPic" src="pictures/px1.png">
+  <img class="upperPic2" src="pictures/px2.png">
 </a>
 
 
@@ -61,7 +60,37 @@
     </li>
     </ul>
    </div>
+   
   	<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+  	  
+        <ul id="navdx" class="navbar-nav ml-auto">
+        <% if(!nome.isBlank()){ %> 
+            <li class="nav-item" >
+                <a class="nav-link" href="userPersonalPage.jsp" style="color:#ff6666;"><i class="fas fa-car-side"></i> Profilo</a>
+            </li>
+       <%}else{ %>
+            <li class="nav-item">
+                <a class="nav-link" href="login.jsp" style="color:#33ccff;" ><i class="fa fa-user-o" aria-hidden="true"></i> Accedi</a>
+            </li>
+       <%} %>
+            <li class="nav-item">
+                <a class="nav-link" href="Carrello.jsp"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrello</a>
+            </li>
+            <li class="nav-item" >
+                <form class="form-inline right" action="<%=response.encodeURL("./SearchControl")%>" method="GET">
+                    <input class="form-control mr-sm-2" name="search" type="text" placeholder="Cerca...">
+                    <button class="btn btn-success" type="submit">Search</button>
+            	</form>
+            </li>
+        </ul>
+        </div>
+    
+    
+    
+
+</nav>
+<nav id="nav2" class="navbar navbar-expand-sm bg-dark navbar-dark">
+	<div class="area1">
         <ul class="navbar-nav ml-auto">
         <% if(!nome.isBlank()){ %> 
             <li class="nav-item" >
@@ -82,9 +111,7 @@
             	</form>
             </li>
         </ul>
-    </div>
-
-</nav>
-
+	</div>
+	</nav>
 </body>
 </html>

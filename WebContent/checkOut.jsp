@@ -112,7 +112,7 @@
       <% }%>
       <%if(tot>=200){%>
       <p>Costi Spedizione<span class="price"><br>0.0&euro;</span></p>
-      <%}else{double pr=tot/2; tot+=pr;%>
+      <%}else{double pr=tot*15/100; tot+=pr;%>
       <p>Costi Spedizione<span class="price"><br><%=pr%>&euro;</span></p> 
       <%} %>
       <hr>

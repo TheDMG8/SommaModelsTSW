@@ -19,9 +19,9 @@
 
 
 <!-- Carousel (Scorrimento orizzontale) -->
-	
+<div class="carousel">	
 <%@ include file="jsp/carousel.jsp" %>	
-	
+</div>	
 <!-- Barra di navigazione utente -->
 	
 

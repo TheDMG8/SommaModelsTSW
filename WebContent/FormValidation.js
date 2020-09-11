@@ -12,7 +12,11 @@ function FormValidation(){
 	var uemail = document.registration.email;
 	var password = document.registration.password;
 
-	
+if(unome||ucognome||uregione||ucittà||uvia||ucellulare||uemail||password){
+	alert('Inserisci tutti i campi');
+	return false;
+}
+
 if(allLet(unome))
 {
 if(allLett(ucognome))

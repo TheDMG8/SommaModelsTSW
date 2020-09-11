@@ -19,33 +19,51 @@
 <form action="AddUtente" method= "POST" name="registration" onSubmit="return FormValidation();" >
 <input type="hidden" name="action" value="insert">
 <fieldset>
-   <ul>
-   <li><label for="nome"><b>Nome</b></label></li>
-   <li><input type="text" size="40" name="nome" ></li>
-   <li><label for="cognome"><b>Cognome</b></label></li>
-   <li><input type="text" size="40" name="cognome" ></li>
-   <li><label for="sesso"><b>Sesso</b></label></li>
-   <li><select name="sesso" id="sesso"></li> 
+   <table id="table-form">
+   <tr>
+   <td><label for="nome" ><b>Nome</b></label></td>
+   <td><input type="text" size="40" name="nome" placeholder="Mario"></td>
+   </tr>
+   <tr>
+   <td><label for="cognome"><b>Cognome</b></label></td>
+   <td><input type="text" size="40" name="cognome" placeholder="Rossi"></td>
+   </tr>
+   <tr>
+   <td><label for="sesso"><b>Sesso</b></label></td>
+   <td><select name="sesso" id="sesso"> 
+    <option value="maschio" >M</option>
     <option value="femmina">F</option>
-    <option value="maschio">M</option>
-	</select>
-   <li><label for="regione"><b>Regione</b></label></li>
-   <li><input type="text" size="40" name="regione"></li>
-   <li><label for="citta"><b>Città</b></label></li>
-   <li><input type="text" size="40" name="citta"></li>
-   <li><label for="provincia"><b>Provincia</b></label></li>
-   <li><input type="text" size="40" name="provincia"></li>
-   <li><label for="via"><b>Via</b></label></li>
-   <li><input type="text" size="40" name="via"></li>
-   <li><label for="numerocivico"><b>Numero Civico</b></label></li>
-   <li><input type="number" size="40" name="numerocivico"></li>
-   <li><label for="cellulare"><b>Cellulare</b></label></li>
-   <li><input type="tel" size="40" name="cellulare"></li>
-   <li><label for="email"><b>Email</b></label></li>
-   <li><input class=margin type="text" size="40"name="email"></li>
-   <li><label for="password"><b>Password</b></label></li>
-   <li><input type="password" size="40" name="password" ></li>
-   </ul>
+	</select></td>
+	</tr>
+	<tr>
+   <td><label for="regione"><b>Regione</b></label></td>
+   <td><input type="text" size="40" name="regione" placeholder="Lazio"></td>
+   </tr>
+   <tr>
+   <td><label for="citta"><b>Citta'</b></label></td>
+   <td><input type="text" size="40" name="citta" placeholder="Roma"></td>
+   </tr>
+   <tr>
+   <td><label for="provincia"><b>Provincia</b></label></td>
+   <td><input type="text" size="40" name="provincia" placeholder="RO"></td>
+   </tr>
+   <tr>
+   <td><label for="via"><b>Via</b></label></td>
+   <td><input type="text" size="40" name="via" placeholder="Via Grande"></td>
+   </tr><tr>
+   <td><label for="numerocivico"><b>Numero Civico</b></label></td>
+   <td><input type="number" size="40" name="numerocivico" placeholder="1"></td>
+   </tr><tr>
+   <td><label for="cellulare"><b>Cellulare</b></label></td>
+   <td><input type="tel" size="40" name="cellulare" placeholder="3334445556"></td>
+   </tr><tr>
+   <td><label for="email"><b>Email</b></label></td>
+   <td><input class=margin type="text" size="40"name="email" placeholder="marioRossi@example.com"></td>
+   </tr><tr>
+   <td><label for="password"><b>Password</b></label></td>
+   <td><input type="password" size="40" name="password" ></td>
+   </tr>
+   </table>
    <input  class=bottoniCreaUtente type ="submit" name="Iviaci i dati" value="Iscriviti" >
    <input class=bottoniCreaUtente type="reset" > 
  </fieldset>

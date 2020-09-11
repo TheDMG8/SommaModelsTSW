@@ -10,7 +10,7 @@
 <br>
 <div class="container" style="background-color:#0000" >
 
-  <div class="card img-fluid" style="width:250px; height:250px; float:left; display:block; margin-left:50px;" >
+  <div id="#card" class="card img-fluid" style="width:250px; height:250px; float:left; display:block; margin-left:50px;margin-bottom: 10px;" >
     <img class="card-img-top" src="pictures/dinamica.jpg" alt="Card image" style="width:100%">
     <div class="card-img-overlay">
       <h4 class="card-title">DINAMICO</h4>
@@ -18,7 +18,7 @@
     </div>
   </div>
  
-  <div class="card img-fluid" style="width:250px; height:250px; float:left; display:block; margin-left:50px;" >
+  <div class="card img-fluid" style="width:250px; height:250px; float:left; display:block; margin-left:50px; margin-bottom: 10px;" >
     <img class="card-img-top" src="pictures/staticanave.jpg" alt="Card image" style="width:100%">
     <div class="card-img-overlay">
       <h4 class="card-title">STATICO</h4>
@@ -26,12 +26,14 @@
     </div>
   </div>
 
-  <div class="card img-fluid" style="width:250px; height:250px; float:left; display:block; margin-left:50px;" >
+  <div class="card img-fluid" style="width:250px; height:250px; float:left; display:block; margin-left:50px; margin-bottom: 10px;" >
     <img class="card-img-top" src="pictures/accessori.jpg" alt="Card image" style="width:100%">
     <div class="card-img-overlay">
       <h4 class="card-title">ACCESSORI</h4>
       <a href="accessori.jsp" class="btn btn-secondary">Catalogo</a>
     </div>
+    
+    
 </div>
 </div>
 </body>

@@ -1,0 +1,47 @@
+.upperPic2{
+   display: none;
+   width: 100%;
+}
+
+.area1,#nav2{
+	display: none;
+}
+
+
+@media only screen and (max-width: 700px){ 
+   .upperPic{
+     display: none;
+     width: 100%;
+   }
+   .topnav {
+    font-size: 10px;
+  }
+  .carousel{
+   display: none;
+   }
+ 
+   #navdx{
+     display: none;
+   }
+
+   .upperPic2{
+     display: block;
+     width: 100%;
+   }
+}
+
+@media only screen and (max-width: 1200px){ 
+	 #navdx{
+     display: none;
+   }
+   
+   .area1,#nav2{
+   display: block;
+     width: 100%;
+   }
+   
+   
+}
+
+
+
