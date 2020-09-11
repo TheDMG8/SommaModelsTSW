@@ -20,7 +20,7 @@
 		<p class=titolo>Effettua il login per richiedere assistenza!</p>   
  <%}else{%>
 	 
-	<p class=titolo>Hai bisogno di aiuto? Compila il form e soddisferemo le tue esigenze!</p>
+	<p class=titolo>Hai bisogno di aiuto?<br>Compila il form e soddisferemo le tue esigenze!</p>
 	
 	<form action="AddAssistenza" method= "POST" name="assistenza" onSubmit="return successAssistenza"; >
 	<input type="hidden" name="azione" value="assistenza">

@@ -29,7 +29,8 @@ ul>li {
 }
 
 li{
-	margin-left: 5px;
+	margin-left: 15px;
+	list-style-type: none;
 }
 
 .pointer{
