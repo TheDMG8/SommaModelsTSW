@@ -9,8 +9,9 @@
 <title>Registrazione Utente</title>
 <script src="FormValidation.js"></script>
 </head>
-<%@ include file="jsp/navbar2.jsp" %>
+
 <body onload="document.registration.nome.focus();">
+<%@ include file="jsp/navbar2.jsp" %>
 <h1 id=benvenutoRegistazione>Unisciti a noi!</h1>
 <p id="registrazione ">Compila il form per effettuare la registrazione</p>
 

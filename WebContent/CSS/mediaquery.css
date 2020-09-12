@@ -1,3 +1,7 @@
+.upperPic{
+   width:100%;
+}
+
 .upperPic2{
    display: none;
    width: 100%;
@@ -28,9 +32,23 @@
      display: block;
      width: 100%;
    }
+   
+   
+   
+   
 }
 
 @media only screen and (max-width: 1200px){ 
+	
+	.upperPic{
+     display: none;
+     width: 100%;
+   }
+   
+    .upperPic2{
+     display: block;
+     width: 100%;
+   }
 	 #navdx{
      display: none;
    }
@@ -40,8 +58,30 @@
      width: 100%;
    }
    
+   #map1{
+   display: none;
+   
+   }
+   
+   #map2{
+     display: block;
+     width: 100%;
+   }
    
 }
+#search-layer {
+	
+	background-color: #000000;
+}
+
+#search-layer a{
+	float:right;
+	margin-right:25px; 
+	text-decoration: none;
+	
+}
+
+
 
 
 

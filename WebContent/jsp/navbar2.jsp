@@ -11,18 +11,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="ISO-8859-1">
 <!-- Meta tags -->
       <meta charset = "utf-8">
       <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
       <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+      <script src="https://kit.fontawesome.com/cf835fc8f8.js"  crossorigin="anonymous"></script>
 	  <link rel = "stylesheet" type="text/css"  href = "CSS/navBar.css"/>
       <link rel = "stylesheet" type="text/css"  href = "CSS/mediaquery.css"/>
-      
-<title>Navbar esatta</title>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>      
+      <script src="preSearch.js"></script>
+<title>Navbar</title>
 </head>
 
 <body>
+<div id="try">
+	
+</div>
 
 <a class="pic" href="Index.jsp">
   <img class="upperPic" src="pictures/px1.png">
@@ -77,18 +83,20 @@
                 <a class="nav-link" href="Carrello.jsp"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrello</a>
             </li>
             <li class="nav-item" >
-                <form class="form-inline right" action="<%=response.encodeURL("./SearchControl")%>" method="GET">
-                    <input class="form-control mr-sm-2" name="search" type="text" placeholder="Cerca...">
-                    <button class="btn btn-success" type="submit">Search</button>
+            
+            
+            
+                <form autocomplete="false" id="form-search" class="form-inline right" action="<%=response.encodeURL("./SearchControl")%>" method="GET">
+                    <input autocomplete="false" id="input-search" onkeyup="ricerca(this.value)" class="form-control mr-sm-2" name="search" type="text" placeholder="Cerca...">
+                    <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
             	</form>
+            	 
             </li>
         </ul>
-        </div>
-    
-    
-    
-
+   </div>
 </nav>
+ 
+    
 <nav id="nav2" class="navbar navbar-expand-sm bg-dark navbar-dark">
 	<div class="area1">
         <ul class="navbar-nav ml-auto">
@@ -104,14 +112,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="Carrello.jsp"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrello</a>
             </li>
-            <li class="nav-item" >
-                <form class="form-inline right" action="<%=response.encodeURL("./SearchControl")%>" method="GET">
-                    <input class="form-control mr-sm-2" name="search" type="text" placeholder="Cerca...">
-                    <button class="btn btn-success" type="submit">Search</button>
+            
+                <form id="form-search" class="form-inline right" action="<%=response.encodeURL("./SearchControl")%>" method="GET">
+                 	<li class="nav-item" ><input  id="input-search" class="form-control mr-sm-2" name="search" type="text" placeholder="Cerca..."></li>
+                  	<li class="nav-item" ><button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button></li>
+                  	<div id="livesearch"></div>
+   	  		        </div>
             	</form>
-            </li>
+           
         </ul>
 	</div>
 	</nav>
+	<div id="search-layer"></div>
 </body>
 </html>

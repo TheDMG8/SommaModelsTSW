@@ -27,64 +27,20 @@ public class SearchControl extends HttpServlet {
         super();
         
     }
-
-	/*
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String toSearch= (String) request.getParameter("search");
-		String[] strings= toSearch.split(" ");
-		ArrayList<String> words= new ArrayList<String>();
-		
-		Collections.addAll(words, strings);
-		
-		Collection<ProductBean> collection;
-		ArrayList<ProductBean> prodotti= new ArrayList<ProductBean>();
-		
-		try {
-			collection = model.doRetrieveAll(null);
-		
-			Iterator<?> it  = collection.iterator();
-			while(it.hasNext()) {
-				ProductBean bean = ((ProductBean)it.next());
-				for(String word : words) {
-					if(!bean.getNomeProdotto().contains(word)) {
-						it.remove();
-						break;
-					}
-				}
-			}
-		
-			Iterator<?> it2  = collection.iterator();
-			while(it2.hasNext()) {
-				ProductBean bean = (ProductBean)it2.next();
-				prodotti.add(bean);
-			}
-		
-			System.out.println("Trovati " + prodotti.size() + " elementi");
-			
-			request.setAttribute("result", prodotti);
-			request.setAttribute("search", toSearch);
-			RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/Ricerca.jsp");
-			dispatcher.forward(request, response);
-		    
-		} catch (SQLException e) {
-			System.out.println("Errore durante la ricerca");
-			}
-	}
-*/
-    
+ 
         public void doGet(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
 
             String s = request.getParameter("search");
-
             String address = null;
-
+            
             Collection<ProductBean> prodotti = model.retriveBySearch(s);
 
             request.setAttribute("prodotti", prodotti);
             address = "/Ricerca.jsp";
             RequestDispatcher dispatcher = request.getRequestDispatcher(address);
             dispatcher.forward(request, response);
+            
         }
 
     

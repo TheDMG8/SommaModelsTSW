@@ -56,3 +56,38 @@
   	font-style: italic;
 }
 
+
+.tab-map{
+padding: 30px;
+margin-left: 100px;
+}
+.map #map1{
+width:600px; 
+height:450px; 
+
+allowfullscreen:""; 
+aria-hidden:"false"; 
+tabindex:"0";
+}
+
+.pagina{
+width:600px; 
+height:450px; 
+ 
+ 
+allowfullscreen:""; 
+aria-hidden:"false"; 
+tabindex:"0";
+}
+.map #map2{
+display: none;
+width:400; 
+height:300;
+frameborder:0; 
+style:border; 
+allowfullscreen:""; 
+aria-hidden:false; 
+tabindex:0;
+}
+
+

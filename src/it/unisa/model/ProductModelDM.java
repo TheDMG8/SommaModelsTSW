@@ -78,13 +78,13 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 			System.out.println("doRetrieveAll:" + preparedStatement.toString());
 			ResultSet rs = preparedStatement.executeQuery();
 			
-			
+
 			while(rs.next()) {
 				
 				ProductBean bean = new ProductBean();
 				
 				bean.setIdProdotto(rs.getInt("idProdotto"));
-				bean.setNomeProdotto(rs.getString("nomeProdotto"));
+				bean.setNomeProdotto(rs.getString("nomeProdotto").toUpperCase());
 				bean.setMarcaProdotto(rs.getString("marcaProdotto"));
 				bean.setTipoCategoria(rs.getString("tipoCategoria"));
 				bean.setTipoProdotto(rs.getString("tipoProdotto"));
@@ -95,7 +95,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 				
 				
 				prodotti.add(bean);
-				
+
 			}
 		}finally {
 			try {
@@ -178,8 +178,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 
             search += replaced + "%";
             System.out.println(search);
-            PreparedStatement ps =
-                    con.prepareStatement("SELECT * FROM prodotto WHERE nomeProdotto LIKE ?");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM prodotto WHERE nomeProdotto LIKE ?");
             ps.setString(1,search);
             ResultSet rs = ps.executeQuery();
 
