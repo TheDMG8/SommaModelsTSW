@@ -31,9 +31,12 @@ public class getPicture extends HttpServlet {
 			byte[] bt;
 			try {
 				bt = model.doRetrieveByKey(id).getImmagine();
-			
-				System.out.println(bt);
+			/*
+				System.out.println((byte[])bt);
 				
+				
+				System.out.println(String.format("%8s", Integer.toBinaryString((bt + 256) % 256)).replace(' ','0'));
+				*/
 			ServletOutputStream out = response.getOutputStream();
 			if (bt != null) 
 			{

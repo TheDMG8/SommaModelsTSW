@@ -66,40 +66,7 @@ public class AdminController extends HttpServlet {
 					view.forward(request,response);
 					return;
 					
-				  }else if(action.equals("update")){
-					  
-					  String id = request.getParameter("idProdotto");
-					  	ProductBean bean = model.doRetrieveByKey(id);
-					  	
-					  	String nomeProdotto= request.getParameter("nomeprodotto");
-						String marcaProdotto= request.getParameter("marcaprodotto");
-						String tipoCategoria= request.getParameter("categoria");
-						String tipoProdotto= request.getParameter("tipoprodotto");
-						String descrizioneProdotto= request.getParameter("descrizioneprodotto");
-						double prezzoProdotto= Double.parseDouble(request.getParameter("prezzoprodotto"));
-						Part immagine= request.getPart("immagine");
-						int numPezziDisponibili=Integer.parseInt(request.getParameter("numPezziDisponibili"));
-
-						
-												
-						bean.setNomeProdotto(nomeProdotto);
-						bean.setMarcaProdotto(marcaProdotto);
-						bean.setTipoCategoria(tipoCategoria);
-						bean.setTipoProdotto(tipoProdotto);
-						bean.setDescrizioneProdotto(descrizioneProdotto);
-						bean.setPrezzoProdotto(prezzoProdotto);
-						bean.setImmagine(immagine.getInputStream().readAllBytes());
-						bean.setNumPezziDisponibili(numPezziDisponibili);
-					  
-					  if(bean != null && !bean.isEmpty()) {
-					  model.doUpdate(bean);
-					  System.out.println("vediamo se fa");
-					  RequestDispatcher view = request.getRequestDispatcher("editProduct.jsp");
-					  view.forward(request,response);
-					  return;  
-					  }
-				  }
-					else if(action.equals("delete")) {
+				  }else if(action.equals("delete")) {
 					  String id = request.getParameter("id");
 					  	ProductBean bean = model.doRetrieveByKey(id);
 						if(bean != null && !bean.isEmpty()) {
