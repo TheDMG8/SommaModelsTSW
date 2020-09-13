@@ -39,6 +39,70 @@ public class AddUtente extends HttpServlet {
 			if(action != null) {
 				if(action.equals("insert")) {
 					
+					/*CONTROLLO FORM LATO SERVLET MI MANCA
+					 * 
+					String regNome =  /^[A-Za-z- ]+$/;
+					String regCognome =  /^[A-Za-z- ]+$/;
+					String regRegione =  /^[A-Za-z- ]+$/;
+					String regCitta =  /^[A-Za-z- ]+$/;
+					String regProvincia =  /^[A-Za-z- ]+$/;
+					String regVia =  /^[A-Za-z- ]+$/;
+					String regCellulare =  /^[0-9]+$/;
+					String regEmail =  /^[A-Za-z- ]+$/;
+					String regPassword =  /^[A-Za-z- ]+$/;
+					
+					if(!request.getParameter("nome").matches(regNome)) {
+						session.setAttribute("error-type", "nome");
+						session.setAttribute("error", "Il nome non è scritto correttamente");
+						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
+				}
+				else if(!request.getParameter("cognome").matches(regCognome)) {
+						session.setAttribute("error-type", "cognome");
+						session.setAttribute("error", "Il cognome non è scritto correttamente");
+						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
+				}
+				
+				else if(!request.getParameter("regione").matches(regRegione)) {
+						session.setAttribute("error-type", "Regione");
+						session.setAttribute("error", "La Regione non è scritta correttamente");
+						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
+				}
+				else if(!request.getParameter("citta").matches(regCitta)) {
+						session.setAttribute("error-type", "citta");
+						session.setAttribute("error", "La citta non è scritta correttamente");
+						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
+				}
+				else if(!request.getParameter("provincia").matches(regProvincia)) {
+						session.setAttribute("error-type", "provincia");
+						session.setAttribute("error", "La provincia non è scritta correttamente");
+						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
+			   }
+				else if(!request.getParameter("via").matches(regVia)) {
+						session.setAttribute("error-type", "via");
+						session.setAttribute("error", "La via non è scritta correttamente");
+						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
+				 }
+				else if(!request.getParameter("cellulare").matches(regCellulare)) {
+						session.setAttribute("error-type", "cellulare");
+						session.setAttribute("error", "Il cellulare non è scritto correttamente");
+						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
+			   }
+				else if(!request.getParameter("email").matches(regEmail)) {
+						session.setAttribute("error-type", "email");
+						session.setAttribute("error", "La email non è scritta correttamente");
+						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
+			 }
+				else if(!request.getParameter("password").matches(regPassword)) {
+						session.setAttribute("error-type", "password");
+						session.setAttribute("error", "La password non è scritta correttamente");
+						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
+						
+				//Se tutti i controlli sono stati superati si crea il bean e si inserisce nel database
+					 * 
+					 * 
+					 */
+					
+					
 					String nome= request.getParameter("nome");
 					String cognome= request.getParameter("cognome");
 					String sesso= request.getParameter("sesso");

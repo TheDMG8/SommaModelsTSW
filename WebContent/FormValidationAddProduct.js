@@ -1,25 +1,24 @@
-function FormValidation(){
+function FormValidationAddProduct(){
 	
 	
-	var unome = document.registration.nome;
-	var ucognome = document.registration.cognome;
-	var usesso = document.registration.sesso;
-	var uregione = document.registration.regione;
-	var ucittà = document.registration.città;
-	var uprovincia = document.registration.provincia;
-	var uvia = document.registration.via;
-	var ucellulare = document.registration.cellulare;
-	var uemail = document.registration.email;
-	var password = document.registration.password;
+	var unome = document.registrazione.nomeprodotto;
+	var umarca = document.registrazione.marcaprodotto;
+	var ucategoria = document.registrazione.categoria;
+	var utipo = document.registrazione.tipoprodotto;
+	var udescrizione = document.registrazione.descrizioneprodotto;
+	var uprezzo = document.registrazione.prezzoprodotto;
+	var uvia = document.registrazione.via;
+	var upezzidisponibili = document.registrazione.numPezziDisponibili;
+	
 
-if(unome||ucognome||uregione||ucittà||uvia||ucellulare||uemail||password){
+if(unome||umarca||ucategoria||utipo||udescrizione||uprezzo||uemail||upezzidisponibili){
 	alert('Inserisci tutti i campi');
 	return false;
 }
 
 if(allLet(unome))
 {
-if(allLett(ucognome))
+if(allLett(umarca))
 {
 if(allLette(usesso))
 {
@@ -33,12 +32,6 @@ if(allLetterad(uvia))
 {
 if(allnumeric(ucellulare))
 {
-if(ValidateEmail(uemail))
-{
-if(password_validation(password,7,12))
-{
-}
-}
 }
 } 
 }
@@ -61,13 +54,13 @@ function allLet(unome){
       }
    }
 
-function allLett(ucognome){ 
+function allLett(umarca){ 
     var letters = /^[A-Za-z- ]+$/;
-  if(ucognome.value.match(letters)){
+  if(umarca.value.match(letters)){
     return true;
    }else{
-     alert('Il campo Cognome deve essere compilato');
-      ucognome.focus();
+     alert('Il campo Marca Pordotto deve essere compilato');
+     umarca.focus();
       return false;
       }
 }
@@ -131,28 +124,4 @@ function allLett(ucognome){
 					  return false;
 					  }
 				  }
-					function ValidateEmail(uemail){
-						var x = uemail.value;
-					    var atpos = x.indexOf("@");
-					    var dotpos = x.lastIndexOf(".");
-					    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-					        alert("Il campo Email deve essere compilato");
-					        uemail.focus();
-					        return false;
-					    }else{
-					       return true;
-					    }
-					}		  
-                 
-					function password_validation(password,mx,my){
-					var password_len = password.value.length;
-					if (password_len == 0 ||password_len >= my || password_len < mx){
-					  alert("Password should not be empty / length be between "+mx+" to "+my);
-					    password.focus();
-					   return false;
-					  }else{
-						  alert('Form Succesfully Submitted');
-						  window.location.reload() 
-					  return true;
-						  }
-}
+					

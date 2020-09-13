@@ -38,7 +38,7 @@ if (adminRoles != true)
 	 	<h2 style="color: red;">Aggiungi prodotti</h2>
 	 </div>
 
-	 <form method="POST" action="AdminController" enctype="multipart/form-data">
+	 <form method="POST" action="AdminController" enctype="multipart/form-data" name="registrazione" onSubmit="return FormValidationAddProduct();">
 	 
 	 <input type="hidden" name="action" value="add_product">
      
