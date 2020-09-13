@@ -8,7 +8,7 @@
     ArrayList<ProductBean> collProd= (ArrayList<ProductBean>)ctx.getAttribute("prodotti");
     String error = (String)request.getAttribute("error");
 	
-    
+    String id= (String)request.getParameter("id");
 	
     
   %>
@@ -63,7 +63,7 @@ padding: 15px;
                                     <a class="nav-link " id="home-tab" data-toggle="tab" href="userPersonalPage.jsp" role="tab" aria-controls="home" aria-selected="true">Profilo</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="ordine-tab" data-toggle="tab" href="ordini.jsp"  role="tab" aria-controls="profile" aria-selected="false">Ordini</a>
+                                    <a class="nav-link active" id="ordine-tab" data-toggle="tab" href="ordini.jsp"  role="tab" aria-controls="profile" aria-selected="false">Ordine:</a>
                                 </li>
                             </ul>
                         </div>
@@ -81,8 +81,9 @@ padding: 15px;
                             <div class="tab-pane fade show active" id="ordini" role="tabpanel" aria-labelledby="ordine-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Dettaglio Ordine:</label>
-                                                
+                                                <label>Dettaglio Ordine ID: <%=id%></label>
+                                                <br><a href="ordini.jsp"><button type="button" class="btn btn-danger">Torna indietro</button></a>
+                                                	  
                                             </div>
                                             <div class="col-md-6">
                                             <p>
@@ -106,6 +107,7 @@ padding: 15px;
      												 <p><b>Costi Spedizione:</b><span class="price"><%=pr%>&euro;</span>
       												<%} %>
                                                 <br><b>Totale:</b><%=totale %>&euro;<br>
+                                                   	
                                              <%}%>   
                                              </p>
                                             </div>

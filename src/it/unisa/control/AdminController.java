@@ -62,6 +62,7 @@ public class AdminController extends HttpServlet {
 					
 					
 					model.doSave(bean);
+
 					RequestDispatcher view = request.getRequestDispatcher("addProduct.jsp");/*dove inoltro il form*/
 					view.forward(request,response);
 					return;

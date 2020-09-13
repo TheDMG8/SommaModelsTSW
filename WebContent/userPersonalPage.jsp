@@ -106,7 +106,7 @@
                                                 <label>Città:</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p><%=user.getCitta()%></p>
+                                                <p><%=user.getCitta()%>(<%=user.getProvincia()%>)</p>
                                             </div>
                                         </div>
                                         

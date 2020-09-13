@@ -35,13 +35,13 @@ if (adminRoles != true)
 	</header>
 	
 	
-	 	<h2 style="color: red;">Aggiungi prodotti</h2>
-	 </div>
+	 	<h2 style="color: red;">Aggiungi prodotto:</h2>
+	
 
 	 <form method="POST" action="AdminController" enctype="multipart/form-data" name="registrazione" onSubmit="return FormValidationAddProduct();">
 	 
 	 <input type="hidden" name="action" value="add_product">
-     
+     <fieldset>
 	 	<table id="table-form">
    		<tr>
 	 		<td><label>Nome Prodotto</label></td>
@@ -63,7 +63,7 @@ if (adminRoles != true)
 	 	
 	 	<tr>
 	 		<td><label>Descrizione Prodotto</label></td>
-	 		<td><textarea rows="5" cols="30"name="descrizioneprodotto" placeholder="descrizione"></textarea></td>
+	 		<td><textarea rows="5" cols="30" name="descrizioneprodotto" placeholder="descrizione"></textarea></td>
 	 	</tr>
 	 	
 	 	<tr>
@@ -80,18 +80,15 @@ if (adminRoles != true)
 	 		<td><label>Pezzi Disponibili</label></td>
 	 		<td><input type="text" name="numPezziDisponibili" placeholder="pezzi disponibili"></td>
 	 	</tr>
-	 	
-	 	 <div > 
-			<td><input type="submit" value="Process" class="bottoneAssistenza"></td> 
-		</div>
+	 	<tr>
+			<td><input type="submit" value="Aggiungi Prodotto" class="bottoneAssistenza"></td>
+			<td> <input class=bottoneAssistenza type="reset" > </td> 
+		</tr>
 		</table>
+		</fieldset>
 	 </form>
 
 
-	 <footer style="position: absolute;left: 0;bottom: 0;width: 100%;">
-		<div class="footer">
-	    </div>
-	</footer>
 </body>
 <%@ include file="jsp/footer.jsp" %>
 </html>

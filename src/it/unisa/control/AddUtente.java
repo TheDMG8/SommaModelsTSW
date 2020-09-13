@@ -39,8 +39,10 @@ public class AddUtente extends HttpServlet {
 			if(action != null) {
 				if(action.equals("insert")) {
 					HttpSession session=request.getSession();
+					
 					/*CONTROLLO FORM LATO SERVLET MI MANCA
 					 */
+					
 					String regNome =  "/^[A-Za-z- ]+$/";
 					String regCognome =  "/^[A-Za-z- ]+$/";
 					String regRegione =  "/^[A-Za-z- ]+$/";
@@ -50,53 +52,45 @@ public class AddUtente extends HttpServlet {
 					String regCellulare =  "/^[0-9]+$/";
 					String regEmail =  "/^[A-Za-z- ]+$/";
 					String regPassword =  "/^[A-Za-z- ]+$/";
+					Boolean validate=true;
 					
-					if(!request.getParameter("nome").matches(regNome)) {
-						session.setAttribute("error-type", "nome");
-						session.setAttribute("error", "Il nome non è scritto correttamente");
-						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-				}
-				else if(!request.getParameter("cognome").matches(regCognome)) {
-						session.setAttribute("error-type", "cognome");
-						session.setAttribute("error", "Il cognome non è scritto correttamente");
-						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-				}
+				if(!request.getParameter("nome").matches(regNome)) {
+						System.out.println("nome dato corretto");
+				}else {validate=false;}
+				if(!request.getParameter("cognome").matches(regCognome)) {
+						System.out.println("cognome dato corretto");		
+				}else {validate=false;}
 				
-				else if(!request.getParameter("regione").matches(regRegione)) {
-						session.setAttribute("error-type", "Regione");
-						session.setAttribute("error", "La Regione non è scritta correttamente");
-						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-				}
-				else if(!request.getParameter("citta").matches(regCitta)) {
-						session.setAttribute("error-type", "citta");
-						session.setAttribute("error", "La citta non è scritta correttamente");
-						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-				}
-				else if(!request.getParameter("provincia").matches(regProvincia)) {
-						session.setAttribute("error-type", "provincia");
-						session.setAttribute("error", "La provincia non è scritta correttamente");
-						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-			   }
-				else if(!request.getParameter("via").matches(regVia)) {
-						session.setAttribute("error-type", "via");
-						session.setAttribute("error", "La via non è scritta correttamente");
-						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-				 }
-				else if(!request.getParameter("cellulare").matches(regCellulare)) {
-						session.setAttribute("error-type", "cellulare");
-						session.setAttribute("error", "Il cellulare non è scritto correttamente");
-						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-			   }
-				else if(!request.getParameter("email").matches(regEmail)) {
-						session.setAttribute("error-type", "email");
-						session.setAttribute("error", "La email non è scritta correttamente");
-						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-			 }
-				else if(!request.getParameter("password").matches(regPassword)) {
-						session.setAttribute("error-type", "password");
-						session.setAttribute("error", "La password non è scritta correttamente");
-						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-				}		
+			    if(!request.getParameter("regione").matches(regRegione)) {
+						System.out.println("regione dato corretto");	
+				}else {validate=false;}
+				if(!request.getParameter("citta").matches(regCitta)) {
+						System.out.println("citta dato corretto");		
+				}else {validate=false;}
+				if(!request.getParameter("provincia").matches(regProvincia)) {
+						System.out.println("provincia dato corretto");		
+			   }else {validate=false;}
+			   if(!request.getParameter("via").matches(regVia)) {
+						System.out.println("via dato corretto");
+				}else {validate=false;}
+			   if(!request.getParameter("cellulare").matches(regCellulare)) {
+					System.out.println("cellulare dato corretto");					
+			   }else {validate=false;}
+			   if(!request.getParameter("email").matches(regEmail)) {
+					System.out.println("email dato corretto");
+			 }else {validate=false;}
+			  if(!request.getParameter("password").matches(regPassword)) {
+					System.out.println("password dato corretto");
+				}else {validate=false;}	
+			  if(validate==true) {
+				  System.out.println("tutti i campi sono giusti");
+			  }else {
+				  RequestDispatcher view = request.getRequestDispatcher("CreaUtente.jsp");/*dove inoltro il form*/
+				  HttpSession currentSession = request.getSession();
+				  currentSession.setAttribute("error", "error");
+				  view.forward(request,response);
+					return;  
+			  }
 				//Se tutti i controlli sono stati superati si crea il bean e si inserisce nel database
 
 					
@@ -127,6 +121,7 @@ public class AddUtente extends HttpServlet {
 					bean.setPsswrd(psswrd);
 					
 					model.doSave(bean);
+					System.out.println("sono arrivato qui");
 					RequestDispatcher view = request.getRequestDispatcher("success.jsp");/*dove inoltro il form*/
 					view.forward(request,response);
 					return;

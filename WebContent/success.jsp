@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Nuovo Utente Creato </title>
 </head>
-<%@ include file="jsp/navbar3.jsp" %>
+<%@ include file="jsp/navbar2.jsp" %>
 <body>
 <!-- nuovo utente creato -->
 
@@ -14,11 +14,11 @@
 <p>Nuovo Utente registrato con successo:
 </p>
 <p>
-   Nome: <% String nome = request.getParameter("nome"); out.print(nome); %><br>
+   Nome: <% String nomex = request.getParameter("nome"); out.print(nomex); %><br>
    Cognome : <% String cognome = request.getParameter("cognome"); out.print(cognome); %><br>
    Sesso : <% String sesso = request.getParameter("sesso"); out.print(sesso); %><br>
    Regione : <% String regione = request.getParameter("regione"); out.print(regione); %><br>
-   Città : <% String città = request.getParameter("città"); out.print(città); %><br>
+   Città : <% String citta = request.getParameter("citta"); out.print(citta); %><br>
    Provincia :<% String provincia = request.getParameter("provincia"); out.print(provincia); %><br>
    Via :<% String via = request.getParameter("via"); out.print(via); %><br>
    Numero civico :<% String numerocivico = request.getParameter("numerocivico"); out.print(numerocivico); %><br>

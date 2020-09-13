@@ -11,10 +11,14 @@
 </head>
 
 <body onload="document.registration.nome.focus();">
-<%@ include file="jsp/navbar2.jsp" %>
+<%@ include file="jsp/navbar3.jsp" %>
 <h1 id=benvenutoRegistazione>Unisciti a noi!</h1>
 <p id="registrazione">Compila il form per effettuare la registrazione</p>
-
+<%
+String error=  (String)request.getSession().getAttribute("error");
+if(error.equals("error")){%>
+	<h1>CAMPI INSERITI IN MODO ERRATO</h1>
+<%} %>
 
 
 <form action="AddUtente" method= "POST" name="registration" onSubmit="return FormValidation();" >
