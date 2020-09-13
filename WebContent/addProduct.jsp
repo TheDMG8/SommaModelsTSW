@@ -42,12 +42,12 @@ if (adminRoles != true)
 	
 	
 	 	<h2 style="color: red;">Aggiungi prodotti</h2>
-	 </div>
+	 
 
 	 <form action="AdminController"  method="POST" name="registration" onSubmit="return FormValidationAddProduct();" enctype="multipart/form-data">
 	 
 	 <input type="hidden" name="action" value="add_product">
-     
+      <fieldset>
 	 	<table id="table-form">
    		<tr>
 	 		<td><label>Nome Prodotto</label></td>
@@ -87,10 +87,13 @@ if (adminRoles != true)
 	 		<td><input type="text" name="numPezziDisponibili" placeholder="pezzi disponibili"></td>
 	 	</tr>
 	 	
-	 	 <div > 
-			<td><input type="submit" value="Process" class="bottoneAssistenza"></td> 
-		</div>
+	 	 	<tr>
+			<td><input type="submit" value="Aggiungi Prodotto" class="bottoneAssistenza"></td>
+			<td> <input class=bottoneAssistenza type="reset" > </td> 
+		</tr>
 		</table>
+		</fieldset>
+		
 	 </form>
 
 

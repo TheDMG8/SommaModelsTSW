@@ -99,8 +99,6 @@ public class AdminController extends HttpServlet {
 					
 					model.doSave(bean);
 					System.out.println("ho aggiunto il prodotto");
-					HttpSession currentSession = request.getSession(); /*ne creo una nuova*/
-				   	currentSession.setAttribute("user", user);
 					RequestDispatcher view = request.getRequestDispatcher("addProduct.jsp");/*dove inoltro il form*/
 					view.forward(request,response);
 					return;
