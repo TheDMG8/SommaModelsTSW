@@ -96,7 +96,7 @@ public class AddUtente extends HttpServlet {
 						session.setAttribute("error-type", "password");
 						session.setAttribute("error", "La password non è scritta correttamente");
 						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
-						
+				}		
 				//Se tutti i controlli sono stati superati si crea il bean e si inserisce nel database
 
 					
@@ -234,7 +234,7 @@ public class AddUtente extends HttpServlet {
 							}
 					}
 				}
-			}}}catch(SQLException | NumberFormatException e) {
+			}}catch(SQLException | NumberFormatException e) {
 			System.out.println("Error:" + e.getMessage());
 			request.setAttribute("error", e.getMessage());
 			}
