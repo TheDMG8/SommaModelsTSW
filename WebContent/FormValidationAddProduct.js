@@ -7,30 +7,22 @@ function FormValidationAddProduct(){
 	var utipo = document.registrazione.tipoprodotto;
 	var udescrizione = document.registrazione.descrizioneprodotto;
 	var uprezzo = document.registrazione.prezzoprodotto;
-	var uvia = document.registrazione.via;
 	var upezzidisponibili = document.registrazione.numPezziDisponibili;
 	
-
-if(unome||umarca||ucategoria||utipo||udescrizione||uprezzo||uemail||upezzidisponibili){
-	alert('Inserisci tutti i campi');
-	return false;
-}
 
 if(allLet(unome))
 {
 if(allLett(umarca))
 {
-if(allLette(usesso))
+if(allLette(ucategoria))
 {
-if(allLetter(uregione))
+if(allLetter(utipo))
 { 
-if(allLettera(ucittà))
+if(allLettera(udescrizione))
 {
-if(allLetteras(uprovincia))
+if(allLetteras(uprezzo))
 {
-if(allLetterad(uvia))
-{
-if(allnumeric(ucellulare))
+if(allnumeric(upezzidisponibili))
 {
 }
 } 
@@ -39,7 +31,7 @@ if(allnumeric(ucellulare))
 }
 }
 }
-}
+
 return false;
 
 }
@@ -48,7 +40,7 @@ function allLet(unome){
   if(unome.value.match(letters)){
     return true;
    }else{
-     alert('Il campo Nome deve essere compilato');
+     alert('Il campo Nome Prodotto deve essere compilato');
       unome.focus();
       return false;
       }
@@ -64,64 +56,57 @@ function allLett(umarca){
       return false;
       }
 }
-  function allLette(usesso){ 
+  function allLette(ucategoria){ 
 	    var letters = /^[A-Za-z]+$/;
-	  if(usesso.value.match(letters)){
+	  if(ucategoria.value.match(letters)){
 	    return true;
 	   }else{
-	     alert('Il campo Sesso deve essere compilato');
-	      usesso.focus();
+	     alert('Il campo Tipo Categoria deve essere compilato');
+	     ucategoria.focus();
 	      return false;
 	      }
   }
-	  function allLetter(uregione){ 
+	  function allLetter(utipo){ 
 		    var letters = /^[A-Za-z- ]+$/;
-		  if(uregione.value.match(letters)){
+		  if(utipo.value.match(letters)){
 		    return true;
 		   }else{
-		     alert('Il campo Regione deve essere compilato');
-		      uregione.focus();
+		     alert('Il campo Tipo Prodotto deve essere compilato');
+		     utipo.focus();
 		      return false;
 		      }
 	  }
-		  function allLettera(ucittà){ 
+		  function allLettera(udescrizione){ 
 			    var letters = /^[A-Za-z- ]+$/;
-			  if(ucittà.value.match(letters)){
+			  if(udescrizione.value.match(letters)){
 			    return true;
 			   }else{
-			     alert('Il campo Città deve essere compilato');
-			      ucittà.focus();
+			     alert('Il campo Descrizione Prodotto deve essere compilato');
+			     udescrizione.focus();
 			      return false;
 			      }
 		  }
-			  function allLetteras(uprovincia){ 
-				    var letters = /^[A-Za-z- ]+$/;
-				  if(uprovincia.value.match(letters)){
+			  function allLetteras(uprezzo){ 
+				    var numbers = /^[0-9]+$/;
+				  if(uprezzo.value.match(numbers)){
 				    return true;
 				   }else{
-				     alert('Il campo Provincia deve essere compilato');
-				      uprovincia.focus();
+				     alert('Il campo Prezzo Prodotto deve essere compilato');
+				     uprezzo.focus();
 				      return false;
 				      }
 			  }
-				  function allLetterad(uvia){ 
-					    var letters = /^[A-Za-z- ]+$/;
-					  if(uvia.value.match(letters)){
-					    return true;
-					   }else{
-					     alert('Il campo Via deve essere compilato');
-					      uvia.focus();
-					      return false;
-					      }
-				  }
-				  function allnumeric(ucellulare){ 
+				 
+				  function allnumeric(upezzidisponibili){ 
 					  var numbers = /^[0-9]+$/;
-					if(ucellulare.value.match(numbers)){
-					    return true;
+					if(!upezzidisponibili.value.match(numbers)){
+						alert('Il campo Pezzi Disponibili deve essere compilato');
+						  upezzidisponibili.focus();
+						  return false;
 					  }else{
-					  alert('Il campo Cellulare deve essere compilato');
-					   ucellulare.focus();
-					  return false;
-					  }
+						  alert('Form Succesfully Submitted');
+						  window.location.reload() 
+						    return true;
+					  } 
 				  }
 					

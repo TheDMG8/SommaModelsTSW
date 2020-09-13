@@ -18,10 +18,10 @@ if (adminRoles != true)
 <link href="CSS/assistenza.css" rel="stylesheet">
 <meta charset="ISO-8859-1">
 <title>Amministrazione</title>
-
+<script src="FormValidationAddProduct.js"></script>
 
 </head>
-<body>
+<body onload="document.registrazione.nome.focus();">
 	<%@ include file="jsp/navbar2.jsp" %>
 
 	<header>
@@ -45,40 +45,40 @@ if (adminRoles != true)
 	 	<table id="table-form">
    		<tr>
 	 		<td><label>Nome Prodotto</label></td>
-	 		<td><input type="text" name="nomeprodotto" placeholder="nome prodotto"  required></td>
+	 		<td><input type="text" name="nomeprodotto" placeholder="nome prodotto"></td>
 	 	</tr>
 	 	<tr>
 	 		<td><label>Marca Prodotto</label></td>
-	 		<td><input type="text" name="marcaprodotto" placeholder="marca prodotto" required></td>
+	 		<td><input type="text" name="marcaprodotto" placeholder="marca prodotto"></td>
 	 	</tr>
 	 	<tr>
 	 		<td><label>Tipo Categoria</label></td>
-	 		<td><input type="text" name="categoria" placeholder="tipo categoria" required></td>
+	 		<td><input type="text" name="categoria" placeholder="tipo categoria"></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label>Tipo Prodotto</label></td>
-	 		<td><input type="text" name="tipoprodotto" placeholder="tipo prodotto" required></td>
+	 		<td><input type="text" name="tipoprodotto" placeholder="tipo prodotto"></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label>Descrizione Prodotto</label></td>
-	 		<td><textarea rows="5" cols="30"name="descrizioneprodotto" placeholder="descrizione" required></textarea></td>
+	 		<td><textarea rows="5" cols="30"name="descrizioneprodotto" placeholder="descrizione"></textarea></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label>Prezzo Prodotto</label></td>
-	 		<td><input type="text" name="prezzoprodotto" placeholder="prezzo prodotto" required></td>
+	 		<td><input type="text" name="prezzoprodotto" placeholder="prezzo prodotto" ></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label for="fileupload">Immagine</label></td>
-	 		<td><input type="file" name="immagine" required></td>
+	 		<td><input type="file" name="immagine"></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label>Pezzi Disponibili</label></td>
-	 		<td><input type="text" name="numPezziDisponibili" placeholder="pezzi disponibili" required></td>
+	 		<td><input type="text" name="numPezziDisponibili" placeholder="pezzi disponibili"></td>
 	 	</tr>
 	 	
 	 	 <div > 
