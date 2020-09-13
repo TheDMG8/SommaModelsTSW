@@ -1,13 +1,13 @@
 function FormValidationAddProduct(){
 	
 	
-	var unome = document.registrazione.nomeprodotto;
-	var umarca = document.registrazione.marcaprodotto;
-	var ucategoria = document.registrazione.categoria;
-	var utipo = document.registrazione.tipoprodotto;
-	var udescrizione = document.registrazione.descrizioneprodotto;
-	var uprezzo = document.registrazione.prezzoprodotto;
-	var upezzidisponibili = document.registrazione.numPezziDisponibili;
+	var unome = document.addprod.nomeprodotto;
+	var umarca = document.addprod.marcaprodotto;
+	var ucategoria = document.addprod.categoria;
+	var utipo = document.addprod.tipoprodotto;
+	var udescrizione = document.addprod.descrizioneprodotto;
+	var uprezzo = document.addprod.prezzoprodotto;
+	var upezzidisponibili = document.addprod.numPezziDisponibili;
 
 
 if(allLet(unome))
@@ -24,6 +24,7 @@ if(allLetteras(uprezzo))
 {
 if(allnumeric(upezzidisponibili))
 {
+	return true;
 }
 } 
 }
@@ -33,7 +34,6 @@ if(allnumeric(upezzidisponibili))
 }
 
 return false;
-
 }
 
 function allLet(unome){ 

@@ -5,7 +5,7 @@ function FormValidation(){
 	var ucognome = document.registration.cognome;
 	var usesso = document.registration.sesso;
 	var uregione = document.registration.regione;
-	var ucittà = document.registration.città;
+	var ucitta = document.registration.citta;
 	var uprovincia = document.registration.provincia;
 	var uvia = document.registration.via;
 	var ucellulare = document.registration.cellulare;
@@ -21,7 +21,7 @@ if(allLette(usesso))
 {
 if(allLetter(uregione))
 { 
-if(allLettera(ucittà))
+if(allLettera(ucitta))
 {
 if(allLetteras(uprovincia))
 {
@@ -33,6 +33,7 @@ if(ValidateEmail(uemail))
 {
 if(password_validation(password,7,12))
 {
+	return true;
 }
 }
 }
@@ -87,13 +88,13 @@ function allLett(ucognome){
 		      return false;
 		      }
 	  }
-		  function allLettera(ucittà){ 
+		  function allLettera(ucitta){ 
 			    var letters = /^[A-Za-z- ]+$/;
-			  if(ucittà.value.match(letters)){
+			  if(ucitta.value.match(letters)){
 			    return true;
 			   }else{
-			     alert('Il campo Città deve essere compilato');
-			      ucittà.focus();
+			     alert('Il campo Citta\' deve essere compilato');
+			      ucitta.focus();
 			      return false;
 			      }
 		  }
