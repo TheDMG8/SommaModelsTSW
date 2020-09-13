@@ -45,44 +45,46 @@ if (adminRoles != true)
 	 	<table id="table-form">
    		<tr>
 	 		<td><label>Nome Prodotto</label></td>
-	 		<td><input type="text" name="nomeprodotto" placeholder="nome prodotto"></td>
+	 		<td><input size="27" type="text" name="nomeprodotto" placeholder="nome prodotto"></td>
 	 	</tr>
 	 	<tr>
 	 		<td><label>Marca Prodotto</label></td>
-	 		<td><input type="text" name="marcaprodotto" placeholder="marca prodotto"></td>
+	 		<td><input size="27" type="text" name="marcaprodotto" placeholder="marca prodotto"></td>
 	 	</tr>
 	 	<tr>
 	 		<td><label>Tipo Categoria</label></td>
-	 		<td><input type="text" name="categoria" placeholder="tipo categoria"></td>
+	 		<td><input size="27" type="text" name="categoria" placeholder="tipo categoria"></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label>Tipo Prodotto</label></td>
-	 		<td><input type="text" name="tipoprodotto" placeholder="tipo prodotto"></td>
+	 		<td><input size="27" type="text" name="tipoprodotto" placeholder="tipo prodotto"></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label>Descrizione Prodotto</label></td>
-	 		<td><textarea rows="5" cols="30" name="descrizioneprodotto" placeholder="descrizione"></textarea></td>
+	 		<td><textarea rows="5" cols="31" name="descrizioneprodotto" placeholder="descrizione"></textarea></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label>Prezzo Prodotto</label></td>
-	 		<td><input type="text" name="prezzoprodotto" placeholder="prezzo prodotto" ></td>
+	 		<td><input size="27" type="text" name="prezzoprodotto" placeholder="prezzo prodotto" ></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label for="fileupload">Immagine</label></td>
-	 		<td><input type="file" name="immagine"></td>
+	 		<td><input size="27" type="file" name="immagine"></td>
 	 	</tr>
 	 	
 	 	<tr>
 	 		<td><label>Pezzi Disponibili</label></td>
-	 		<td><input type="text" name="numPezziDisponibili" placeholder="pezzi disponibili"></td>
+	 		<td><input size="27" type="text" name="numPezziDisponibili" placeholder="pezzi disponibili"></td>
 	 	</tr>
+	 	</table>
+	 	<table>
 	 	<tr>
 			<td><input type="submit" value="Aggiungi Prodotto" class="bottoneAssistenza"></td>
-			<td> <input class=bottoneAssistenza type="reset" > </td> 
+			<td><input class=bottoneAssistenza type="reset" > </td> 
 		</tr>
 		</table>
 		</fieldset>

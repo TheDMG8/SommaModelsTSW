@@ -8,7 +8,7 @@ function FormValidationAddProduct(){
 	var udescrizione = document.registrazione.descrizioneprodotto;
 	var uprezzo = document.registrazione.prezzoprodotto;
 	var upezzidisponibili = document.registrazione.numPezziDisponibili;
-	console.log(unome);
+
 
 if(allLet(unome))
 {
@@ -35,6 +35,7 @@ if(allnumeric(upezzidisponibili))
 return false;
 
 }
+
 function allLet(unome){ 
     var letters = /^[A-Za-z- ]+$/;
   if(unome.value.match(letters)){
@@ -100,14 +101,14 @@ function allLett(umarca){
 				 
 				  function allnumeric(upezzidisponibili){ 
 					  var numbers = /^[0-9]+$/;
-					if(!upezzidisponibili.value.match(numbers)){
-						alert('Il campo Pezzi Disponibili deve essere compilato');
-						  upezzidisponibili.focus();
-						  return false;
-					  }else{
-						  alert('Form Succesfully Submitted');
+					if(upezzidisponibili.value.match(numbers)){
+						alert('Form Succesfully Submitted');
 						  window.location.reload() 
 						    return true;
+					  }else{
+						  alert('Il campo Pezzi Disponibili deve essere compilato');
+							  upezzidisponibili.focus();
+							  return false;
 					  } 
 				  }
 					

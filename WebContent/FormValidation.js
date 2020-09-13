@@ -151,4 +151,4 @@ function allLett(ucognome){
 						  window.location.reload() 
 					  return true;
 						  }
-}
+					}

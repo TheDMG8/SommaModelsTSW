@@ -35,11 +35,11 @@ public class AdminController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
-		System.out.println();
+		System.out.println("ciao");
 		try {
 			if(action != null) {
 				if(action.equals("add_product")) {
-					
+					System.out.println("sto per aggiungere il prodotto");
 					String nomeProdotto= request.getParameter("nomeprodotto");
 					String marcaProdotto= request.getParameter("marcaprodotto");
 					String tipoCategoria= request.getParameter("categoria");
@@ -62,7 +62,7 @@ public class AdminController extends HttpServlet {
 					
 					
 					model.doSave(bean);
-
+					System.out.println("ho aggiunto il prodotto");
 					RequestDispatcher view = request.getRequestDispatcher("addProduct.jsp");/*dove inoltro il form*/
 					view.forward(request,response);
 					return;
