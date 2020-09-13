@@ -1,13 +1,13 @@
 function FormValidationAddProduct(){
 	
 	
-	var unome = document.addprod.nomeprodotto;
-	var umarca = document.addprod.marcaprodotto;
-	var ucategoria = document.addprod.categoria;
-	var utipo = document.addprod.tipoprodotto;
-	var udescrizione = document.addprod.descrizioneprodotto;
-	var uprezzo = document.addprod.prezzoprodotto;
-	var upezzidisponibili = document.addprod.numPezziDisponibili;
+	var unome = document.registration.nomeprodotto;
+	var umarca = document.registration.marcaprodotto;
+	var ucategoria = document.registration.categoria;
+	var utipo = document.registration.tipoprodotto;
+	var udescrizione = document.registration.descrizioneprodotto;
+	var uprezzo = document.registration.prezzoprodotto;
+	var upezzidisponibili = document.registration.numPezziDisponibili;
 
 
 if(allLet(unome))

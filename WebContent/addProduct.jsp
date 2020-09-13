@@ -21,7 +21,7 @@ if (adminRoles != true)
 <script src="FormValidationAddProduct.js"></script>
 
 </head>
-<body onload="document.registrazione.nome.focus();">
+<body onload="document.registration.nome.focus();">
 	<%@ include file="jsp/navbar2.jsp" %>
 
 	<header>
@@ -38,7 +38,7 @@ if (adminRoles != true)
 	 	<h2 style="color: red;">Aggiungi prodotti</h2>
 	 </div>
 
-	 <form action="AdminController"  method="POST" name="registrazione" onSubmit="return FormValidationAddProduct();" enctype="multipart/form-data">
+	 <form action="AdminController"  method="POST" name="registration" onSubmit="return FormValidationAddProduct();" enctype="multipart/form-data">
 	 
 	 <input type="hidden" name="action" value="add_product">
      
