@@ -6,8 +6,9 @@
 }
 
 #registrazione{
-	color: black;
+	color: red;
 	font-style: italic;
+	text-align: center;
 	
 }
 
@@ -27,4 +28,6 @@
 .bottoniCreaUtente:hover {
 	opacity: 0.8;
 }
+
+
 

@@ -90,4 +90,9 @@ aria-hidden:false;
 tabindex:0;
 }
 
+.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
 

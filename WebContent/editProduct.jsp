@@ -34,12 +34,19 @@ if (adminRoles != true)
    		
 </div>
 	 
-	 <li><h1>elimina prodotto</h1>
+	 
+	 <h1 style="color: red">elimina prodotto</h1>
 	 <form method="post" action="AdminController" enctype="multipart/form-data">
 	 <input type="hidden" name="action" value="delete">
-	 	<li><label>Id prodotto:</label>
-	 	<li><input type="text" name="id" placeholder="ID">
-	 	<li><input class="bottoneAssistenza" type="submit" value="elimina prodotto">
+	 <table id="table-form">
+	 	<tr>
+	 	<td><label>Id prodotto:</td>
+	 	<td><input type="text" name="id" placeholder="ID"></td>
+	 	</tr>
+	 	</table>
+	 	<table id="table-form" class="center">
+	 	<tr><input class="bottoneAssistenza" type="submit" value="elimina prodotto"></tr>
+	 	</table>
 	 </form>		
 	 
 	 

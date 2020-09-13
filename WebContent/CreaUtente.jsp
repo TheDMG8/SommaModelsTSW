@@ -13,14 +13,14 @@
 <body onload="document.registration.nome.focus();">
 <%@ include file="jsp/navbar2.jsp" %>
 <h1 id=benvenutoRegistazione>Unisciti a noi!</h1>
-<p id="registrazione ">Compila il form per effettuare la registrazione</p>
+<p id="registrazione">Compila il form per effettuare la registrazione</p>
 
 
 
 <form action="AddUtente" method= "POST" name="registration" onSubmit="return FormValidation();" >
 <input type="hidden" name="action" value="insert">
 <fieldset>
-   <table id="table-form">
+   <table id="table-form" class="center">
    <tr>
    <td><label for="nome" ><b>Nome</b></label></td>
    <td><input type="text" size="40" name="nome" placeholder="Mario"></td>

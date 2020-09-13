@@ -24,24 +24,31 @@
 	
 	<form action="AddAssistenza" method= "POST" name="assistenza" onSubmit="return successAssistenza"; >
 	<input type="hidden" name="azione" value="assistenza">
-	<ul>
-		<li><label  for="categoria"><b>Categoria: </b></label></li>
-   			<li><select  name="categoria" id="categoria" >
+	
+	<table id="table-form" class="center">
+		<tr>
+		<td><label  for="categoria"><b>Categoria: </b></label></td>
+   			<td><select  name="categoria" id="categoria" >
    		 		<option value="statico">Modellismo statico</option>
     			<option value="dinamico">Modellismo dinamico</option>
-			</select></li>
-			
-		<li><label  for="orario"><b>Fascia oraria in cui sei disponibile: </b></label></li>
-   			<li><select class=margin name="orario" id="orario"> 
+			</select></td>
+		</tr>
+		<tr>	
+		<td><label  for="orario"><b>Fascia oraria in cui sei disponibile: </b></label></td>
+   			<td><select class=margin name="orario" id="orario"> 
    		 		<option value="Nove-Tredici">9:00-13:00</option>
    		 		<option value="Quattordici-Quindici">14:00-17:00</option>
     			<option value="Sedici-Diciassette">17:00-19:00</option>
-			</select> </li>
-			
-		<li><label  for="problema"><b>Descrivi il tuo problema: </b></label></li>
-		<li><textarea  id=problma name="problema" rows="4" col="100"> </textarea></li>
-	</ul>
-	<input class=bottoneAssistenza id=bottoneAssistenza type ="submit" value="Inviaci i dati" >
+			</select> </td>
+		</tr>
+		<tr>	
+		<td><label  for="problema"><b>Descrivi il tuo problema: </b></label></td>
+		<td><textarea  id=problma name="problema" rows="4" col="100"> </textarea></td>
+		</tr>
+	</table>
+	<table id="table-form" class="center">
+	<tr><input class=bottoneAssistenza id=bottoneAssistenza type ="submit" value="Inviaci i dati" ></tr>
+	</table>
 	</form>
 
 	 
