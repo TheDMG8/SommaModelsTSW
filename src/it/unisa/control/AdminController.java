@@ -42,7 +42,39 @@ public class AdminController extends HttpServlet {
 		try {
 			if(action != null) {
 				if(action.equals("add_product")) {
-				
+					String regNome =  "/^[A-Za-z- ]+$/";
+					String regNum =  "/^[0-9.]+$/";
+					Boolean validate=true;
+					if(!request.getParameter("nomeprodotto").matches(regNome)) {
+						System.out.println("nomep dato corretto");
+					}else{validate=false;}
+					if(!request.getParameter("marcaprodotto").matches(regNome)) {
+						System.out.println("marca dato corretto");
+					}else{validate=false;}
+					if(!request.getParameter("categoria").matches(regNome)) {
+						System.out.println("cate dato corretto");
+					}else{validate=false;}
+					if(!request.getParameter("tipoprodotto").matches(regNome)) {
+						System.out.println("tipo dato corretto");
+					}else{validate=false;}
+					if(!request.getParameter("descrizioneprodotto").matches(regNome)) {
+						System.out.println("descr dato corretto");
+					}else{validate=false;}
+					if(!request.getParameter("prezzoprodotto").matches(regNum)) {
+						System.out.println("prezzo dato corretto");					
+				   }else {validate=false;}
+					if(!request.getParameter("numPezziDisponibili").matches(regNum)) {
+						System.out.println("num dato corretto");					
+				   }else {validate=false;}
+					 if(validate==true) {
+						  System.out.println("tutti i campi sono giusti");
+					  }else {
+						  RequestDispatcher view = request.getRequestDispatcher("addProduct.jsp");/*dove inoltro il form*/
+						  HttpSession currentSession = request.getSession();
+						  currentSession.setAttribute("error", "error");
+						  view.forward(request,response);
+							return;  
+					  }
 					System.out.println("sto per aggiungere il prodotto");
 					String nomeProdotto= request.getParameter("nomeprodotto");
 					String marcaProdotto= request.getParameter("marcaprodotto");

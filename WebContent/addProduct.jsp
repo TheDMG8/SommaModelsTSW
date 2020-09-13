@@ -23,6 +23,12 @@ if (adminRoles != true)
 </head>
 <body onload="document.registrazione.nome.focus();">
 	<%@ include file="jsp/navbar2.jsp" %>
+	<%
+		if(request.getSession()!=null){
+			String error=  (String)request.getSession().getAttribute("error");
+		if(error != null){%>
+			<h1>CAMPI INSERITI SONO ERRATI</h1>
+		<%} }%>
 
 	<header>
 		<div class="user-div">

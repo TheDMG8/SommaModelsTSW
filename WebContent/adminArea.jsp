@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" %>
 
+   <%
+// Check user credentials
+Boolean adminRoles = (Boolean) request.getSession().getAttribute("adminRoles");
+if (adminRoles != true)
+{	
+    response.sendRedirect("./login.jsp");
+    return;
+}
+%>
     
 <!DOCTYPE html>
 <html>

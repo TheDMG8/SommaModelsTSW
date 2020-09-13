@@ -1,13 +1,13 @@
 function FormValidationAddProduct(){
 	
 	
-	var unome = document.addprod.nomeprodotto;
-	var umarca = document.addprod.marcaprodotto;
-	var ucategoria = document.addprod.categoria;
-	var utipo = document.addprod.tipoprodotto;
-	var udescrizione = document.addprod.descrizioneprodotto;
-	var uprezzo = document.addprod.prezzoprodotto;
-	var upezzidisponibili = document.addprod.numPezziDisponibili;
+	var unome = document.registrazione.nomeprodotto;
+	var umarca = document.registrazione.marcaprodotto;
+	var ucategoria = document.registrazione.categoria;
+	var utipo = document.registrazione.tipoprodotto;
+	var udescrizione = document.registrazione.descrizioneprodotto;
+	var uprezzo = document.registrazione.prezzoprodotto;
+	var upezzidisponibili = document.registrazione.numPezziDisponibili;
 
 
 if(allLet(unome))
@@ -58,7 +58,7 @@ function allLett(umarca){
       }
 }
   function allLette(ucategoria){ 
-	    var letters = /^[A-Za-z]+$/;
+	    var letters = /^[A-Za-z- ]+$/;
 	  if(ucategoria.value.match(letters)){
 	    return true;
 	   }else{
@@ -82,7 +82,7 @@ function allLett(umarca){
 			  if(udescrizione.value.match(letters)){
 			    return true;
 			   }else{
-			     alert('Il campo Nome Prodotto deve essere compilato');
+			     alert('Il campo Descrizione Prodotto deve essere compilato');
 			      unome.focus();
 			      return false;
 			      }

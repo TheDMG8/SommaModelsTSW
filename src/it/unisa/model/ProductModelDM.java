@@ -20,7 +20,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 		
 		ProductBean bean = new ProductBean();
 		
-		String selectSQL = "SELECT *FROM prodotto WHERE idProdotto = ?";
+		String selectSQL = "SELECT * FROM prodotto WHERE idProdotto = ?";
 		try {
 			connection = DriverManagerConnectionPool.getConnection();
 			preparedStatement = connection.prepareStatement (selectSQL);
@@ -65,7 +65,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 		
 		Collection<ProductBean> prodotti = new LinkedList<ProductBean>();
 		
-		String selectSQL = "SELECT *FROM prodotto";
+		String selectSQL = "SELECT * FROM prodotto";
 		
 		if (order != null && !order.equals("")) {
 			selectSQL += "ORDER BY" + order;
@@ -116,7 +116,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 		
 		List<ProductBean> prodotti = new LinkedList<ProductBean>();
 		
-		String selectSQL = "SELECT *FROM prodotto WHERE tipoCategoria='statico' ";
+		String selectSQL = "SELECT * FROM prodotto WHERE tipoCategoria='statico' ";
 		
 		if (order != null && !order.equals("")) {
 			selectSQL += "ORDER BY" + order;
@@ -211,7 +211,7 @@ public class ProductModelDM implements ProductModel<ProductBean> {
 		
 		Collection<ProductBean> prodotti = new LinkedList<ProductBean>();
 		
-		String selectSQL = "SELECT *FROM prodotto WHERE tipoCategoria= 'Radiocomandato' ";
+		String selectSQL = "SELECT * FROM prodotto WHERE tipoCategoria= 'Radiocomandato' ";
 		
 		if (order != null && !order.equals("")) {
 			selectSQL += "ORDER BY" + order;
@@ -262,7 +262,7 @@ ResultSet rs = preparedStatement.executeQuery();
 		
 		Collection<ProductBean> prodotti = new LinkedList<ProductBean>();
 		
-		String selectSQL = "SELECT *FROM prodotto WHERE tipoCategoria= 'accessori' ";
+		String selectSQL = "SELECT * FROM prodotto WHERE tipoCategoria= 'accessori' ";
 		
 		if (order != null && !order.equals("")) {
 			selectSQL += "ORDER BY" + order;

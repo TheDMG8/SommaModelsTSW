@@ -18,7 +18,7 @@
 if(request.getSession()!=null){
 String error=  (String)request.getSession().getAttribute("error");
 if(error != null){%>
-	<h1>CAMPI INSERITI IN MODO ERRATO</h1>
+	<h1>CAMPI INSERITI SONO ERRATI</h1>
 <%} }%>
 
 
