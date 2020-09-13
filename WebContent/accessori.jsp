@@ -30,12 +30,13 @@
 <title>Accessori</title>
 <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
+<link rel="stylesheet" type="text/css" href="CSS/assistenza.css">
 </head>
 <body>
 
 <%@ include file="jsp/navbar2.jsp" %>
 <br><br>
-<h1>Accessori:</h1>
+<h1  class="titolo">Accessori:</h1>
 
 <br><br>
 <div class= "container">

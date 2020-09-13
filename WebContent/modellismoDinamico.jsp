@@ -33,6 +33,7 @@
 <title>Modellismo Dinamico</title>
 <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
+<link rel="stylesheet" type="text/css" href="CSS/assistenza.css">
 </head>
 <body>
 
@@ -40,7 +41,7 @@
 
 <br><br>
 
-<h1>Modellismo Dinamico:</h1>
+<h1 class="titolo">Modellismo Dinamico:</h1>
 <br>
 <br>
 <div class= "container">
