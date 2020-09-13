@@ -28,6 +28,7 @@
 <title>Modellismo Statico</title>
 <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="CSS/style.css">
+<link rel="stylesheet" type="text/css" href="CSS/assistenza.css">
 
 <style type="text/css">
 </style>
@@ -37,7 +38,7 @@
 <%@ include file="jsp/navbar2.jsp" %>
 
 <br><br>
-<h1>Modellismo Statico:</h1>
+<h1 class="titolo">Modellismo Statico:</h1>
 
 
 <div class= "container">
