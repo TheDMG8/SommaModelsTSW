@@ -1,14 +1,14 @@
 function FormValidationAddProduct(){
 	
 	
-	var unome = document.registrazione.nomeprodotto;
-	var umarca = document.registrazione.marcaprodotto;
-	var ucategoria = document.registrazione.categoria;
-	var utipo = document.registrazione.tipoprodotto;
-	var udescrizione = document.registrazione.descrizioneprodotto;
-	var uprezzo = document.registrazione.prezzoprodotto;
-	var upezzidisponibili = document.registrazione.numPezziDisponibili;
-	
+	var unome = document.addprod.nomeprodotto;
+	var umarca = document.addprod.marcaprodotto;
+	var ucategoria = document.addprod.categoria;
+	var utipo = document.addprod.tipoprodotto;
+	var udescrizione = document.addprod.descrizioneprodotto;
+	var uprezzo = document.addprod.prezzoprodotto;
+	var upezzidisponibili = document.addprod.numPezziDisponibili;
+
 
 if(allLet(unome))
 {
@@ -24,6 +24,7 @@ if(allLetteras(uprezzo))
 {
 if(allnumeric(upezzidisponibili))
 {
+	return true;
 }
 } 
 }
@@ -33,8 +34,8 @@ if(allnumeric(upezzidisponibili))
 }
 
 return false;
-
 }
+
 function allLet(unome){ 
     var letters = /^[A-Za-z- ]+$/;
   if(unome.value.match(letters)){
@@ -77,17 +78,18 @@ function allLett(umarca){
 		      }
 	  }
 		  function allLettera(udescrizione){ 
-			    var letters = /^[A-Za-z- ]+$/;
+			  var letters = /^[.A-Za-z- ]+$/;
 			  if(udescrizione.value.match(letters)){
 			    return true;
 			   }else{
-			     alert('Il campo Descrizione Prodotto deve essere compilato');
-			     udescrizione.focus();
+			     alert('Il campo Nome Prodotto deve essere compilato');
+			      unome.focus();
 			      return false;
 			      }
-		  }
+			   }
+		  
 			  function allLetteras(uprezzo){ 
-				    var numbers = /^[0-9]+$/;
+				    var numbers = /^[0-9.]+$/;
 				  if(uprezzo.value.match(numbers)){
 				    return true;
 				   }else{
@@ -99,14 +101,14 @@ function allLett(umarca){
 				 
 				  function allnumeric(upezzidisponibili){ 
 					  var numbers = /^[0-9]+$/;
-					if(!upezzidisponibili.value.match(numbers)){
-						alert('Il campo Pezzi Disponibili deve essere compilato');
-						  upezzidisponibili.focus();
-						  return false;
-					  }else{
-						  alert('Form Succesfully Submitted');
+					if(upezzidisponibili.value.match(numbers)){
+						alert('Form Succesfully Submitted');
 						  window.location.reload() 
 						    return true;
+					  }else{
+						  alert('Il campo Pezzi Disponibili deve essere compilato');
+							  upezzidisponibili.focus();
+							  return false;
 					  } 
 				  }
 					

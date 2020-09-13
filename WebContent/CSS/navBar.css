@@ -2,6 +2,7 @@
 
 .nav-item a{
 	float: left;
+	
 }
 
 #text-search{
@@ -18,7 +19,7 @@
 
 .navbar-nav .nav-item a:hover{
 	
-	background-color: #0080ff;
+	background-color: red;
     color: white;
     text-decoration: black;
     animation-name: color;
@@ -29,5 +30,8 @@
 
 @keyframes color {
   from {background-color: #0080ff;}
-  to {background-color: red;}
+  to {background-color: red;} 
 }
+
+
+

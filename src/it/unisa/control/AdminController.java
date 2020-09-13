@@ -11,10 +11,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import it.unisa.model.ProductBean;
 import it.unisa.model.ProductModelDM;
+import it.unisa.model.UtenteBean;
 
 
 @WebServlet("/AdminController")
@@ -35,11 +37,13 @@ public class AdminController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
-		System.out.println();
+		UtenteBean user= (UtenteBean)request.getAttribute("user");
+		System.out.println("ciao");
 		try {
 			if(action != null) {
 				if(action.equals("add_product")) {
-					
+				
+					System.out.println("sto per aggiungere il prodotto");
 					String nomeProdotto= request.getParameter("nomeprodotto");
 					String marcaProdotto= request.getParameter("marcaprodotto");
 					String tipoCategoria= request.getParameter("categoria");
@@ -62,6 +66,9 @@ public class AdminController extends HttpServlet {
 					
 					
 					model.doSave(bean);
+					System.out.println("ho aggiunto il prodotto");
+					HttpSession currentSession = request.getSession(); /*ne creo una nuova*/
+				   	currentSession.setAttribute("user", user);
 					RequestDispatcher view = request.getRequestDispatcher("addProduct.jsp");/*dove inoltro il form*/
 					view.forward(request,response);
 					return;
