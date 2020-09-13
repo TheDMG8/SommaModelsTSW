@@ -70,8 +70,12 @@ if(error != null){%>
    <td><input type="password" size="40" name="password" ></td>
    </tr>
    </table>
-   <input  class=bottoniCreaUtente type ="submit" name="Inviaci i dati" value="Iscriviti" >
-   <input class=bottoniCreaUtente type="reset" > 
+   <table id="table-form" class="center">
+   <tr>
+   <td><input  class=bottoniCreaUtente type ="submit" name="Inviaci i dati" value="Iscriviti" ></td>
+   <td><input class=bottoniCreaUtente type="reset" > </td>
+   </tr>
+   </table> 
  </fieldset>
   
 </form>

@@ -47,7 +47,9 @@
 		</tr>
 	</table>
 	<table id="table-form" class="center">
-	<tr><input class=bottoneAssistenza id=bottoneAssistenza type ="submit" value="Inviaci i dati" ></tr>
+	<tr>
+	<td><input class=bottoneAssistenza id=bottoneAssistenza type ="submit" value="Inviaci i dati" ></td>
+	</tr>
 	</table>
 	</form>
 
