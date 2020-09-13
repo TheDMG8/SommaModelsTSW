@@ -11,9 +11,23 @@
 	
 }
 
-
-
 #form-search button{
 	background-color: #FF1717;
 	border: 1px solid #FF1717;
+}
+
+.navbar-nav .nav-item a:hover{
+	
+	background-color: #0080ff;
+    color: white;
+    text-decoration: black;
+    animation-name: color;
+    animation-duration: 4s;
+}
+
+
+
+@keyframes color {
+  from {background-color: #0080ff;}
+  to {background-color: red;}
 }
