@@ -65,7 +65,7 @@
    <td><input type="password" size="40" name="password" ></td>
    </tr>
    </table>
-   <input  class=bottoniCreaUtente type ="submit" name="Iviaci i dati" value="Iscriviti" >
+   <input  class=bottoniCreaUtente type ="submit" name="Inviaci i dati" value="Iscriviti" >
    <input class=bottoniCreaUtente type="reset" > 
  </fieldset>
   
