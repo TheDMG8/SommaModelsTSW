@@ -38,18 +38,18 @@ public class AddUtente extends HttpServlet {
 		try {
 			if(action != null) {
 				if(action.equals("insert")) {
-					
+					HttpSession session=request.getSession();
 					/*CONTROLLO FORM LATO SERVLET MI MANCA
-					 * 
-					String regNome =  /^[A-Za-z- ]+$/;
-					String regCognome =  /^[A-Za-z- ]+$/;
-					String regRegione =  /^[A-Za-z- ]+$/;
-					String regCitta =  /^[A-Za-z- ]+$/;
-					String regProvincia =  /^[A-Za-z- ]+$/;
-					String regVia =  /^[A-Za-z- ]+$/;
-					String regCellulare =  /^[0-9]+$/;
-					String regEmail =  /^[A-Za-z- ]+$/;
-					String regPassword =  /^[A-Za-z- ]+$/;
+					 */
+					String regNome =  "/^[A-Za-z- ]+$/";
+					String regCognome =  "/^[A-Za-z- ]+$/";
+					String regRegione =  "/^[A-Za-z- ]+$/";
+					String regCitta =  "/^[A-Za-z- ]+$/";
+					String regProvincia =  "/^[A-Za-z- ]+$/";
+					String regVia =  "/^[A-Za-z- ]+$/";
+					String regCellulare =  "/^[0-9]+$/";
+					String regEmail =  "/^[A-Za-z- ]+$/";
+					String regPassword =  "/^[A-Za-z- ]+$/";
 					
 					if(!request.getParameter("nome").matches(regNome)) {
 						session.setAttribute("error-type", "nome");
@@ -98,10 +98,7 @@ public class AddUtente extends HttpServlet {
 						response.sendRedirect(request.getContextPath()+"/CreaUtente.jsp");
 						
 				//Se tutti i controlli sono stati superati si crea il bean e si inserisce nel database
-					 * 
-					 * 
-					 */
-					
+
 					
 					String nome= request.getParameter("nome");
 					String cognome= request.getParameter("cognome");
@@ -237,8 +234,7 @@ public class AddUtente extends HttpServlet {
 							}
 					}
 				}
-			}
-		}catch(SQLException | NumberFormatException e) {
+			}}}catch(SQLException | NumberFormatException e) {
 			System.out.println("Error:" + e.getMessage());
 			request.setAttribute("error", e.getMessage());
 			}
